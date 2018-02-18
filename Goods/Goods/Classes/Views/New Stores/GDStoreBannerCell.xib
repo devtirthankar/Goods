@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GDStoreBannerCell" id="rM1-o2-Z9j" customClass="GDStoreBannerCell" customModule="Goods" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyW-gl-0dA">
+                        <rect key="frame" x="3" y="3" width="314" height="200"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_bannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-Ca-wlN">
+                        <rect key="frame" x="6" y="8" width="308" height="173.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iYz-Ca-wlN" secondAttribute="height" multiplier="16:9" id="yD2-2Z-gjS"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grad_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="gRw-9m-OfU">
+                        <rect key="frame" x="6" y="8" width="308" height="173.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Excellent place. very good service." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aSi-mr-IDe">
+                        <rect key="frame" x="6" y="185.5" width="308" height="12.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                        <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-kp-PIJ">
+                        <rect key="frame" x="10" y="142.5" width="106" height="19"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iYz-Ca-wlN" firstAttribute="centerX" secondItem="rM1-o2-Z9j" secondAttribute="centerX" id="2oQ-0J-P1k"/>
+                <constraint firstItem="iYz-Ca-wlN" firstAttribute="top" secondItem="rM1-o2-Z9j" secondAttribute="top" constant="8" id="5zo-Nl-6Ju"/>
+                <constraint firstItem="IgJ-kp-PIJ" firstAttribute="leading" secondItem="iYz-Ca-wlN" secondAttribute="leading" constant="4" id="A6N-3a-ZRK"/>
+                <constraint firstItem="gRw-9m-OfU" firstAttribute="width" secondItem="iYz-Ca-wlN" secondAttribute="width" id="BWB-w9-eCF"/>
+                <constraint firstItem="nyW-gl-0dA" firstAttribute="centerX" secondItem="rM1-o2-Z9j" secondAttribute="centerX" id="BcJ-bE-QVW"/>
+                <constraint firstItem="iYz-Ca-wlN" firstAttribute="leading" secondItem="rM1-o2-Z9j" secondAttribute="leading" constant="6" id="Cqz-u9-1Xn"/>
+                <constraint firstItem="nyW-gl-0dA" firstAttribute="centerY" secondItem="rM1-o2-Z9j" secondAttribute="centerY" id="EWU-Mz-us9"/>
+                <constraint firstItem="nyW-gl-0dA" firstAttribute="width" secondItem="rM1-o2-Z9j" secondAttribute="width" constant="-6" id="Lfg-UF-knn"/>
+                <constraint firstItem="IgJ-kp-PIJ" firstAttribute="bottom" secondItem="iYz-Ca-wlN" secondAttribute="bottom" constant="-20" id="S8g-C4-m50"/>
+                <constraint firstItem="gRw-9m-OfU" firstAttribute="centerY" secondItem="iYz-Ca-wlN" secondAttribute="centerY" id="SDh-lI-cVT"/>
+                <constraint firstItem="aSi-mr-IDe" firstAttribute="top" secondItem="iYz-Ca-wlN" secondAttribute="bottom" constant="4" id="Vm1-U4-qDR"/>
+                <constraint firstAttribute="bottom" secondItem="aSi-mr-IDe" secondAttribute="bottom" constant="8" id="al4-97-uiq"/>
+                <constraint firstAttribute="trailing" secondItem="iYz-Ca-wlN" secondAttribute="trailing" constant="6" id="fXV-ZP-7LH"/>
+                <constraint firstItem="aSi-mr-IDe" firstAttribute="trailing" secondItem="iYz-Ca-wlN" secondAttribute="trailing" id="i7W-1d-Qhq"/>
+                <constraint firstItem="nyW-gl-0dA" firstAttribute="height" secondItem="rM1-o2-Z9j" secondAttribute="height" constant="-6" id="jV3-wI-BuP"/>
+                <constraint firstItem="aSi-mr-IDe" firstAttribute="leading" secondItem="iYz-Ca-wlN" secondAttribute="leading" id="t9i-Ge-Oer"/>
+                <constraint firstItem="gRw-9m-OfU" firstAttribute="height" secondItem="iYz-Ca-wlN" secondAttribute="height" id="xSc-UE-OMt"/>
+                <constraint firstItem="gRw-9m-OfU" firstAttribute="centerX" secondItem="iYz-Ca-wlN" secondAttribute="centerX" id="y6J-NJ-aJG"/>
+            </constraints>
+            <size key="customSize" width="320" height="171"/>
+            <connections>
+                <outlet property="bannerImageView" destination="iYz-Ca-wlN" id="DP9-r4-qul"/>
+                <outlet property="bgView" destination="nyW-gl-0dA" id="cwv-6P-yhE"/>
+                <outlet property="descriptionLabel" destination="aSi-mr-IDe" id="qnu-6P-jFy"/>
+            </connections>
+            <point key="canvasLocation" x="155" y="152"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="grad_overlay.png" width="188" height="188"/>
+        <image name="placeholder_bannerImage" width="649" height="659"/>
+    </resources>
+</document>
