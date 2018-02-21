@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Regular.ttf">
+            <string>Comfortaa-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GDProductDescriptionCell" id="gTV-IL-0wX" customClass="GDProductDescriptionCell" customModule="Goods" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG0-o7-rSy">
+                        <rect key="frame" x="4" y="4" width="192" height="94"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97c-Zz-Piy">
+                        <rect key="frame" x="4" y="106" width="192" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="K4U-sr-eYb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate for the product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-V7-46g">
+                        <rect key="frame" x="4" y="130" width="192" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="28e-iC-VY9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NG0-o7-rSy" secondAttribute="trailing" constant="4" id="3Ik-Ts-JpQ"/>
+                <constraint firstAttribute="trailing" secondItem="97c-Zz-Piy" secondAttribute="trailing" constant="4" id="7VU-ol-HU8"/>
+                <constraint firstAttribute="bottom" secondItem="Ncd-V7-46g" secondAttribute="bottom" constant="4" id="9JX-nD-qn5"/>
+                <constraint firstItem="97c-Zz-Piy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Slp-qa-lr4"/>
+                <constraint firstItem="97c-Zz-Piy" firstAttribute="top" secondItem="NG0-o7-rSy" secondAttribute="bottom" constant="8" id="XDG-os-Zca"/>
+                <constraint firstItem="NG0-o7-rSy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="a75-oa-Mnh"/>
+                <constraint firstAttribute="trailing" secondItem="Ncd-V7-46g" secondAttribute="trailing" constant="4" id="hqn-Pq-S7E"/>
+                <constraint firstItem="Ncd-V7-46g" firstAttribute="top" secondItem="97c-Zz-Piy" secondAttribute="bottom" constant="8" id="sRl-f7-qPU"/>
+                <constraint firstItem="Ncd-V7-46g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="snu-PP-PyF"/>
+                <constraint firstItem="NG0-o7-rSy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="xVK-bN-njF"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="NG0-o7-rSy" id="g40-3o-D2K"/>
+                <outlet property="priceLabel" destination="97c-Zz-Piy" id="6W2-PU-xj4"/>
+                <outlet property="ratingLabel" destination="Ncd-V7-46g" id="xC3-aE-5aS"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
