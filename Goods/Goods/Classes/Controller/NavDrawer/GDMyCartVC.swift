@@ -63,21 +63,23 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         
         
         let cell: GDMyCartItemCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDMyCartItemCell
+        let serailNo = indexPath.row + 1
+        cell._serialNumber.text = "\(serailNo)"
         return cell;
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width =  _collectionView.frame.size.width
-        let height = width * 0.5//(3 / 4)
+        let height = CGFloat(125.0)//width * 0.5//(3 / 4)
         return CGSize.init(width: width, height: height)
     }
     
     
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        let edgeInset = UIEdgeInsets.init(top: 3, left: 3, bottom: 3, right: 3)
-        return edgeInset
-    }
+//    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//
+//        let edgeInset = UIEdgeInsets.init(top: 3, left: 3, bottom: 3, right: 3)
+//        return edgeInset
+//    }
 
 }
