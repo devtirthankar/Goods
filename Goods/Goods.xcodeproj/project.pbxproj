@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2BBEB82042566C009BB076 /* GDWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */; };
+		0D2BBEBA20425734009BB076 /* GDWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */; };
 		0D3953E21FE934AF00DE2B1D /* GDMyCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */; };
 		0D3953E41FE934C500DE2B1D /* GDMyCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */; };
+		0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B0F20425CA30001063F /* ArrayExtension.swift */; };
 		0D5F0974203D4DC500D6812D /* GDProductBannerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */; };
 		0D5F0975203D4DC500D6812D /* GDProductBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */; };
 		0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */; };
@@ -87,8 +90,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceRequest.swift; sourceTree = "<group>"; };
+		0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceManager.swift; sourceTree = "<group>"; };
 		0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyCartItemCell.swift; sourceTree = "<group>"; };
 		0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDMyCartItemCell.xib; sourceTree = "<group>"; };
+		0D449B0F20425CA30001063F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductBannerHeader.swift; sourceTree = "<group>"; };
 		0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductBannerHeader.xib; sourceTree = "<group>"; };
 		0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductDescriptionCell.swift; sourceTree = "<group>"; };
@@ -183,6 +189,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2BBEB62042562A009BB076 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		0D3953E01FE9348200DE2B1D /* My Cart */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +272,7 @@
 		0DDBE4C91FF88AA800AA576F /* CocoaAdditions */ = {
 			isa = PBXGroup;
 			children = (
+				0D449B0F20425CA30001063F /* ArrayExtension.swift */,
 				0DDBE4CA1FF88AA800AA576F /* UIColor+Additions.swift */,
 			);
 			path = CocoaAdditions;
@@ -395,6 +410,8 @@
 		0DE086911FD9ADE6007C228F /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				0D2BBEB62042562A009BB076 /* Requests */,
+				0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -642,7 +659,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -655,9 +673,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Goods/Pods-Goods-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -674,6 +697,7 @@
 				0DC2ECC11FE3615A005B7E11 /* GDStoreBannerCell.swift in Sources */,
 				9E33ADA31FDAA92800A02475 /* GDNearYouVC.swift in Sources */,
 				0DD670701FDED68B009AC39C /* GDStoreThumbnailCell.swift in Sources */,
+				0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */,
 				9E33AD9E1FDA90A800A02475 /* GDRegistrationVC.swift in Sources */,
 				0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */,
 				0DE0869D1FD9B204007C228F /* GDSignInVC.swift in Sources */,
@@ -698,12 +722,14 @@
 				9E33ADA91FDAB37000A02475 /* GDTabBarController.swift in Sources */,
 				0DF735511FDD578F009E2F81 /* GDProductVC.swift in Sources */,
 				0DDBE4C71FF8895900AA576F /* GDLocationManager.swift in Sources */,
+				0D2BBEB82042566C009BB076 /* GDWebServiceRequest.swift in Sources */,
 				0DF29E911FFD4EF4005831CA /* GDStoreSegmentContainerCell.swift in Sources */,
 				0DE6D1A61FEA470D004795F5 /* GDMyCartVC.swift in Sources */,
 				0DE6D1A81FEA470D004795F5 /* GDSearchVC.swift in Sources */,
 				0DE129A11FE677E7005A766B /* GDMarkerView.swift in Sources */,
 				0DDBE4C81FF8895900AA576F /* GDTheme.swift in Sources */,
 				0DE086931FD9AE22007C228F /* AppDelegate.swift in Sources */,
+				0D2BBEBA20425734009BB076 /* GDWebServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
