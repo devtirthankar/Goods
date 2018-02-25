@@ -12,6 +12,8 @@
 		0D3953E21FE934AF00DE2B1D /* GDMyCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */; };
 		0D3953E41FE934C500DE2B1D /* GDMyCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */; };
 		0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B0F20425CA30001063F /* ArrayExtension.swift */; };
+		0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */; };
+		0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B132042CE190001063F /* GDRegistrationVM.swift */; };
 		0D5F0974203D4DC500D6812D /* GDProductBannerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */; };
 		0D5F0975203D4DC500D6812D /* GDProductBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */; };
 		0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */; };
@@ -95,6 +97,8 @@
 		0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyCartItemCell.swift; sourceTree = "<group>"; };
 		0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDMyCartItemCell.xib; sourceTree = "<group>"; };
 		0D449B0F20425CA30001063F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWSRegistrationRequest.swift; sourceTree = "<group>"; };
+		0D449B132042CE190001063F /* GDRegistrationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDRegistrationVM.swift; sourceTree = "<group>"; };
 		0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductBannerHeader.swift; sourceTree = "<group>"; };
 		0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductBannerHeader.xib; sourceTree = "<group>"; };
 		0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductDescriptionCell.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */,
+				0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				0DE0869A1FD9B0D3007C228F /* GDSplashVC.swift */,
 				0DE0869C1FD9B204007C228F /* GDSignInVC.swift */,
 				9E33AD9D1FDA90A800A02475 /* GDRegistrationVC.swift */,
+				0D449B132042CE190001063F /* GDRegistrationVM.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -697,6 +703,7 @@
 				0DC2ECC11FE3615A005B7E11 /* GDStoreBannerCell.swift in Sources */,
 				9E33ADA31FDAA92800A02475 /* GDNearYouVC.swift in Sources */,
 				0DD670701FDED68B009AC39C /* GDStoreThumbnailCell.swift in Sources */,
+				0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */,
 				0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */,
 				9E33AD9E1FDA90A800A02475 /* GDRegistrationVC.swift in Sources */,
 				0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */,
@@ -707,6 +714,7 @@
 				0DDBE4CB1FF88AA800AA576F /* UIColor+Additions.swift in Sources */,
 				0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */,
 				0DE0869B1FD9B0D3007C228F /* GDSplashVC.swift in Sources */,
+				0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */,
 				0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */,
 				9E33ADA71FDAA95B00A02475 /* GDMapViewVC.swift in Sources */,
 				0DDBE4C11FF8867800AA576F /* GDBaseVC.swift in Sources */,

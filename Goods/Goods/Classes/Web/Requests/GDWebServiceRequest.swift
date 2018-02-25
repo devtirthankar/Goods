@@ -45,7 +45,7 @@ class GDWebServiceRequest: NSObject {
         url = url?.replacingOccurrences(of: "+", with: "%2B")
         
         if httpMethod == HTTPMethod.post || httpMethod == HTTPMethod.put {
-            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: JSONEncoding(), headers: headers).validate(statusCode: 200...300)
+            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.default, headers: headers).validate(statusCode: 200...300)
         }else{
             self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.httpBody, headers: headers).validate(statusCode: 200...300)
         }
