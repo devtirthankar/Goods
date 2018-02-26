@@ -12,6 +12,12 @@ import UIKit
 class GDRegistrationVC: GDBaseVC {
     
     @IBOutlet weak var _registrationBtton: UIButton!
+    @IBOutlet weak var _firstName: UITextField!
+    @IBOutlet weak var _lastName: UITextField!
+    @IBOutlet weak var _email: UITextField!
+    @IBOutlet weak var _password: UITextField!
+    @IBOutlet weak var _confirmPassword: UITextField!
+    @IBOutlet weak var _phone: UITextField!
     
     private var registrationVM: GDRegistrationVM?
     
@@ -30,6 +36,7 @@ class GDRegistrationVC: GDBaseVC {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        registrationVM?.onRegistratButtonPressed(firstName: _firstName!.text!, lastName: "", email: _email!.text!, password: _password!.text!, phone: _phone!.text! )
     }
 }
 

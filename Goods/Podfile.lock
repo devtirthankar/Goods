@@ -7,20 +7,20 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.3.0):
     - GoogleMaps/Base (= 2.3.0)
-  - SwiftyJSON (4.0.0)
+  - IQKeyboardManagerSwift (5.0.7)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
   - GooglePlaces
-  - SwiftyJSON
+  - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   GooglePlaces: 74d322c74184ea4576184089b496d291cf0dcd38
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
 
-PODFILE CHECKSUM: f2f3fbe1d878fc812097e6ebe4bfb6b4066387e0
+PODFILE CHECKSUM: 7a7eb9cb414421ee4b8c05cd72a39fdd46017e62
 
 COCOAPODS: 1.4.0
