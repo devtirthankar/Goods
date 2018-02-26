@@ -37,8 +37,8 @@ class GDWebServiceRequest: NSObject {
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = nil
         
-        headers?["Accept"] = "application/json"
-        headers?["Content-Type"] = "application/json"
+        //headers?["Accept"] = "application/json"
+        //headers?["Content-Type"] = "application/json"
     
         _ = Alamofire.SessionManager(configuration: configuration)
         url = url?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -57,6 +57,9 @@ class GDWebServiceRequest: NSObject {
                 return
             }
             let attributeDict = response.result.value
+            if let responseDictionary = attributeDict as? [String: Any] {
+                print(responseDictionary)
+            }
             self.responseSuccess(data: attributeDict)
         })
         
@@ -129,7 +132,6 @@ extension Data{
             if let errors = errors{
                 for item in errors {
                     if item["code"] != nil{
-                        //let code = Int(item["code"] as! String)
                         let message = item["message"] as! String
                         let error = NSError(domain: "", code: errorcode, userInfo: ["message" : message])
                         return error

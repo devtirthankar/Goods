@@ -11,15 +11,15 @@ import Foundation
 typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 
 enum GDWebServiceURLEndPoints{
-    static let registration = "http://www.goods-dts.com/goodsapp/register"
-    static let login = ""
+    static let registration = "/register"
+    static let login = "/login"
 }
 
 enum GDServerURL: String {
     case development = "development"
     case test = "test"
     case production = "production"
-    case staging = "staging"
+    case staging = "http://www.goods-dts.com/goodsapp"
 }
 
 class GDWebServiceManager: NSObject {
@@ -59,4 +59,10 @@ extension GDWebServiceManager{
         let service = GDWSRegistrationRequest.init(manager: self, firstname: firstname, lastname: lastname, email: email, password: password, phone: phone, block: block)
         self.startRequest(service: service)
     }
+    
+    func loginUser(email: String, password: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSLoginRequest.init(manager: self, email: email, password: password, block: block)
+        self.startRequest(service: service)
+    }
+    
 }

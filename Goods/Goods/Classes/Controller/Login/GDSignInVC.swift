@@ -13,6 +13,8 @@ class GDSignInVC: GDBaseVC {
     
     @IBOutlet weak var _signInButton: UIButton!
     @IBOutlet weak var _goodsLogo: UIImageView!
+    @IBOutlet weak var _email: UITextField!
+    @IBOutlet weak var _password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +36,45 @@ class GDSignInVC: GDBaseVC {
         
         GDLocationManager.sharedManager
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
-        self.navigationController?.pushViewController(controller, animated: true)
+        if _email.text?.count == 0 {
+            
+        }
+        else if GDUtilities.checkEmailValidity(_email.text!) == false {
+            
+        }
+        else if _password.text?.count == 0 {
+            
+        }
+        else {
+            validateLogin()
+        }
+        
     }
     
     @IBAction func signUpPressed(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDRegistrationVC")
         self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
+    func validateLogin() {
+        GDWebServiceManager.sharedManager.loginUser(email: _email.text!, password: _password.text!, block : {[weak self](response, error) in
+            
+            if let error = error {
+                print("Login error")
+            }
+            else {
+                print("Login successful")
+                DispatchQueue.main.async {
+                    self?.bringUpDashboard()
+                }
+            }
+        })
+    }
+    
+    func bringUpDashboard() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -20,6 +20,7 @@
 		0D5F0979203D4ED800D6812D /* GDProductDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0977203D4ED800D6812D /* GDProductDescriptionCell.xib */; };
 		0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F097A203D586200D6812D /* GDProductActionCell.swift */; };
 		0D5F097D203D586200D6812D /* GDProductActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F097B203D586200D6812D /* GDProductActionCell.xib */; };
+		0D7DFCDA2044028100ED0505 /* GDUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7DFCD92044028100ED0505 /* GDUtilities.swift */; };
 		0D826F5E1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */; };
 		0D826F601FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */; };
 		0D9A359B1FFF4F18007F786B /* GDStoreReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */; };
@@ -105,6 +106,7 @@
 		0D5F0977203D4ED800D6812D /* GDProductDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductDescriptionCell.xib; sourceTree = "<group>"; };
 		0D5F097A203D586200D6812D /* GDProductActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductActionCell.swift; sourceTree = "<group>"; };
 		0D5F097B203D586200D6812D /* GDProductActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductActionCell.xib; sourceTree = "<group>"; };
+		0D7DFCD92044028100ED0505 /* GDUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDUtilities.swift; sourceTree = "<group>"; };
 		0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDNearYouSectionHeaderView.xib; sourceTree = "<group>"; };
 		0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDNearYouSectionHeaderView.swift; sourceTree = "<group>"; };
 		0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreReviewCell.xib; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				0DDBE4C41FF8895900AA576F /* GDLocationManager.swift */,
 				0DDBE4C51FF8895900AA576F /* GDTheme.swift */,
+				0D7DFCD92044028100ED0505 /* GDUtilities.swift */,
 			);
 			path = GDUtility;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				9E33ADA31FDAA92800A02475 /* GDNearYouVC.swift in Sources */,
 				0DD670701FDED68B009AC39C /* GDStoreThumbnailCell.swift in Sources */,
 				0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */,
+				0D7DFCDA2044028100ED0505 /* GDUtilities.swift in Sources */,
 				0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */,
 				9E33AD9E1FDA90A800A02475 /* GDRegistrationVC.swift in Sources */,
 				0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */,

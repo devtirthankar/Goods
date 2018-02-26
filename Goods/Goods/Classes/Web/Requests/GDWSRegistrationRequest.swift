@@ -28,3 +28,19 @@ class GDWSRegistrationRequest: GDWebServiceRequest {
     }
     
 }
+
+class GDWSLoginRequest: GDWebServiceRequest {
+    
+    init(manager : GDWebServiceManager, email: String, password: String, block : @escaping GDWSCompletionBlock) {
+        
+        super.init(manager: manager, block: block)
+        
+        httpMethod = HTTPMethod.post
+        
+        url = manager.baseURL + GDWebServiceURLEndPoints.login
+        
+        body?["email"] = email
+        body?["password"] = password
+        
+    }
+}

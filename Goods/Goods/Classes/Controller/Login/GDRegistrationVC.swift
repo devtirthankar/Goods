@@ -36,7 +36,7 @@ class GDRegistrationVC: GDBaseVC {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registrationVM?.onRegistratButtonPressed(firstName: _firstName!.text!, lastName: "", email: _email!.text!, password: _password!.text!, phone: _phone!.text! )
+        registrationVM?.onRegistratButtonPressed(firstName: _firstName!.text!, lastName: "Nash", email: _email!.text!, password: _password!.text!, phone: _phone!.text! )
     }
 }
 
