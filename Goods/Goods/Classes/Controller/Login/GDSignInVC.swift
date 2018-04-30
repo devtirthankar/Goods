@@ -21,6 +21,9 @@ class GDSignInVC: GDBaseVC {
         setColorForTitleViews()
         setColorForLabels()
         initializeUI()
+        
+        _mobile.text = "536154619"
+        _password.text = "test1234"
     }
     
     func initializeUI() {

@@ -36,13 +36,19 @@ class GDWebServiceRequest: NSObject {
         
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = nil
-        
+        headers?["Content-Type"] = "application/json"
         _ = Alamofire.SessionManager(configuration: configuration)
         url = url?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         url = url?.replacingOccurrences(of: "+", with: "%2B")
         
+        /*
         if httpMethod == HTTPMethod.post || httpMethod == HTTPMethod.put {
             self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.default, headers: headers).validate(statusCode: 200...300)
+        }else{
+            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.httpBody, headers: headers).validate(statusCode: 200...300)
+        }*/
+        if httpMethod == HTTPMethod.post || httpMethod == HTTPMethod.put || httpMethod == HTTPMethod.delete {
+            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: JSONEncoding(), headers: headers).validate(statusCode: 200...300)
         }else{
             self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.httpBody, headers: headers).validate(statusCode: 200...300)
         }

@@ -11,9 +11,9 @@ import Foundation
 typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 
 enum GDWebServiceURLEndPoints{
-    static let registration = "/register"
-    static let login = "/login"
-    static let otp = "/otp"
+    static let registration = "register"
+    static let login = "login"
+    static let otp = "otp"
     static let productsbystore = "/productsbystore"
     static let productsbyid = "/productsbyid"
     static let productsbyrating = "/productsbyrating"
