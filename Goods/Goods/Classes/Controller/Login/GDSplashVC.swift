@@ -16,10 +16,8 @@ class GDSplashVC: GDBaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setColorForTitleViews()
-        
         _goodsLogo.image = _goodsLogo.image!.withRenderingMode(.alwaysTemplate)
-        _goodsLogo.tintColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)//init(red: 41.0/255.0, green: 190.0/255.0, blue: 136.0/255.0, alpha: 1.0)
-       
+        _goodsLogo.tintColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.bringUpLoginView()
         }
@@ -31,12 +29,6 @@ class GDSplashVC: GDBaseVC {
         let controller = storyboard.instantiateViewController(withIdentifier: "GDSignInVC")
         self.navigationController?.pushViewController(controller, animated: false)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

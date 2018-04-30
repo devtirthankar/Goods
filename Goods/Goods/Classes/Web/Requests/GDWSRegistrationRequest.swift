@@ -11,7 +11,7 @@ import Alamofire
 
 class GDWSRegistrationRequest: GDWebServiceRequest {
     
-    init(manager : GDWebServiceManager, firstname : String, lastname: String, email: String, password: String, phone: String, block : @escaping GDWSCompletionBlock) {
+    init(manager : GDWebServiceManager, name : String, email: String, password: String, phone: String, countrycode: String, usertype:String, block : @escaping GDWSCompletionBlock) {
         
         super.init(manager: manager, block: block)
         
@@ -19,19 +19,19 @@ class GDWSRegistrationRequest: GDWebServiceRequest {
         
         url = manager.baseURL + GDWebServiceURLEndPoints.registration
         
-        body?["fname"] = firstname
-        body?["lname"] = lastname
+        body?["name"] = name
         body?["email"] = email
         body?["password"] = password
-        body?["phone"] = phone
-        
+        body?["mobile"] = phone
+        body?["countrycode"] = countrycode
+        body?["type"] = usertype
     }
     
 }
 
 class GDWSLoginRequest: GDWebServiceRequest {
     
-    init(manager : GDWebServiceManager, email: String, password: String, block : @escaping GDWSCompletionBlock) {
+    init(manager : GDWebServiceManager, mobile: String, password: String, block : @escaping GDWSCompletionBlock) {
         
         super.init(manager: manager, block: block)
         
@@ -39,8 +39,23 @@ class GDWSLoginRequest: GDWebServiceRequest {
         
         url = manager.baseURL + GDWebServiceURLEndPoints.login
         
-        body?["email"] = email
+        body?["mobile"] = mobile
         body?["password"] = password
         
     }
+}
+
+class GDOTPValidationRequest: GDWebServiceRequest {
+    
+    init(manager: GDWebServiceManager, otp: String, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        
+        httpMethod = HTTPMethod.post
+        
+        url = manager.baseURL + GDWebServiceURLEndPoints.login
+        
+        body?["code"] = otp
+        body?["uuid"] = ""
+    }
+    
 }

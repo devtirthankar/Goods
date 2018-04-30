@@ -13,40 +13,32 @@ class GDSignInVC: GDBaseVC {
     
     @IBOutlet weak var _signInButton: UIButton!
     @IBOutlet weak var _goodsLogo: UIImageView!
-    @IBOutlet weak var _email: UITextField!
+    @IBOutlet weak var _mobile: UITextField!
     @IBOutlet weak var _password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setColorForTitleViews()
         setColorForLabels()
         initializeUI()
     }
     
     func initializeUI() {
-        
         _signInButton.layer.cornerRadius = _signInButton.frame.height * 0.5
-        //_goodsLogo.image = myImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         _goodsLogo.image = _goodsLogo.image!.withRenderingMode(.alwaysTemplate)
-        _goodsLogo.tintColor = UIColor.init(red: 255.0/255.0, green: 112.0/255.0, blue: 67.0/255.0, alpha: 1.0)//UIColor.colorForHex(GDColor.ThemeColor as NSString)//UIColor.init(red: 41.0/255.0, green: 190.0/255.0, blue: 136.0/255.0, alpha: 1.0)
+        _goodsLogo.tintColor = UIColor.init(red: 255.0/255.0, green: 112.0/255.0, blue: 67.0/255.0, alpha: 1.0)
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
-        
-        GDLocationManager.sharedManager
-        
-        if _email.text?.count == 0 {
-            
-        }
-        else if GDUtilities.checkEmailValidity(_email.text!) == false {
-            
+        let _ = GDLocationManager.sharedManager
+        if _mobile.text?.count == 0 {
+            GDAlertAndLoader.showAlertMessage(GDErrorAlertMessage.emptyMobile)
         }
         else if _password.text?.count == 0 {
-            
+            GDAlertAndLoader.showAlertMessage(GDErrorAlertMessage.emptyPassword)
         }
         else {
-            validateLogin()
+            login()
         }
         
     }
@@ -56,14 +48,12 @@ class GDSignInVC: GDBaseVC {
         self.navigationController?.pushViewController(controller!, animated: true)
     }
     
-    func validateLogin() {
-        GDWebServiceManager.sharedManager.loginUser(email: _email.text!, password: _password.text!, block : {[weak self](response, error) in
-            
-            if let error = error {
-                print("Login error")
+    func login() {
+        GDWebServiceManager.sharedManager.loginUser(mobile: _mobile.text!, password: _password.text!, block : {[weak self](response, error) in
+            if let err = error {
+                GDAlertAndLoader.showAlertMessage(err.localizedDescription)
             }
             else {
-                print("Login successful")
                 DispatchQueue.main.async {
                     self?.bringUpDashboard()
                 }
@@ -76,5 +66,9 @@ class GDSignInVC: GDBaseVC {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

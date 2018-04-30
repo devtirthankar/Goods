@@ -27,6 +27,11 @@
 		0D9A359D1FFF4F4E007F786B /* GDStoreReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */; };
 		0DB400CB1FF3B800003DC383 /* GDStoreContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB400CA1FF3B800003DC383 /* GDStoreContainerCell.xib */; };
 		0DB400CD1FF3B855003DC383 /* GDStoreContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB400CC1FF3B855003DC383 /* GDStoreContainerCell.swift */; };
+		0DB8B89A20979B420022C81D /* GDOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89920979B410022C81D /* GDOTPVC.swift */; };
+		0DB8B89C20979B700022C81D /* GDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89B20979B700022C81D /* GDConstants.swift */; };
+		0DB8B89E20979B9C0022C81D /* GDAlertAndLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89D20979B9B0022C81D /* GDAlertAndLoader.swift */; };
+		0DB8B8A020979BD00022C81D /* GDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89F20979BD00022C81D /* GDStorage.swift */; };
+		0DB8B8A220979BED0022C81D /* GDWebServiceProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B8A120979BED0022C81D /* GDWebServiceProductRequest.swift */; };
 		0DC2ECC11FE3615A005B7E11 /* GDStoreBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2ECC01FE3615A005B7E11 /* GDStoreBannerCell.swift */; };
 		0DC2ECC51FE3D3E1005B7E11 /* GDStoreBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC2ECC41FE3D3E1005B7E11 /* GDStoreBannerCell.xib */; };
 		0DC2ECC71FE45A73005B7E11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC2ECC61FE45A73005B7E11 /* GoogleService-Info.plist */; };
@@ -113,6 +118,11 @@
 		0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreReviewCell.swift; sourceTree = "<group>"; };
 		0DB400CA1FF3B800003DC383 /* GDStoreContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreContainerCell.xib; sourceTree = "<group>"; };
 		0DB400CC1FF3B855003DC383 /* GDStoreContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreContainerCell.swift; sourceTree = "<group>"; };
+		0DB8B89920979B410022C81D /* GDOTPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDOTPVC.swift; sourceTree = "<group>"; };
+		0DB8B89B20979B700022C81D /* GDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDConstants.swift; sourceTree = "<group>"; };
+		0DB8B89D20979B9B0022C81D /* GDAlertAndLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDAlertAndLoader.swift; sourceTree = "<group>"; };
+		0DB8B89F20979BD00022C81D /* GDStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStorage.swift; sourceTree = "<group>"; };
+		0DB8B8A120979BED0022C81D /* GDWebServiceProductRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDWebServiceProductRequest.swift; sourceTree = "<group>"; };
 		0DC2ECC01FE3615A005B7E11 /* GDStoreBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreBannerCell.swift; sourceTree = "<group>"; };
 		0DC2ECC41FE3D3E1005B7E11 /* GDStoreBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreBannerCell.xib; sourceTree = "<group>"; };
 		0DC2ECC61FE45A73005B7E11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -198,6 +208,7 @@
 		0D2BBEB62042562A009BB076 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8B8A120979BED0022C81D /* GDWebServiceProductRequest.swift */,
 				0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */,
 				0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */,
 			);
@@ -263,6 +274,7 @@
 		0DDBE4C31FF8895900AA576F /* GDUtility */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8B89D20979B9B0022C81D /* GDAlertAndLoader.swift */,
 				0DDBE4C41FF8895900AA576F /* GDLocationManager.swift */,
 				0DDBE4C51FF8895900AA576F /* GDTheme.swift */,
 				0D7DFCD92044028100ED0505 /* GDUtilities.swift */,
@@ -377,6 +389,7 @@
 		0DE0868D1FD9ADE6007C228F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8B89B20979B700022C81D /* GDConstants.swift */,
 				0DC2ECC61FE45A73005B7E11 /* GoogleService-Info.plist */,
 				0DE086921FD9AE22007C228F /* AppDelegate.swift */,
 				9E33ADA81FDAB37000A02475 /* GDTabBarController.swift */,
@@ -418,6 +431,7 @@
 		0DE086911FD9ADE6007C228F /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8B89F20979BD00022C81D /* GDStorage.swift */,
 				0D2BBEB62042562A009BB076 /* Requests */,
 				0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */,
 			);
@@ -437,6 +451,7 @@
 		0DE086991FD9B09B007C228F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8B89920979B410022C81D /* GDOTPVC.swift */,
 				0DE0869A1FD9B0D3007C228F /* GDSplashVC.swift */,
 				0DE0869C1FD9B204007C228F /* GDSignInVC.swift */,
 				9E33AD9D1FDA90A800A02475 /* GDRegistrationVC.swift */,
@@ -709,6 +724,7 @@
 				0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */,
 				0D7DFCDA2044028100ED0505 /* GDUtilities.swift in Sources */,
 				0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */,
+				0DB8B8A220979BED0022C81D /* GDWebServiceProductRequest.swift in Sources */,
 				9E33AD9E1FDA90A800A02475 /* GDRegistrationVC.swift in Sources */,
 				0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */,
 				0DE0869D1FD9B204007C228F /* GDSignInVC.swift in Sources */,
@@ -727,6 +743,7 @@
 				0D3953E21FE934AF00DE2B1D /* GDMyCartItemCell.swift in Sources */,
 				0DE6D1A51FEA470D004795F5 /* GDMyAccountVC.swift in Sources */,
 				0DDBE4CD1FF8BC5200AA576F /* GDBaseView.swift in Sources */,
+				0DB8B89C20979B700022C81D /* GDConstants.swift in Sources */,
 				0DE6D1A91FEA470D004795F5 /* GDSettingsVC.swift in Sources */,
 				9E33ADA51FDAA94900A02475 /* GDNewStoresVC.swift in Sources */,
 				0D826F601FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift in Sources */,
@@ -740,8 +757,11 @@
 				0DE6D1A81FEA470D004795F5 /* GDSearchVC.swift in Sources */,
 				0DE129A11FE677E7005A766B /* GDMarkerView.swift in Sources */,
 				0DDBE4C81FF8895900AA576F /* GDTheme.swift in Sources */,
+				0DB8B89E20979B9C0022C81D /* GDAlertAndLoader.swift in Sources */,
 				0DE086931FD9AE22007C228F /* AppDelegate.swift in Sources */,
 				0D2BBEBA20425734009BB076 /* GDWebServiceManager.swift in Sources */,
+				0DB8B8A020979BD00022C81D /* GDStorage.swift in Sources */,
+				0DB8B89A20979B420022C81D /* GDOTPVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

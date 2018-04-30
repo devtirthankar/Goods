@@ -10,7 +10,7 @@ import Foundation
 
 enum GDColor {
     
-    static let  ThemeColor = "ff7043"//"#8ec5ce"
+    static let  ThemeColor = "#2064AA" //"ff7043"//"#8ec5ce"
     static let  Green = "#78cdc0"
     static let  Yellow = "#ffc005"
     static let  Red = "#ea5c5c"

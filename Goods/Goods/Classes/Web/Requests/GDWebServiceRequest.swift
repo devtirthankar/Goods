@@ -37,9 +37,6 @@ class GDWebServiceRequest: NSObject {
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = nil
         
-        //headers?["Accept"] = "application/json"
-        //headers?["Content-Type"] = "application/json"
-    
         _ = Alamofire.SessionManager(configuration: configuration)
         url = url?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         url = url?.replacingOccurrences(of: "+", with: "%2B")

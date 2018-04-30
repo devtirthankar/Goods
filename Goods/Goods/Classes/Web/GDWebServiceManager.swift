@@ -13,18 +13,22 @@ typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 enum GDWebServiceURLEndPoints{
     static let registration = "/register"
     static let login = "/login"
+    static let otp = "/otp"
+    static let productsbystore = "/productsbystore"
+    static let productsbyid = "/productsbyid"
+    static let productsbyrating = "/productsbyrating"
 }
 
 enum GDServerURL: String {
-    case development = "development"
+    case development = "https://api.smj.ltd/api/v1/"
     case test = "test"
-    case production = "production"
+    case production = "https://api.goods-dts.com/"
     case staging = "http://www.goods-dts.com/goodsapp"
 }
 
 class GDWebServiceManager: NSObject {
     var serviceArray = [GDWebServiceRequest]()
-    var baseURL = GDServerURL.staging.rawValue
+    var baseURL = GDServerURL.development.rawValue
     
     static let sharedManager : GDWebServiceManager = {
         let instance = GDWebServiceManager()
@@ -55,13 +59,13 @@ class GDWebServiceManager: NSObject {
 
 extension GDWebServiceManager{
     
-    func registerUser(firstname : String, lastname: String, email: String, password: String, phone: String, block : @escaping GDWSCompletionBlock){
-        let service = GDWSRegistrationRequest.init(manager: self, firstname: firstname, lastname: lastname, email: email, password: password, phone: phone, block: block)
+    func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String, block : @escaping GDWSCompletionBlock){
+        let service = GDWSRegistrationRequest.init(manager: self, name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype, block: block)
         self.startRequest(service: service)
     }
     
-    func loginUser(email: String, password: String, block : @escaping GDWSCompletionBlock) {
-        let service = GDWSLoginRequest.init(manager: self, email: email, password: password, block: block)
+    func loginUser(mobile: String, password: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSLoginRequest.init(manager: self, mobile: mobile, password: password, block: block)
         self.startRequest(service: service)
     }
     

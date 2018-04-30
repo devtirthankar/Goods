@@ -12,12 +12,13 @@ import UIKit
 class GDRegistrationVC: GDBaseVC {
     
     @IBOutlet weak var _registrationBtton: UIButton!
-    @IBOutlet weak var _firstName: UITextField!
-    @IBOutlet weak var _lastName: UITextField!
+    @IBOutlet weak var _name: UITextField!
     @IBOutlet weak var _email: UITextField!
     @IBOutlet weak var _password: UITextField!
     @IBOutlet weak var _confirmPassword: UITextField!
     @IBOutlet weak var _phone: UITextField!
+    @IBOutlet weak var _countryCode: UITextField!
+    @IBOutlet weak var _userType: UITextField!
     
     private var registrationVM: GDRegistrationVM?
     
@@ -36,25 +37,21 @@ class GDRegistrationVC: GDBaseVC {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registrationVM?.onRegistratButtonPressed(firstName: _firstName!.text!, lastName: "Nash", email: _email!.text!, password: _password!.text!, phone: _phone!.text! )
+        registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: _countryCode.text!, usertype: _userType.text!)
     }
 }
 
 extension GDRegistrationVC: GDRegistrationVMDelegate {
     
     func invalidInputDetected(_ message: String) {
-        
-    }
-    
-    func emptyInputFieldDetected(_ message: String) {
-        
+        GDAlertAndLoader.showAlertMessage(message)
     }
     
     func registraionSucessfull() {
-        
+        //Open OTP screen
     }
     
-    func registraionError() {
-        
+    func registraionError(_ message: String) {
+        GDAlertAndLoader.showAlertMessage(message)
     }
 }

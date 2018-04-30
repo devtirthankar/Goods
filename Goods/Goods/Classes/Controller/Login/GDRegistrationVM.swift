@@ -10,9 +10,8 @@ import UIKit
 
 protocol GDRegistrationVMDelegate {
     func registraionSucessfull()
-    func registraionError()
+    func registraionError(_ message: String)
     func invalidInputDetected(_ message: String)
-    func emptyInputFieldDetected(_ message: String)
 }
 
 class GDRegistrationVM: NSObject {
@@ -23,18 +22,43 @@ class GDRegistrationVM: NSObject {
         self.delegate = delegate
     }
     
-    func onRegistratButtonPressed(firstName: String, lastName: String, email: String, password: String, phone: String) {
+    func onRegistratButtonPressed(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String) {
         
-        //Check for input validation
+        var message: String = ""
+        if name.count == 0 {
+            message = GDErrorAlertMessage.emptyName
+        }
+        else if email.count == 0 {
+            message = GDErrorAlertMessage.emptyEmail
+        }
+        else if GDUtilities.checkEmailValidity(email) != true {
+            message = GDErrorAlertMessage.invalidEmail
+        }
+        else if password.count == 0 {
+            message = GDErrorAlertMessage.emptyPassword
+        }
+        else if phone.count == 0 {
+            message = GDErrorAlertMessage.emptyMobile
+        }
+        else if countrycode.count == 0 {
+            message = GDErrorAlertMessage.emptyCountryCode
+        }
+            
+        if message.count == 0 {
+            self.delegate?.invalidInputDetected(message)
+        }
+        else {
+            //if validation successfull, call register api
+            registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype)
+        }
         
-        //if validation successfull, call register api
-        registerUser(firstName: firstName, lastName: lastName, email: email, password: password, phone: phone)
+        
     }
     
-    private func registerUser(firstName: String, lastName: String, email: String, password: String, phone: String) {
-        GDWebServiceManager.sharedManager.registerUser(firstname: firstName, lastname: lastName, email: email, password: password, phone: phone, block: {[weak self](response, error) in
-            if let error = error {
-                self?.delegate?.registraionError()
+    private func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String) {
+        GDWebServiceManager.sharedManager.registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype, block: {[weak self](response, error) in
+            if let err = error {
+                self?.delegate?.registraionError(err.localizedDescription)
             }
             else {
                 self?.delegate?.registraionSucessfull()
