@@ -43,6 +43,20 @@ class GDWSLoginRequest: GDWebServiceRequest {
         body?["password"] = password
         
     }
+    
+    override func responseSuccess(data: Any?) {
+        var loginInfo: GDLogin?
+        if let json = data as? [String: Any]{
+            if let info = json["result"] as? [String: Any] {
+                let moc = GDStorage.sharedStorage.moc
+                moc?.performAndWait {
+                    loginInfo = GDLogin(dictionary: info, moc: moc)
+                }
+                GDStorage.sharedStorage.saveMOCToStorage()
+            }
+        }
+        super.responseSuccess(data: loginInfo)
+    }
 }
 
 class GDOTPValidationRequest: GDWebServiceRequest {

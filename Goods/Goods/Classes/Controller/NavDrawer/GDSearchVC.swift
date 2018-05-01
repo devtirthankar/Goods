@@ -16,10 +16,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     let cellProductIdentifier = "GDStoreThumbnailCell"
     let cellStoreIdentifier = "GDStoreBannerCell"
     
-    let prodCount = 18
-    let storeCount = 8
-    
-    let descriptions = ["One of the finest places to dine.", "A book shop that would give you the word of information. The store has provision for people to sit there and read books and you can buy if you like a few.", "You get varities of fruits and veggies copared to other shops and the freshness of the products would make you a loyal customer in no time.", "The best jeweller who provides attractive discounts and EMI options as well.", "The best branded paints and painting services.", "One of the finest places to dine.", "A book shop that would give you the word of information. The store has provision for people to sit there and read books and you can buy if you like a few.", "You get varities of fruits and veggies copared to other shops and the freshness of the products would make you a loyal customer in no time."]
+    var products = [GDProduct]()
+    var stores = [GDStore]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +28,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         
         _collectionView.register(UINib.init(nibName: cellProductIdentifier, bundle: nil), forCellWithReuseIdentifier: cellProductIdentifier)
         _collectionView.register(UINib.init(nibName: cellStoreIdentifier, bundle: nil), forCellWithReuseIdentifier: cellStoreIdentifier)
-
-        // Do any additional setup after loading the view.
+        fetchStores()
+        fetchProducts()
     }
 
     @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
@@ -53,10 +51,10 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
         if _segmentControl.selectedSegmentIndex == 0 {
-            return prodCount
+            return products.count
         }
         else {
-            return storeCount
+            return stores.count
         }
         
     }
@@ -79,7 +77,7 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
             let cell: GDStoreBannerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellStoreIdentifier, for: indexPath) as! GDStoreBannerCell
             let imageName = "StoreThmb\(indexPath.row + 1).png"
             cell.bannerImageView.image = UIImage.init(named:imageName)
-            cell.descriptionLabel.text = descriptions[indexPath.row]
+            //cell.descriptionLabel.text = descriptions[indexPath.row]
             return cell;
         }
         
@@ -103,7 +101,7 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         else {
             if let cell = GDStoreBannerCell.fromNib() {
                 
-                cell.descriptionLabel.text = descriptions[indexPath.row]
+                //cell.descriptionLabel.text = descriptions[indexPath.row]
                 let preferredSize = cell.preferredLayoutSizeFittingWidth(targetWidth: _collectionView.frame.size.width - 6)
                 return preferredSize
             }
@@ -133,6 +131,29 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDProductVC")
         controller?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller!, animated: true);
+    }
+    
+    //MARK: Fetch Data
+    func fetchStores() {
+        GDWebServiceManager.sharedManager.getStores(block: {[weak self](response, error) in
+            DispatchQueue.main.async {
+                if let list = response as? [GDStore] {
+                    self?.stores = list
+                    self?._collectionView.reloadData()
+                }
+            }
+        })
+    }
+    
+    func fetchProducts() {
+        GDWebServiceManager.sharedManager.getProducts(block: {[weak self](response, error) in
+            DispatchQueue.main.async {
+                if let list = response as? [GDProduct] {
+                    self?.products = list
+                    self?._collectionView.reloadData()
+                }
+            }
+        })
     }
 
 }

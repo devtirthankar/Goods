@@ -11,6 +11,32 @@ import Alamofire
 
 class GDWebServiceProductRequest: GDWebServiceRequest {
     
+    override init(manager: GDWebServiceManager, block : @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.get
+        url = manager.baseURL + GDWebServiceURLEndPoints.products
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+    }
+    
+    override func responseSuccess(data: Any?) {
+        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDProduct")
+        var products = [GDProduct]()
+        if let json = data as? [String: Any]{
+            if let list = json["result"] as? [[String: Any]]{
+                let moc = GDStorage.sharedStorage.moc
+                moc?.performAndWait {
+                    for info in list {
+                        let product = GDProduct.init(dictionary: info, moc: moc)
+                        products.append(product)
+                    }
+                }
+            }
+            GDStorage.sharedStorage.saveMOCToStorage()
+        }
+        super.responseSuccess(data: products)
+    }
+    
+    /*
     //products by store
     init(manager: GDWebServiceManager, storeId: Int64, block : @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
@@ -31,5 +57,6 @@ class GDWebServiceProductRequest: GDWebServiceRequest {
         httpMethod = HTTPMethod.get
         url = manager.baseURL + GDWebServiceURLEndPoints.productsbyrating + "/\(rating)"
     }
+ */
     
 }

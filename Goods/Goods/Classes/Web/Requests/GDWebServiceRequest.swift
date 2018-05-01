@@ -54,9 +54,7 @@ class GDWebServiceRequest: NSObject {
                 if let statusDictionary = responseDictionary["status"] as? [String: Any] {
                     if let code = statusDictionary["code"] as? Int {
                         if code == 200 {
-                            if let resultDictionary = responseDictionary["result"] as? [String: Any]{
-                                self.responseSuccess(data: resultDictionary)
-                            }
+                            self.responseSuccess(data: responseDictionary)
                         }else{
                             self.responseFailed(statusDictionary: statusDictionary, responseError: response.result.error)
                         }
