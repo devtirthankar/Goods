@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0B01452097AB490000E9EF /* GDDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B01432097AB490000E9EF /* GDDataModel.xcdatamodeld */; };
 		0D2BBEB82042566C009BB076 /* GDWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */; };
 		0D2BBEBA20425734009BB076 /* GDWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */; };
 		0D3953E21FE934AF00DE2B1D /* GDMyCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0B01442097AB490000E9EF /* GDDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GDDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0D2BBEB72042566C009BB076 /* GDWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceRequest.swift; sourceTree = "<group>"; };
 		0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceManager.swift; sourceTree = "<group>"; };
 		0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyCartItemCell.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				0DE0868A1FD9AD5A007C228F /* Classes */,
 				0DE0868B1FD9AD5A007C228F /* Resources */,
 				0DE0867F1FD9ACC6007C228F /* Assets.xcassets */,
+				0D0B01432097AB490000E9EF /* GDDataModel.xcdatamodeld */,
 				0DE086841FD9ACC6007C228F /* Info.plist */,
 			);
 			path = Goods;
@@ -736,6 +739,7 @@
 				0DE0869B1FD9B0D3007C228F /* GDSplashVC.swift in Sources */,
 				0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */,
 				0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */,
+				0D0B01452097AB490000E9EF /* GDDataModel.xcdatamodeld in Sources */,
 				9E33ADA71FDAA95B00A02475 /* GDMapViewVC.swift in Sources */,
 				0DDBE4C11FF8867800AA576F /* GDBaseVC.swift in Sources */,
 				0DB400CD1FF3B855003DC383 /* GDStoreContainerCell.swift in Sources */,
@@ -907,6 +911,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0D0B01432097AB490000E9EF /* GDDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D0B01442097AB490000E9EF /* GDDataModel.xcdatamodel */,
+			);
+			currentVersion = 0D0B01442097AB490000E9EF /* GDDataModel.xcdatamodel */;
+			path = GDDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DE0866D1FD9ACC6007C228F /* Project object */;
 }

@@ -41,12 +41,6 @@ class GDWebServiceRequest: NSObject {
         url = url?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         url = url?.replacingOccurrences(of: "+", with: "%2B")
         
-        /*
-        if httpMethod == HTTPMethod.post || httpMethod == HTTPMethod.put {
-            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.default, headers: headers).validate(statusCode: 200...300)
-        }else{
-            self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: URLEncoding.httpBody, headers: headers).validate(statusCode: 200...300)
-        }*/
         if httpMethod == HTTPMethod.post || httpMethod == HTTPMethod.put || httpMethod == HTTPMethod.delete {
             self.request = Alamofire.request(url!, method: httpMethod, parameters: body, encoding: JSONEncoding(), headers: headers).validate(statusCode: 200...300)
         }else{
@@ -54,16 +48,22 @@ class GDWebServiceRequest: NSObject {
         }
         
         self.request?.responseJSON(queue: concurrentQueue, options: JSONSerialization.ReadingOptions.allowFragments, completionHandler: { (response : DataResponse) in
-            
-            if let error = response.result.error{
-                self.responseFailed(data: response.data, responseError: error)
-                return
-            }
             let attributeDict = response.result.value
             if let responseDictionary = attributeDict as? [String: Any] {
                 print(responseDictionary)
+                if let statusDictionary = responseDictionary["status"] as? [String: Any] {
+                    if let code = statusDictionary["code"] as? Int {
+                        if code == 200 {
+                            if let resultDictionary = responseDictionary["result"] as? [String: Any]{
+                                self.responseSuccess(data: resultDictionary)
+                            }
+                        }else{
+                            self.responseFailed(statusDictionary: statusDictionary, responseError: response.result.error)
+                        }
+                    }
+                }
             }
-            self.responseSuccess(data: attributeDict)
+ 
         })
         
     }
@@ -99,54 +99,16 @@ extension GDWebServiceRequest{
         
     }
     
-    func responseFailed(data : Data?, responseError : Error?){
+    func responseFailed(statusDictionary : [String: Any], responseError : Error?) {
         
-        print("\(self) error = \(String(describing: responseError))")
-        
-        var errorcode = (responseError as! NSError).code
-        let aferror = responseError as? AFError
-        if let aferror = aferror{
-            if let responseCode = aferror.responseCode{
-                errorcode = responseCode
-            }
+        var message = "Could not fetch data"
+        if let msg = statusDictionary["description"] as? String {
+            message = msg
         }
-        
-        var error = data?.validateError(errorcode: (responseError as! NSError).code)
-        if error == nil{
-            error = responseError as? NSError
-        }
-        
+        let error = NSError(domain: "", code: 400, userInfo: ["message" : message])
         DispatchQueue.main.async {
             self.block(nil,error)
         }
-        GDWebServiceManager.sharedManager.closeService(service: self)
     }
     
-}
-
-extension Data{
-    
-    func validateError(errorcode : Int) -> NSError?{
-        
-        var json : [String : Any]?
-        do{
-            json = try JSONSerialization.jsonObject(with: self, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : Any]
-            let errors = json?["errors"] as? [[String : Any]]
-            if let errors = errors{
-                for item in errors {
-                    if item["code"] != nil{
-                        let message = item["message"] as! String
-                        let error = NSError(domain: "", code: errorcode, userInfo: ["message" : message])
-                        return error
-                    }
-                }
-            }
-        }
-        catch{
-            return nil
-        }
-        
-        return nil
-        
-    }
 }

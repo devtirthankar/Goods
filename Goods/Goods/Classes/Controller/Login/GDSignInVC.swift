@@ -53,8 +53,10 @@ class GDSignInVC: GDBaseVC {
     
     func login() {
         GDWebServiceManager.sharedManager.loginUser(mobile: _mobile.text!, password: _password.text!, block : {[weak self](response, error) in
-            if let err = error {
-                GDAlertAndLoader.showAlertMessage(err.localizedDescription)
+            if let err = error as? NSError {
+                if let errorMessage = err.userInfo["message"] as? String {
+                    GDAlertAndLoader.showAlertMessage(errorMessage)
+                }
             }
             else {
                 DispatchQueue.main.async {
