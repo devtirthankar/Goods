@@ -15,4 +15,6 @@ pod 'Alamofire'
 
 pod 'IQKeyboardManagerSwift'
 
+pod 'Kingfisher'
+
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GDStoreBannerCell: UICollectionViewCell {
     @IBOutlet weak var bgView: UIView!
@@ -65,6 +66,13 @@ class GDStoreBannerCell: UICollectionViewCell {
         return descriptionSize
     }
 
-    
+    func loadBannerImage(url: String?) {
+        bannerImageView?.kf.indicatorType = .activity
+        if let imageUrl = url {
+            let placeholderImage = UIImage.init(named: "bannerPlaceholder")
+            bannerImageView?.kf.setImage(with: URL(string: imageUrl), placeholder: placeholderImage, options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
+            })
+        }
+    }
 }
 

@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" red="0.91764705879999997" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.12549019607843137" green="0.39215686274509803" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="WEY-wY-46y" kind="relationship" relationship="viewControllers" id="PQi-IA-8OH"/>
@@ -420,7 +420,7 @@
                                     <segment title="Products"/>
                                     <segment title="Stores"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.4392156862745098" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12549019607843137" green="0.39215686274509803" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentControlSelected:" destination="Gfl-YP-Zar" eventType="valueChanged" id="3cr-BY-OjA"/>
                                 </connections>
@@ -814,7 +814,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GoodsLogo" width="171" height="171"/>
+        <image name="GoodsLogo" width="167" height="167"/>
         <image name="icon_back_white" width="24" height="30"/>
         <image name="icon_hamburger" width="33" height="22"/>
         <image name="mapview" width="25" height="25"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol GDStoreThumbnailCellDelegate {
     func bringUpProductScreen()
@@ -41,6 +42,15 @@ class GDStoreThumbnailCell: UICollectionViewCell {
         containerView.clipsToBounds = false
         */
 
+    }
+    
+    func loadThumbImage(url: String?) {
+        thumbImageView?.kf.indicatorType = .activity
+        if let imageUrl = url {
+            let placeholderImage = UIImage.init(named: "thumbPlaceholder")
+            thumbImageView?.kf.setImage(with: URL(string: imageUrl), placeholder: placeholderImage, options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
+            })
+        }
     }
     
 }

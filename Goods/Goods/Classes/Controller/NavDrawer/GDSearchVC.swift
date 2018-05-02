@@ -62,22 +62,21 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         if _segmentControl.selectedSegmentIndex == 0 {
+            let product: GDProduct = products[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
             
-            var index = indexPath.row + 1
-            if index > 9 {
-                index = (index % 10) + 1
-            }
-            let imageName = "Prod\(index).png"
-            cell.thumbImageView.image = UIImage.init(named:imageName)
-            cell.titleLabel.text = "Product\(indexPath.row + 1)"
+            
+            //cell.thumbImageView.image = UIImage.init(named:imageName)
+            cell.titleLabel.text = product.name
+            //cell.loadThumbImage(url: product)
             return cell;
         }
         else {
+            let store: GDStore = stores[indexPath.row]
             let cell: GDStoreBannerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellStoreIdentifier, for: indexPath) as! GDStoreBannerCell
-            let imageName = "StoreThmb\(indexPath.row + 1).png"
-            cell.bannerImageView.image = UIImage.init(named:imageName)
-            //cell.descriptionLabel.text = descriptions[indexPath.row]
+            cell.titleLabel.text = store.name
+            cell.descriptionLabel.text = store.name
+            cell.loadBannerImage(url: store.image)
             return cell;
         }
         

@@ -28,8 +28,8 @@ class GDSignInVC: GDBaseVC {
     
     func initializeUI() {
         _signInButton.layer.cornerRadius = _signInButton.frame.height * 0.5
-        _goodsLogo.image = _goodsLogo.image!.withRenderingMode(.alwaysTemplate)
-        _goodsLogo.tintColor = UIColor.init(red: 255.0/255.0, green: 112.0/255.0, blue: 67.0/255.0, alpha: 1.0)
+//        _goodsLogo.image = _goodsLogo.image!.withRenderingMode(.alwaysTemplate)
+//        _goodsLogo.tintColor = UIColor.init(red: 255.0/255.0, green: 112.0/255.0, blue: 67.0/255.0, alpha: 1.0)
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
