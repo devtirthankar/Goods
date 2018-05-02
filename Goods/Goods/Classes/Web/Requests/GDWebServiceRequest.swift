@@ -50,11 +50,11 @@ class GDWebServiceRequest: NSObject {
         self.request?.responseJSON(queue: concurrentQueue, options: JSONSerialization.ReadingOptions.allowFragments, completionHandler: { (response : DataResponse) in
             let attributeDict = response.result.value
             if let responseDictionary = attributeDict as? [String: Any] {
-                print(responseDictionary)
                 if let statusDictionary = responseDictionary["status"] as? [String: Any] {
                     if let code = statusDictionary["code"] as? Int {
                         if code == 200 {
-                            self.responseSuccess(data: responseDictionary)
+                            //self.responseSuccess(data: attributeDict as? Data)
+                            self.responseSuccess(data: response.data)
                         }else{
                             self.responseFailed(statusDictionary: statusDictionary, responseError: response.result.error)
                         }
@@ -87,7 +87,7 @@ class GDWebServiceRequest: NSObject {
 
 extension GDWebServiceRequest{
     
-    func responseSuccess(data : Any?){
+    func responseSuccess(data : Data?){
         
         GDWebServiceManager.sharedManager.closeService(service: self)
         

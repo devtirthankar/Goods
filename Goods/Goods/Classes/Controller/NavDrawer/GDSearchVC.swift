@@ -16,8 +16,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     let cellProductIdentifier = "GDStoreThumbnailCell"
     let cellStoreIdentifier = "GDStoreBannerCell"
     
-    var products = [GDProduct]()
-    var stores = [GDStore]()
+    var products = ["GDProduct", "Some", "Monday", "Tomtom", "Chino"]
+    var stores = ["GDStore", "Some store", "Monday store", "Tomtom store", "Chino store"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,7 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     }
 
     @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
-        
         _collectionView.reloadData()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,21 +60,21 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         if _segmentControl.selectedSegmentIndex == 0 {
-            let product: GDProduct = products[indexPath.row]
+            //--New let product: GDProduct = products[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
             
             
             //cell.thumbImageView.image = UIImage.init(named:imageName)
-            cell.titleLabel.text = product.name
+            //--New cell.titleLabel.text = product.name
             //cell.loadThumbImage(url: product)
             return cell;
         }
         else {
-            let store: GDStore = stores[indexPath.row]
+            //--New let store: GDStore = stores[indexPath.row]
             let cell: GDStoreBannerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellStoreIdentifier, for: indexPath) as! GDStoreBannerCell
-            cell.titleLabel.text = store.name
-            cell.descriptionLabel.text = store.name
-            cell.loadBannerImage(url: store.image)
+            //--New cell.titleLabel.text = store.name
+            //--New cell.descriptionLabel.text = store.name
+            //--New cell.loadBannerImage(url: store.image)
             return cell;
         }
         
@@ -136,10 +134,11 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func fetchStores() {
         GDWebServiceManager.sharedManager.getStores(block: {[weak self](response, error) in
             DispatchQueue.main.async {
+                /*--new
                 if let list = response as? [GDStore] {
                     self?.stores = list
                     self?._collectionView.reloadData()
-                }
+                }*/
             }
         })
     }
@@ -147,10 +146,11 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func fetchProducts() {
         GDWebServiceManager.sharedManager.getProducts(block: {[weak self](response, error) in
             DispatchQueue.main.async {
+                /*--New
                 if let list = response as? [GDProduct] {
                     self?.products = list
                     self?._collectionView.reloadData()
-                }
+                }*/
             }
         })
     }

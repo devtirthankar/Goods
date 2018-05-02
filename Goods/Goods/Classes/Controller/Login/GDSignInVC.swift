@@ -33,6 +33,8 @@ class GDSignInVC: GDBaseVC {
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
+        bringUpDashboard()
+        return
         let _ = GDLocationManager.sharedManager
         if _mobile.text?.count == 0 {
             GDAlertAndLoader.showAlertMessage(GDErrorAlertMessage.emptyMobile)

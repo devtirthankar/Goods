@@ -5,17 +5,6 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="GDUserProfile" inverseName="login" inverseEntity="GDUserProfile" syncable="YES"/>
     </entity>
-    <entity name="GDProduct" representedClassName="GDProduct" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="productdescription" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="productid" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="GDStore" representedClassName="GDStore" syncable="YES">
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="storedescription" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="storeid" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="GDUserProfile" representedClassName="GDUserProfile" syncable="YES">
         <attribute name="countrycode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="mobile" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -24,8 +13,6 @@
     </entity>
     <elements>
         <element name="GDLogin" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="GDStore" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="GDUserProfile" positionX="-54" positionY="-9" width="128" height="105"/>
-        <element name="GDProduct" positionX="-63" positionY="36" width="128" height="90"/>
     </elements>
 </model>

@@ -9,6 +9,45 @@
 import Foundation
 import Alamofire
 
+struct Products: Decodable {
+    let result: [Product]
+}
+
+struct Product: Decodable {
+    let price: Float32?
+    let productcategory: ProductCategory?
+    let productdescription: String?
+    let productid: Int64
+    let productimages: [ProductImage]?
+    let productname: String?
+    let productnamear: String?
+    let productstatus: ProductStatus?
+    let quantity: Int32?
+    let serialnumber: String?
+    let storeInfo: StoreInfo?
+}
+
+struct ProductCategory: Decodable {
+    let productcategoryname: String
+    let productcategorynamear: String
+}
+
+struct ProductImage: Decodable {
+    let imgpath: URL
+}
+
+struct ProductStatus: Decodable {
+    let productstatusname: String
+    let productstatusnamear: String
+}
+
+struct StoreInfo: Decodable {
+    let delivery: Bool
+    let storeid: Int64
+    let storename: String
+    let storenamear: String
+}
+
 class GDWebServiceProductRequest: GDWebServiceRequest {
     
     override init(manager: GDWebServiceManager, block : @escaping GDWSCompletionBlock) {
@@ -18,22 +57,33 @@ class GDWebServiceProductRequest: GDWebServiceRequest {
         headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
     
-    override func responseSuccess(data: Any?) {
-        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDProduct")
-        var products = [GDProduct]()
-        if let json = data as? [String: Any]{
-            if let list = json["result"] as? [[String: Any]]{
-                let moc = GDStorage.sharedStorage.moc
-                moc?.performAndWait {
-                    for info in list {
-                        let product = GDProduct.init(dictionary: info, moc: moc)
-                        products.append(product)
-                    }
-                }
-            }
-            GDStorage.sharedStorage.saveMOCToStorage()
+    override func responseSuccess(data: Data?) {
+        guard let data = data else {
+            print("No product data")
+            return
         }
-        super.responseSuccess(data: products)
+        
+        guard let product = try? JSONDecoder().decode(Products.self, from: data ) else {
+            print("Error: Couldn't decode data into Product")
+            return
+        }
+        
+        print("Product :" + "\(product.result) ")
+//        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDProduct")
+//        var products = [GDProduct]()
+//        if let json = data as? [String: Any]{
+//            if let list = json["result"] as? [[String: Any]]{
+//                let moc = GDStorage.sharedStorage.moc
+//                moc?.performAndWait {
+//                    for info in list {
+//                        let product = GDProduct.init(dictionary: info, moc: moc)
+//                        products.append(product)
+//                    }
+//                }
+//            }
+//            GDStorage.sharedStorage.saveMOCToStorage()
+//        }
+//        super.responseSuccess(data: products)
     }
     
     /*

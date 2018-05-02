@@ -44,18 +44,30 @@ class GDWSLoginRequest: GDWebServiceRequest {
         
     }
     
-    override func responseSuccess(data: Any?) {
-        var loginInfo: GDLogin?
-        if let json = data as? [String: Any]{
-            if let info = json["result"] as? [String: Any] {
-                let moc = GDStorage.sharedStorage.moc
-                moc?.performAndWait {
-                    loginInfo = GDLogin(dictionary: info, moc: moc)
-                }
-                GDStorage.sharedStorage.saveMOCToStorage()
-            }
+    override func responseSuccess(data: Data?) {
+        guard let data = data else {
+            return
         }
-        super.responseSuccess(data: loginInfo)
+        var json = [String: Any]()
+        do {
+            json = (try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any])!
+            
+        } catch {
+            print("Something went wrong")
+        }
+        print("\(json)")
+        
+        var loginInfo: GDLogin?
+        //if let json = data as? [String: Any]{
+        if let info = json["result"] as? [String: Any] {
+            let moc = GDStorage.sharedStorage.moc
+            moc?.performAndWait {
+                loginInfo = GDLogin(dictionary: info, moc: moc)
+            }
+            GDStorage.sharedStorage.saveMOCToStorage()
+        }
+        //}
+        super.responseSuccess(data: data)
     }
 }
 
@@ -69,7 +81,7 @@ class GDOTPValidationRequest: GDWebServiceRequest {
         url = manager.baseURL + GDWebServiceURLEndPoints.login
         
         body?["code"] = otp
-        body?["uuid"] = ""
+        body?["uuid"] = GDLogin.loggedInUser()?.uuid
     }
     
 }
