@@ -134,7 +134,7 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.83137254901960778" green="0.90196078431372551" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="787-CF-7l3" firstAttribute="top" secondItem="b09-sa-UJD" secondAttribute="top" id="Acx-IW-545"/>
                 <constraint firstAttribute="trailing" secondItem="gtx-ES-xTG" secondAttribute="trailing" constant="8" id="Oxz-rK-7G3"/>

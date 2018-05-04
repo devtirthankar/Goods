@@ -18,6 +18,7 @@ class GDStoreContainerCell: UICollectionViewCell, UICollectionViewDelegate, UICo
     var delegate: GDStoreContainerCellDelegate?
     
     let cellReuseIdentifier = "GDStoreThumbnailCell"
+    var stores = [Store]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +29,13 @@ class GDStoreContainerCell: UICollectionViewCell, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 8
+        return stores.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
+        let store: Store = stores[indexPath.row]
         let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreThumbnailCell
-        let imageName = "StoreThmb\(indexPath.row + 1).png"
-        cell.thumbImageView.image = UIImage.init(named:imageName)
+        cell.titleLabel.text = store.storename
         return cell
     }
     
@@ -74,6 +74,4 @@ class GDStoreContainerCell: UICollectionViewCell, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectStoreAtIndexPath(indexPath)
     }
-
-
 }

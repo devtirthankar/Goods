@@ -63,33 +63,15 @@ class GDWebServiceStoreRequest: GDWebServiceRequest {
         url = manager.baseURL + GDWebServiceURLEndPoints.stores
         headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
-    
-    override func responseSuccess(data: Data?) {
-        guard let data = data else {
-            print("No product data")
-            return
-        }
-        
-        guard let stores = try? JSONDecoder().decode(Stores.self, from: data) else {
-            print("Error: Couldn't decode data into Product")
-            return
-        }
-        print("\(stores.result)")
-        /*--New
-        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDStore")
-        var stores = [GDStore]()
-        if let json = data as? [String: Any]{
-            if let list = json["result"] as? [[String: Any]]{
-                let moc = GDStorage.sharedStorage.moc
-                moc?.performAndWait {
-                    for info in list {
-                        let store = GDStore.init(dictionary: info, moc: moc)
-                        stores.append(store)
-                    }
-                }
-            }
-            GDStorage.sharedStorage.saveMOCToStorage()
-        }
-        super.responseSuccess(data: stores)*/
+}
+
+class GDWebServiceStoresNearYouRequest: GDWebServiceRequest {
+    init(manager: GDWebServiceManager, latitude: Double, longitude: Double, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.post
+        url = manager.baseURL + GDWebServiceURLEndPoints.stores
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        body?["lat"] = latitude
+        body?["lng"] = longitude
     }
 }

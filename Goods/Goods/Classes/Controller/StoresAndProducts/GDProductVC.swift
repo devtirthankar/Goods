@@ -16,10 +16,8 @@ class GDProductVC: GDBaseVC {
     let reuseIdentifierHeaderBanner = "GDProductBannerHeader"
     let reuseIdentifierCellAction = "GDProductActionCell"
     
-    let descrptionText = "One of the finest places to dine A book shop that would give you the word of information. The store has provision for people to sit there and read books and you can buy if you like a few. You get varities of fruits and veggies copared to other shops and the freshness of the products would make you a loyal customer in no time. The best jeweller who provides attractive discounts and EMI options as well. The best branded paints and painting services. One of the finest places to dine. A book shop that would give you the word of information. The store has provision for people to sit there and read books and you can buy if you like a few. You get varities of fruits and veggies copared to other shops and the freshness of the products would make you a loyal customer in no time."
-    
-    /*let descrptionText = "d dcidc cdhcd dciuhdc cuhdmcuidc diuchdmic diuhcdjc duhmdc dviufhvmifv fuvh fvifhv fvuifhviurthg efopgiyer giuerg rejngeufg weuhv wev ieouwg irue gureiwhg vjwuhvu wuiwh viurwv rwiuhv rwibvn oiu nifn...."*/
-    
+    var product: Product! = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
@@ -37,14 +35,14 @@ class GDProductVC: GDBaseVC {
 
 extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        
         return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         if indexPath.row == 0 {
             let cell: GDProductDescriptionCell = _collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierCellDescription, for: indexPath) as! GDProductDescriptionCell
-            cell.descriptionLabel.text = descrptionText
+            cell.descriptionLabel.text = product.productdescription ?? ""
+            cell.priceLabel.text = product.price?.description ?? ""
             return cell
         }
         
@@ -56,13 +54,12 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
             if let cell = GDProductDescriptionCell.fromNib() {
-                
-                cell.descriptionLabel.text = descrptionText
+                cell.descriptionLabel.text = product.productdescription ?? ""
                 let preferredSize = cell.preferredLayoutSizeFittingWidth(targetWidth: _collectionView.frame.size.width - 6)
                 return preferredSize
             }
         }
-        return CGSize.init(width: _collectionView.frame.size.width, height: 200.0)
+        return CGSize.init(width: _collectionView.frame.size.width, height: 250.0)
     }
     
     

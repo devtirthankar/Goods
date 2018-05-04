@@ -31,7 +31,7 @@ class GDLocationManager: NSObject, CLLocationManagerDelegate {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.distanceFilter = 5//kCLDistanceFilterNone
+        locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {

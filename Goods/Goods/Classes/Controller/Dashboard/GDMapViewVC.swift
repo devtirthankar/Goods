@@ -9,9 +9,10 @@
 import UIKit
 import GoogleMaps
 
-class GDMapViewVC: GDBaseVC {
+class GDMapViewVC: GDBaseVC, GMSMapViewDelegate {
     
     @IBOutlet weak var _mapView: GMSMapView!
+    var stores = [Store]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,9 @@ class GDMapViewVC: GDBaseVC {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // Dispose of any resources that can be recreated.
-        recenterMap()
+        _mapView.delegate = self
+        fetchStores()
+        //recenterMap()
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton){
@@ -34,35 +37,64 @@ class GDMapViewVC: GDBaseVC {
     
     func recenterMap() {
         
-        var latitude = 0.0
-        var longitude = 0.0
+        var latitude = 17.336840183595562
+        var longitude = 78.57341475784779
         
         if let userlocation = GDLocationManager.sharedManager.userLocation {
             latitude = userlocation.coordinate.latitude
             longitude = userlocation.coordinate.longitude
-            placeMarkerOnMap(latitude: latitude, longitude: longitude)
         }
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 15.5)
         _mapView.animate(to: camera)
     }
     
-    func placeMarkerOnMap(latitude: Double, longitude: Double) {
+    func placeMarkerOnMap() {
         
-        let markerView = UINib(nibName: "GDMarkerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GDMarkerView
-        markerView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        for store in stores {
+            let str = store as Store
+            if let addresses = str.addresses {
+                for address in addresses {
+                    let lat = address.lat
+                    let lng = address.lng
+                    let markerView = UINib(nibName: "GDMarkerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GDMarkerView
+                    markerView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+                    
+                    markerView.markerImage.image = markerView.markerImage.image!.withRenderingMode(.alwaysTemplate)
+                    markerView.markerImage.tintColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)
+                    
+                    let position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                    
+                    let marker = GMSMarker(position: position)
+                    marker.iconView = markerView
+                    marker.title = str.storename
+                    marker.tracksViewChanges = true
+                    marker.map = _mapView
+                }
+            }
+        }
         
-        markerView.markerImage.image = markerView.markerImage.image!.withRenderingMode(.alwaysTemplate)
-        markerView.markerImage.tintColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)
         
-        let position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        let marker = GMSMarker(position: position)
-        marker.iconView = markerView
-        marker.title = "Shop name"
-        marker.tracksViewChanges = true
-        marker.map = _mapView
     }
     
-
+    //MARK: Fetch Data
+    func fetchStores() {
+        GDWebServiceManager.sharedManager.getStores(block: {[weak self](response, error) in
+            DispatchQueue.main.async {
+                guard let data = response as? Data else {
+                    print("No product data")
+                    return
+                }
+                
+                guard let storelist = try? JSONDecoder().decode(Stores.self, from: data) else {
+                    print("Error: Couldn't decode data into Stores")
+                    return
+                }
+                for item in storelist.result {
+                    self?.stores.append(item)
+                }
+                self?.placeMarkerOnMap()
+            }
+        })
+    }
 }

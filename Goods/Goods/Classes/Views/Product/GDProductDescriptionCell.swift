@@ -12,6 +12,7 @@ class GDProductDescriptionCell: UICollectionViewCell {
 
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var priceTextLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
     override func awakeFromNib() {

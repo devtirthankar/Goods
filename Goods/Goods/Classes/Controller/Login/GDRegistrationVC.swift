@@ -37,7 +37,8 @@ class GDRegistrationVC: GDBaseVC {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: _countryCode.text!, usertype: _userType.text!)
+        registraionSucessfull()
+        //registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: _countryCode.text!, usertype: _userType.text!)
     }
 }
 
@@ -49,6 +50,8 @@ extension GDRegistrationVC: GDRegistrationVMDelegate {
     
     func registraionSucessfull() {
         //Open OTP screen
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDOTPVC")
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
     
     func registraionError(_ message: String) {

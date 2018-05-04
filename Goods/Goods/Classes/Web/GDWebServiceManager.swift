@@ -16,6 +16,9 @@ enum GDWebServiceURLEndPoints{
     static let otp = "otp"
     static let stores = "stores"
     static let products = "products"
+    static let rating = "rating"
+    static let orders = "orders"
+    static let placeorders = "order"
     static let productsbystore = "/productsbystore"
     static let productsbyid = "/productsbyid"
     static let productsbyrating = "/productsbyrating"
@@ -48,11 +51,11 @@ class GDWebServiceManager: NSObject {
     }
     
     func closeService(service : GDWebServiceRequest?){
-        guard service != nil else{
+        guard let ser = service else{
             return
         }
-        if self.serviceArray.contains(service!) == true{
-            self.serviceArray.remove(object: service!)
+        if self.serviceArray.contains(ser) == true{
+            self.serviceArray.remove(object: ser)
         }
         print("service pending = \(self.serviceArray.count)")
     }
@@ -71,13 +74,38 @@ extension GDWebServiceManager{
         self.startRequest(service: service)
     }
     
+    func validateOTP(otp: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDOTPValidationRequest(manager: self, otp: otp, block: block)
+        self.startRequest(service: service)
+    }
+    
     func getStores(block : @escaping GDWSCompletionBlock) {
         let service = GDWebServiceStoreRequest.init(manager: self, block: block)
         self.startRequest(service: service)
     }
     
+    func getStoresNearYou(latitude: Double, longitude: Double, block : @escaping GDWSCompletionBlock) {
+        let service = GDWebServiceStoresNearYouRequest(manager: self, latitude: latitude, longitude: longitude, block: block)
+        self.startRequest(service: service)
+    }
+    
     func getProducts(block : @escaping GDWSCompletionBlock) {
         let service = GDWebServiceProductRequest.init(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func getOrders(block : @escaping GDWSCompletionBlock) {
+        let service = GDWebServiceOrderRequest(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func placeOrder(productid: Int64, quantity: Int, block : @escaping GDWSCompletionBlock) {
+        let service = GDWebServicePlaceOrderRequest(manager: self, productid: productid, quantity: quantity, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func rateProduct(productid: Int64, rating: Float, block : @escaping GDWSCompletionBlock) {
+        let service = GDWebServiceRateProductRequest(manager: self, rating: rating, productId: productid, block: block)
         self.startRequest(service: service)
     }
 }

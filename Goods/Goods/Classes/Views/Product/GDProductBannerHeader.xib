@@ -22,7 +22,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXC-yz-eA7">
                             <rect key="frame" x="0.0" y="0.0" width="960" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prod9.png" translatesAutoresizingMaskIntoConstraints="NO" id="yYX-mN-gux">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="yYX-mN-gux">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prod8.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jj0-os-de6">
@@ -70,6 +70,6 @@
     <resources>
         <image name="Prod7.png" width="344" height="332"/>
         <image name="Prod8.png" width="324" height="399"/>
-        <image name="Prod9.png" width="536" height="446"/>
+        <image name="bannerPlaceholder" width="321" height="232"/>
     </resources>
 </document>

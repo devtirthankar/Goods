@@ -33,6 +33,7 @@ class GDSignInVC: GDBaseVC {
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
+        GDLocationManager.sharedManager
         bringUpDashboard()
         return
         let _ = GDLocationManager.sharedManager

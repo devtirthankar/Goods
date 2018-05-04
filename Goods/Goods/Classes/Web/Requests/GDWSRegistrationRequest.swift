@@ -75,11 +75,8 @@ class GDOTPValidationRequest: GDWebServiceRequest {
     
     init(manager: GDWebServiceManager, otp: String, block: @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
-        
         httpMethod = HTTPMethod.post
-        
         url = manager.baseURL + GDWebServiceURLEndPoints.login
-        
         body?["code"] = otp
         body?["uuid"] = GDLogin.loggedInUser()?.uuid
     }

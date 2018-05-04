@@ -13,7 +13,7 @@ struct Products: Decodable {
     let result: [Product]
 }
 
-struct Product: Decodable {
+struct Product: Decodable, Equatable {
     let price: Float32?
     let productcategory: ProductCategory?
     let productdescription: String?
@@ -25,6 +25,10 @@ struct Product: Decodable {
     let quantity: Int32?
     let serialnumber: String?
     let storeInfo: StoreInfo?
+    
+    static func ==(lhs: Product, rhs: Product) -> Bool {
+        return lhs.productid == rhs.productid
+    }
 }
 
 struct ProductCategory: Decodable {
@@ -56,57 +60,18 @@ class GDWebServiceProductRequest: GDWebServiceRequest {
         url = manager.baseURL + GDWebServiceURLEndPoints.products
         headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
+}
+
+class GDWebServiceRateProductRequest: GDWebServiceRequest {
     
-    override func responseSuccess(data: Data?) {
-        guard let data = data else {
-            print("No product data")
-            return
-        }
-        
-        guard let product = try? JSONDecoder().decode(Products.self, from: data ) else {
-            print("Error: Couldn't decode data into Product")
-            return
-        }
-        
-        print("Product :" + "\(product.result) ")
-//        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDProduct")
-//        var products = [GDProduct]()
-//        if let json = data as? [String: Any]{
-//            if let list = json["result"] as? [[String: Any]]{
-//                let moc = GDStorage.sharedStorage.moc
-//                moc?.performAndWait {
-//                    for info in list {
-//                        let product = GDProduct.init(dictionary: info, moc: moc)
-//                        products.append(product)
-//                    }
-//                }
-//            }
-//            GDStorage.sharedStorage.saveMOCToStorage()
-//        }
-//        super.responseSuccess(data: products)
-    }
-    
-    /*
-    //products by store
-    init(manager: GDWebServiceManager, storeId: Int64, block : @escaping GDWSCompletionBlock) {
+    init(manager: GDWebServiceManager, rating: Float, productId: Int64, block : @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
-        httpMethod = HTTPMethod.get
-        url = manager.baseURL + GDWebServiceURLEndPoints.productsbystore + "/\(storeId)"
+        httpMethod = HTTPMethod.post
+        url = manager.baseURL + GDWebServiceURLEndPoints.rating
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        body?["rating"] = rating
+        body?["productid"] = productId
     }
-    
-    //products by id
-    init(manager: GDWebServiceManager, productId: Int64, block : @escaping GDWSCompletionBlock) {
-        super.init(manager: manager, block: block)
-        httpMethod = HTTPMethod.get
-        url = manager.baseURL + GDWebServiceURLEndPoints.productsbyid + "/\(productId)"
-    }
-    
-    //products by rating
-    init(manager: GDWebServiceManager, rating: Float, block : @escaping GDWSCompletionBlock) {
-        super.init(manager: manager, block: block)
-        httpMethod = HTTPMethod.get
-        url = manager.baseURL + GDWebServiceURLEndPoints.productsbyrating + "/\(rating)"
-    }
- */
     
 }
+

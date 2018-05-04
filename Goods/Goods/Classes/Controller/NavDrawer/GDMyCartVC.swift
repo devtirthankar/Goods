@@ -53,7 +53,6 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
         return 5
@@ -68,18 +67,10 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         return cell;
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width =  _collectionView.frame.size.width
         let height = CGFloat(125.0)//width * 0.5//(3 / 4)
         return CGSize.init(width: width, height: height)
     }
     
-    
-//    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        let edgeInset = UIEdgeInsets.init(top: 3, left: 3, bottom: 3, right: 3)
-//        return edgeInset
-//    }
-
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,16 +27,16 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG0-o7-rSy">
                         <rect key="frame" x="4" y="4" width="192" height="94"/>
                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97c-Zz-Piy">
-                        <rect key="frame" x="4" y="106" width="192" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97c-Zz-Piy">
+                        <rect key="frame" x="85.5" y="106" width="110.5" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="K4U-sr-eYb"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate for the product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-V7-46g">
@@ -44,7 +45,16 @@
                             <constraint firstAttribute="height" constant="16" id="28e-iC-VY9"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m5-TD-hJ4">
+                        <rect key="frame" x="4" y="106" width="73.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="mKw-Zu-QW6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -53,7 +63,10 @@
                 <constraint firstAttribute="trailing" secondItem="NG0-o7-rSy" secondAttribute="trailing" constant="4" id="3Ik-Ts-JpQ"/>
                 <constraint firstAttribute="trailing" secondItem="97c-Zz-Piy" secondAttribute="trailing" constant="4" id="7VU-ol-HU8"/>
                 <constraint firstAttribute="bottom" secondItem="Ncd-V7-46g" secondAttribute="bottom" constant="4" id="9JX-nD-qn5"/>
-                <constraint firstItem="97c-Zz-Piy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Slp-qa-lr4"/>
+                <constraint firstItem="4m5-TD-hJ4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="BT2-F5-SQc"/>
+                <constraint firstItem="97c-Zz-Piy" firstAttribute="width" secondItem="4m5-TD-hJ4" secondAttribute="width" multiplier="1.5" id="M9l-0h-jHm"/>
+                <constraint firstItem="97c-Zz-Piy" firstAttribute="leading" secondItem="4m5-TD-hJ4" secondAttribute="trailing" constant="8" id="NTw-2r-JKc"/>
+                <constraint firstItem="97c-Zz-Piy" firstAttribute="centerY" secondItem="4m5-TD-hJ4" secondAttribute="centerY" id="Vzl-Uo-9RW"/>
                 <constraint firstItem="97c-Zz-Piy" firstAttribute="top" secondItem="NG0-o7-rSy" secondAttribute="bottom" constant="8" id="XDG-os-Zca"/>
                 <constraint firstItem="NG0-o7-rSy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="a75-oa-Mnh"/>
                 <constraint firstAttribute="trailing" secondItem="Ncd-V7-46g" secondAttribute="trailing" constant="4" id="hqn-Pq-S7E"/>
@@ -64,6 +77,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="NG0-o7-rSy" id="g40-3o-D2K"/>
                 <outlet property="priceLabel" destination="97c-Zz-Piy" id="6W2-PU-xj4"/>
+                <outlet property="priceTextLabel" destination="4m5-TD-hJ4" id="IuE-jb-O7a"/>
                 <outlet property="ratingLabel" destination="Ncd-V7-46g" id="xC3-aE-5aS"/>
             </connections>
         </collectionViewCell>

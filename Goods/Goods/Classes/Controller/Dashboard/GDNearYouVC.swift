@@ -8,9 +8,11 @@
 
 import UIKit
 
-class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GDStoreContainerCellDelegate {
+class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GDStoreContainerCellDelegate, GDNearYouViewModelDelegate {
     
     @IBOutlet weak var _collectionView: UICollectionView!
+    
+    var nearYouViewModel = GDSNearYouViewModel()
     
     let cellReuseIdentifier = "GDStoreThumbnailCell"
     let headerReuseIdentifier = "GDNearYouSectionHeaderView"
@@ -20,6 +22,18 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         super.viewDidLoad()
         
         setColorForTitleViews()
+        
+        var userLatitude = 17.336840183595562
+        var userLongitude = 78.57341475784779
+        
+        if let currentLocation = GDLocationManager.sharedManager.userLocation {
+            userLatitude = currentLocation.coordinate.latitude
+            userLongitude = currentLocation.coordinate.longitude
+        }
+        
+        nearYouViewModel.fetchStores(latitude: userLatitude, longitude: userLongitude)
+        //nearYouViewModel.fetchTopStores(latitude: 17.336840183595562, longitude: 78.57341475784779)
+        nearYouViewModel.delegate = self
 
         // Do any additional setup after loading the view.
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -27,6 +41,7 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         _collectionView.register(UINib.init(nibName: headerReuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
         let layout = _collectionView.collectionViewLayout as? UICollectionViewFlowLayout 
         layout?.sectionHeadersPinToVisibleBounds = true
+        
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton){
@@ -45,20 +60,20 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         if section == 0 {
             return 1
         }
-        return 8
+        return nearYouViewModel.stores.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         if indexPath.section == 0 {
             let cell: GDStoreContainerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifierTopStore, for: indexPath) as! GDStoreContainerCell
+            cell.stores = nearYouViewModel.stores
             cell.delegate = self
             return cell
         }
-        
+        let store: Store = nearYouViewModel.stores[indexPath.row]
         let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreThumbnailCell
-        let imageName = "StoreThmb\(indexPath.row + 1).png"
-        cell.thumbImageView.image = UIImage.init(named:imageName)
+        cell.titleLabel.text = store.storename
         return cell
     }
     
@@ -133,6 +148,11 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
     //MARK: GDStoreContainerCellDelegate
     func didSelectStoreAtIndexPath(_ indexPath: IndexPath){
         bringUpStoreScreen()
+    }
+    
+    //MARK: GDNearYouViewModelDelegate
+    func didFetchData() {
+        _collectionView.reloadData()
     }
 
 }
