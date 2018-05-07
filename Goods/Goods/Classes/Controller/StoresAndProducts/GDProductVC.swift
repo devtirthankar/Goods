@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GDProductVC: GDBaseVC {
+class GDProductVC: GDBaseVC, GDProductActionCellDelegate {
     
     @IBOutlet weak var _collectionView: UICollectionView!
     
@@ -47,6 +47,7 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }
         
         let cell: GDProductActionCell = _collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierCellAction, for: indexPath) as! GDProductActionCell
+        cell.delegate = self
         return cell
     }
     
@@ -77,6 +78,11 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize.init(width: collectionView.frame.size.width, height: 200.0)
+    }
+    
+    func addProductToCart() {
+        GDCartManager.sharedManager.addProductToCart(product: product)
+        GDAlertAndLoader.showAlertMessage("Product added to cart")
     }
 }
 

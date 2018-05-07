@@ -48,7 +48,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoreThmb1.png" translatesAutoresizingMaskIntoConstraints="NO" id="69U-Kf-9f6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="69U-Kf-9f6">
                                 <rect key="frame" x="36" y="30.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="GIk-ha-eE1"/>
@@ -62,6 +62,9 @@
                                     <constraint firstAttribute="height" constant="25" id="OC7-TG-icv"/>
                                 </constraints>
                                 <state key="normal" image="cartMinus"/>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="b09-sa-UJD" eventType="touchUpInside" id="R83-Bg-oJW"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-qo-UAT">
                                 <rect key="frame" x="223" y="49" width="40" height="30"/>
@@ -80,6 +83,9 @@
                                     <constraint firstAttribute="width" constant="25" id="Tgr-Vf-GkX"/>
                                 </constraints>
                                 <state key="normal" image="cartPlus"/>
+                                <connections>
+                                    <action selector="plusButtonPressed:" destination="b09-sa-UJD" eventType="touchUpInside" id="GuH-1X-jX5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,9 +166,9 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="StoreThmb1.png" width="798" height="782"/>
         <image name="cartMinus" width="55" height="55"/>
         <image name="cartPlus" width="55" height="55"/>
         <image name="deleteCartItem" width="50" height="50"/>
+        <image name="thumbPlaceholder" width="100" height="100"/>
     </resources>
 </document>

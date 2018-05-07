@@ -9,26 +9,27 @@
 import Foundation
 import UIKit
 
+protocol GDMyCartItemCellDelegate {
+    func increaseCartValue(price: Float)
+    func decreaseCartValue(price: Float)
+}
+
 class GDMyCartItemCell: UICollectionViewCell {
     
     @IBOutlet weak var _serialNumber: UILabel!
     @IBOutlet weak var _productName: UILabel!
     @IBOutlet weak var _price: UILabel!
-    
     @IBOutlet weak var _serialNoView: UIView!
     @IBOutlet weak var _cellContainerView: UIView!
     @IBOutlet weak var _quantity: UITextField!
-    
     @IBOutlet weak var _deleteButton: UIButton!
     @IBOutlet weak var _thumbImage: UIImageView!
+    var _noOfQuantity = 1
+    var delegate: GDMyCartItemCellDelegate?
+    var product: Product! = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        _deleteButton.layer.cornerRadius = _deleteButton.frame.height * 0.5
-//        _deleteButton.layer.borderWidth = 1.0
-//        _deleteButton.layer.borderColor = UIColor.colorForHex(GDColor.ThemeColor as NSString).cgColor//UIColor.init(colorLiteralRed: 41.0/256.0, green: 190.0/256.0, blue: 136.0/256.0, alpha: 1.0).cgColor
-//        _deleteButton.setTitleColor(UIColor.colorForHex(GDColor.ThemeColor as NSString), for: .normal)
         _cellContainerView.layer.cornerRadius = 10.0
         _cellContainerView.clipsToBounds = true
         
@@ -39,6 +40,26 @@ class GDMyCartItemCell: UICollectionViewCell {
         _serialNoView.layer.borderColor = UIColor.colorForHex(GDColor.GreyDark as NSString).cgColor
         
         _thumbImage.layer.cornerRadius = 20.0
+    }
+    
+    func configureProduct(product: Product) {
+        self.product = product
+        _productName.text = product.productname
+        _price.text = product.price?.description
+    }
+    
+    @IBAction func plusButtonPressed(_ sender: UIButton) {
+        _noOfQuantity = _noOfQuantity + 1
+        _quantity.text = "\(_noOfQuantity)"
+        self.delegate?.increaseCartValue(price: product.price!)
+    }
+    
+    @IBAction func minusButtonPressed(_ sender: UIButton) {
+        if _noOfQuantity > 1 {
+            _noOfQuantity = _noOfQuantity - 1
+            _quantity.text = "\(_noOfQuantity)"
+            self.delegate?.decreaseCartValue(price: product.price!)
+        }
     }
     
 }

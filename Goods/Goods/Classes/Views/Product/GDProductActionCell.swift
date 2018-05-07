@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol GDProductActionCellDelegate {
+    func addProductToCart()
+}
+
 class GDProductActionCell: UICollectionViewCell {
     
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var gotoStoreButton: UIButton!
     @IBOutlet weak var visitStoreButton: UIButton!
     @IBOutlet weak var contactStoreButton: UIButton!
+    var delegate: GDProductActionCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +46,10 @@ class GDProductActionCell: UICollectionViewCell {
         buttonLayer.cornerRadius = addToCartButton.frame.height * 0.5
         buttonLayer.borderWidth = 1.0
         buttonLayer.borderColor = UIColor.colorForHex(GDColor.ThemeColor as NSString).cgColor
+    }
+    
+    @IBAction func addToCartButtonPressed(_ sender: UIButton){
+        self.delegate?.addProductToCart()
     }
 
 }

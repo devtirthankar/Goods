@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class GDWebServiceOrderRequest: GDWebServiceRequest {
-    
     override init(manager: GDWebServiceManager, block : @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.get
@@ -19,8 +18,8 @@ class GDWebServiceOrderRequest: GDWebServiceRequest {
     }
 }
 
+//This places the user order over the web
 class GDWebServicePlaceOrderRequest: GDWebServiceRequest {
-    
     init(manager: GDWebServiceManager, productid: Int64, quantity: Int, block : @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.post

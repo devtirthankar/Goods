@@ -348,6 +348,9 @@
                                         <state key="normal" title="Proceed To Ckeckout">
                                             <color key="titleColor" red="0.5568627451" green="0.7725490196" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="checkoutButtonPressed:" destination="bNQ-cI-vCP" eventType="touchUpInside" id="o7Q-rU-89b"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIi-rN-bPV">
                                         <rect key="frame" x="54" y="105" width="235" height="30"/>
@@ -360,6 +363,9 @@
                                         <state key="normal" title="Continue Shopping">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="continueShoppingButtonPressed:" destination="bNQ-cI-vCP" eventType="touchUpInside" id="5vg-H9-Xuw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -396,6 +402,7 @@
                         <outlet property="_collectionView" destination="SbX-kJ-TtJ" id="l43-C4-v7X"/>
                         <outlet property="_continueShoppingBttn" destination="tIi-rN-bPV" id="rQX-sC-HZ1"/>
                         <outlet property="_proceedToCheckoutBttn" destination="gUe-0k-cYu" id="btI-kT-5SA"/>
+                        <outlet property="_totalPriceLabel" destination="dSq-UP-Ry5" id="5DY-Qg-Nee"/>
                         <outletCollection property="_themeView" destination="AfE-Kf-v2f" collectionClass="NSMutableArray" id="nGs-lN-28O"/>
                         <outletCollection property="_themeView" destination="tIi-rN-bPV" collectionClass="NSMutableArray" id="LLL-9z-hbE"/>
                     </connections>

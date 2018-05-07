@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
-class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GDMyCartItemCellDelegate {
     
     @IBOutlet weak var _collectionView: UICollectionView!
     @IBOutlet weak var _continueShoppingBttn: UIButton!
     @IBOutlet weak var _proceedToCheckoutBttn: UIButton!
     @IBOutlet weak var _cartSummeryView: UIView!
+    @IBOutlet weak var _totalPriceLabel: UILabel!
+    var _totalPrice = Float(0.0)
     
     let cellReuseIdentifier = "GDMyCartItemCell"
     
@@ -42,6 +44,15 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         layer.shadowOpacity = 0.5
         _cartSummeryView.clipsToBounds = false
         
+        updateCartPrice()
+    }
+    
+    func updateCartPrice() {
+        for item in GDCartManager.sharedManager.cart {
+            let price = item.price
+            _totalPrice = _totalPrice + price!
+        }
+        _totalPriceLabel.text = "\(_totalPrice)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,17 +64,24 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func checkoutButtonPressed(_ sender: UIButton) {
+        //Make API call here
+    }
+    @IBAction func continueShoppingButtonPressed(_ sender: UIButton) {
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        return 5
+        return GDCartManager.sharedManager.cart.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         
         let cell: GDMyCartItemCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDMyCartItemCell
+        cell.delegate = self
         let serailNo = indexPath.row + 1
         cell._serialNumber.text = "\(serailNo)"
+        cell.configureProduct(product: GDCartManager.sharedManager.cart[indexPath.row])
         return cell;
     }
     
@@ -71,6 +89,15 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         let width =  _collectionView.frame.size.width
         let height = CGFloat(125.0)//width * 0.5//(3 / 4)
         return CGSize.init(width: width, height: height)
+    }
+    
+    func increaseCartValue(price: Float) {
+        _totalPrice = _totalPrice + price
+        _totalPriceLabel.text = "\(_totalPrice)"
+    }
+    func decreaseCartValue(price: Float) {
+        _totalPrice = _totalPrice - price
+        _totalPriceLabel.text = "\(_totalPrice)"
     }
     
 }
