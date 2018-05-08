@@ -62,6 +62,16 @@ class GDWebServiceProductRequest: GDWebServiceRequest {
     }
 }
 
+class GDWSProductsForStoreRequest: GDWebServiceRequest {
+    init(manager: GDWebServiceManager, storeId: Int64, block : @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.get
+        url = manager.baseURL + "store/" + "\(storeId)/" + "products"
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+    }
+}
+
+
 class GDWebServiceRateProductRequest: GDWebServiceRequest {
     
     init(manager: GDWebServiceManager, rating: Float, productId: Int64, block : @escaping GDWSCompletionBlock) {

@@ -51,8 +51,6 @@ class GDRegistrationVM: NSObject {
             //if validation successfull, call register api
             registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype)
         }
-        
-        
     }
     
     private func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String) {

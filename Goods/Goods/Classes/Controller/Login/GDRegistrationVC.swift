@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GDRegistrationVC: GDBaseVC {
+class GDRegistrationVC: GDBaseVC, GDDropDownViewDelegate {
     
     @IBOutlet weak var _registrationBtton: UIButton!
     @IBOutlet weak var _name: UITextField!
@@ -19,6 +19,8 @@ class GDRegistrationVC: GDBaseVC {
     @IBOutlet weak var _phone: UITextField!
     @IBOutlet weak var _countryCode: UITextField!
     @IBOutlet weak var _userType: UITextField!
+    var _categoryView : GDDropDownView!
+    var _transparentView : UIView!
     
     private var registrationVM: GDRegistrationVM?
     
@@ -30,15 +32,20 @@ class GDRegistrationVC: GDBaseVC {
         
         _registrationBtton.layer.cornerRadius = _registrationBtton.frame.height * 0.5
         registrationVM = GDRegistrationVM.init(delegate: self)
+        
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func countryCodeButtonPressed(_ sender: UIButton) {
+        
+    }
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registraionSucessfull()
-        //registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: _countryCode.text!, usertype: _userType.text!)
+        //registraionSucessfull()
+        registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: _countryCode.text!, usertype: _userType.text!)
     }
 }
 
@@ -56,5 +63,28 @@ extension GDRegistrationVC: GDRegistrationVMDelegate {
     
     func registraionError(_ message: String) {
         GDAlertAndLoader.showAlertMessage(message)
+    }
+    
+    func addTransparentView() {
+        _transparentView = UIView();
+        _transparentView.backgroundColor = UIColor.black;
+        _transparentView.alpha = 0.6
+        _transparentView.frame = self.view.frame
+        
+        self.view.addSubview(_transparentView)
+    }
+    
+    //MARK: GODropDownViewDelegate
+    func donePressed() {
+        
+        if _transparentView != nil {
+            _transparentView.removeFromSuperview()
+            _transparentView = nil
+        }
+        
+        if _categoryView  != nil {
+            _categoryView.removeFromSuperview()
+            _categoryView = nil
+        }
     }
 }

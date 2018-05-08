@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 protocol GDStoreSegmentContainerCellDelegate{
-    
     func didSelectProductAtIndexPath(_ indexPath: IndexPath)
 }
 
@@ -21,11 +20,12 @@ class GDStoreSegmentContainerCell: UICollectionViewCell, UICollectionViewDelegat
     let cellProductIdentifier = "GDStoreThumbnailCell"
     let cellStoreIdentifier = "GDStoreReviewCell"
     var _selectedSegmentIndex = 0
+    var _storeId = Int64()
     var delegate: GDStoreSegmentContainerCellDelegate?
+    var productList = [Product]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func configureCollectionViewForSegment(segment: Int) {
@@ -47,7 +47,7 @@ class GDStoreSegmentContainerCell: UICollectionViewCell, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         if _selectedSegmentIndex == 0 {
-            return 18
+            return productList.count
         }
         else {
             return 8
@@ -57,15 +57,9 @@ class GDStoreSegmentContainerCell: UICollectionViewCell, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         if _selectedSegmentIndex == 0 {
+            let product: Product = productList[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
-            
-            var index = indexPath.row + 1
-            if index > 9 {
-                index = (index % 10) + 1
-            }
-            let imageName = "Prod\(index).png"
-            cell.thumbImageView.image = UIImage.init(named:imageName)
-            cell.titleLabel.text = "Product\(indexPath.row + 1)"
+            cell.titleLabel.text = product.productname
             return cell;
         }
         else {
@@ -120,4 +114,5 @@ class GDStoreSegmentContainerCell: UICollectionViewCell, UICollectionViewDelegat
         if _selectedSegmentIndex == 0 {
             delegate?.didSelectProductAtIndexPath(indexPath)
         }
-    }}
+    }
+}

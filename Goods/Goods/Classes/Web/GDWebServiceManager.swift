@@ -14,6 +14,7 @@ enum GDWebServiceURLEndPoints{
     static let registration = "register"
     static let login = "login"
     static let otp = "otp"
+    static let listCountries = "countries"
     static let stores = "stores"
     static let products = "products"
     static let rating = "rating"
@@ -69,13 +70,18 @@ extension GDWebServiceManager{
         self.startRequest(service: service)
     }
     
+    func listCountries(block : @escaping GDWSCompletionBlock) {
+        let service = GDWSCountryCodeRequest(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
     func loginUser(mobile: String, password: String, block : @escaping GDWSCompletionBlock) {
         let service = GDWSLoginRequest.init(manager: self, mobile: mobile, password: password, block: block)
         self.startRequest(service: service)
     }
     
     func validateOTP(otp: String, block : @escaping GDWSCompletionBlock) {
-        let service = GDOTPValidationRequest(manager: self, otp: otp, block: block)
+        let service = GDWSOTPValidationRequest(manager: self, otp: otp, block: block)
         self.startRequest(service: service)
     }
     
@@ -91,6 +97,11 @@ extension GDWebServiceManager{
     
     func getProducts(block : @escaping GDWSCompletionBlock) {
         let service = GDWebServiceProductRequest.init(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func getProductsForStore(storeId: Int64, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSProductsForStoreRequest(manager: self, storeId: storeId, block: block)
         self.startRequest(service: service)
     }
     

@@ -102,6 +102,7 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         }
         else {
             let store: Store = searchViewModel.stores[indexPath.row]
+            bringUpStoreScreen(store: store)
         }
     }
     

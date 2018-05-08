@@ -8,37 +8,33 @@
 
 import UIKit
 
-class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GDStoreSegmentHeaderDelegate, GDStoreSegmentContainerCellDelegate {
+class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GDStoreSegmentHeaderDelegate, GDStoreSegmentContainerCellDelegate, GDStoreViewModelDelegate {
     
     @IBOutlet weak var _collectionView: UICollectionView!
-
     let headerReuseIdentifierBanner = "GDStoreBannerHeader"
     let headerReuseIdentifierSegment = "GDStoreSegmentHeader"
     let cellReuseIdentifier = "GDStoreSegmentContainerCell"
     var selectedSegment = 0
     var store: Store! = nil
+    var storeViewModel = GDStoreViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
         // Do any additional setup after loading the view.
-        
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         _collectionView.register(UINib.init(nibName: headerReuseIdentifierBanner, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifierBanner)
         _collectionView.register(UINib.init(nibName: headerReuseIdentifierSegment, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifierSegment)
+        
+        storeViewModel.delegate = self
+        storeViewModel.fetchProductsForStore(storeId: store.storeid)
         
         let layout = _collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.sectionHeadersPinToVisibleBounds = true
         
         
-
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func backPressed(_ sender: UIButton) {
         _ = self.navigationController?.popViewController(animated: true)
     }
@@ -52,9 +48,10 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
-        
         let cell: GDStoreSegmentContainerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreSegmentContainerCell
+        if selectedSegment == 0 {
+            cell.productList = storeViewModel.products
+        }
         cell.configureCollectionViewForSegment(segment: selectedSegment)
         cell.delegate = self
         return cell
@@ -121,6 +118,11 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDProductVC")
         controller?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
+    //MARK: GDStoreViewModelDelegate
+    func didFetchData() {
+        _collectionView.reloadData()
     }
     
 }

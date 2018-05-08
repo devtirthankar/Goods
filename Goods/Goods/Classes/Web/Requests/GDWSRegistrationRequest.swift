@@ -71,8 +71,7 @@ class GDWSLoginRequest: GDWebServiceRequest {
     }
 }
 
-class GDOTPValidationRequest: GDWebServiceRequest {
-    
+class GDWSOTPValidationRequest: GDWebServiceRequest {
     init(manager: GDWebServiceManager, otp: String, block: @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.post
@@ -80,5 +79,12 @@ class GDOTPValidationRequest: GDWebServiceRequest {
         body?["code"] = otp
         body?["uuid"] = GDLogin.loggedInUser()?.uuid
     }
-    
+}
+
+class GDWSCountryCodeRequest: GDWebServiceRequest {
+    override init(manager: GDWebServiceManager, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.get
+        url = manager.baseURL + GDWebServiceURLEndPoints.listCountries
+    }
 }

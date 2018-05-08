@@ -133,13 +133,14 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section != 0 {
-            bringUpStoreScreen()
+            bringUpStoreScreen(indexPath: indexPath)
         }
     }
     
-    func bringUpStoreScreen() {
+    func bringUpStoreScreen(indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "GDStoreVC")
+        let controller = storyboard.instantiateViewController(withIdentifier: "GDStoreVC") as! GDStoreVC
+        controller.store = nearYouViewModel.stores[indexPath.row]
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true);
 
@@ -147,7 +148,7 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
     
     //MARK: GDStoreContainerCellDelegate
     func didSelectStoreAtIndexPath(_ indexPath: IndexPath){
-        bringUpStoreScreen()
+        bringUpStoreScreen(indexPath: indexPath)
     }
     
     //MARK: GDNearYouViewModelDelegate
