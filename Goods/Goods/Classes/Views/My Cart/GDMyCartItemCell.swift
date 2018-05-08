@@ -24,7 +24,7 @@ class GDMyCartItemCell: UICollectionViewCell {
     @IBOutlet weak var _quantity: UITextField!
     @IBOutlet weak var _deleteButton: UIButton!
     @IBOutlet weak var _thumbImage: UIImageView!
-    var _noOfQuantity = 1
+    var _noOfQuantity = Int()
     var delegate: GDMyCartItemCellDelegate?
     var product: Product! = nil
     
@@ -42,16 +42,19 @@ class GDMyCartItemCell: UICollectionViewCell {
         _thumbImage.layer.cornerRadius = 20.0
     }
     
-    func configureProduct(product: Product) {
-        self.product = product
+    func configureProduct(cartItem: CartItem) {
+        self.product = cartItem.product
         _productName.text = product.productname
         _price.text = product.price?.description
+        _noOfQuantity = cartItem.itemQuantity
+        _quantity.text = "\(_noOfQuantity)"
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
         _noOfQuantity = _noOfQuantity + 1
         _quantity.text = "\(_noOfQuantity)"
         self.delegate?.increaseCartValue(price: product.price!)
+        GDCartManager.sharedManager.updateProductQuantity(product: product, increaseItemCount: true)
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
@@ -59,6 +62,7 @@ class GDMyCartItemCell: UICollectionViewCell {
             _noOfQuantity = _noOfQuantity - 1
             _quantity.text = "\(_noOfQuantity)"
             self.delegate?.decreaseCartValue(price: product.price!)
+            GDCartManager.sharedManager.updateProductQuantity(product: product, increaseItemCount: false)
         }
     }
     

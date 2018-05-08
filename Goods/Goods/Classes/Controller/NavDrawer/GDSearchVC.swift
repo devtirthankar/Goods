@@ -100,6 +100,9 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
             let product: Product = searchViewModel.products[indexPath.row]
             bringUpProductScreen(product: product)
         }
+        else {
+            let store: Store = searchViewModel.stores[indexPath.row]
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -117,6 +120,13 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         controller.product = product
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true);
+    }
+    
+    func bringUpStoreScreen(store: Store) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDStoreVC") as! GDStoreVC
+        controller.store = store
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func didFetchData() {

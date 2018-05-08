@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoreThmb8.png" translatesAutoresizingMaskIntoConstraints="NO" id="rHz-fE-4iK">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rHz-fE-4iK">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 </imageView>
             </subviews>
@@ -31,6 +31,6 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="StoreThmb8.png" width="868" height="774"/>
+        <image name="bannerPlaceholder" width="321" height="232"/>
     </resources>
 </document>

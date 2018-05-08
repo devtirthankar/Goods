@@ -51,7 +51,6 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
             if let cell = GDProductDescriptionCell.fromNib() {
@@ -62,7 +61,6 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }
         return CGSize.init(width: _collectionView.frame.size.width, height: 250.0)
     }
-    
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
@@ -80,6 +78,7 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         return CGSize.init(width: collectionView.frame.size.width, height: 200.0)
     }
     
+    //MARK: GDProductActionCellDelegate
     func addProductToCart() {
         GDCartManager.sharedManager.addProductToCart(product: product)
         GDAlertAndLoader.showAlertMessage("Product added to cart")

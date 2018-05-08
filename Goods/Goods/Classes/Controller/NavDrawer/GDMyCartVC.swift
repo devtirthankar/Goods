@@ -49,8 +49,8 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     
     func updateCartPrice() {
         for item in GDCartManager.sharedManager.cart {
-            let price = item.price
-            _totalPrice = _totalPrice + price!
+            let price = item.product.price! * Float(item.itemQuantity)
+            _totalPrice = _totalPrice + price
         }
         _totalPriceLabel.text = "\(_totalPrice)"
     }
@@ -81,7 +81,8 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         cell.delegate = self
         let serailNo = indexPath.row + 1
         cell._serialNumber.text = "\(serailNo)"
-        cell.configureProduct(product: GDCartManager.sharedManager.cart[indexPath.row])
+        let newCartItem = GDCartManager.sharedManager.cart[indexPath.row]
+        cell.configureProduct(cartItem: newCartItem)
         return cell;
     }
     

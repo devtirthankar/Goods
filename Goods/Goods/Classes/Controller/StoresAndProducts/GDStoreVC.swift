@@ -16,7 +16,7 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
     let headerReuseIdentifierSegment = "GDStoreSegmentHeader"
     let cellReuseIdentifier = "GDStoreSegmentContainerCell"
     var selectedSegment = 0
-    
+    var store: Store! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

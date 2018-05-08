@@ -8,9 +8,17 @@
 
 import Foundation
 
+struct CartItem {
+    let product: Product
+    var itemQuantity: Int
+    mutating func increaseItemQuantity(number: Int) {
+        itemQuantity = number
+    }
+}
+
 class GDCartManager: NSObject {
     
-    var cart = [Product]()
+    var cart = [CartItem]()
     
     static let sharedManager: GDCartManager = {
         let instance = GDCartManager()
@@ -22,10 +30,47 @@ class GDCartManager: NSObject {
     }
     
     func addProductToCart(product: Product) {
-        cart.append(product)
+        
+        var isItemExisting = false
+        for index in 0..<cart.count {
+            let item = cart[index]
+            if item.product.productid == product.productid {
+                cart[index].itemQuantity += 1
+                isItemExisting = true
+            }
+        }
+        if isItemExisting == false {
+            let newItem = CartItem(product: product, itemQuantity: 1)
+            cart.append(newItem)
+        }
+        
     }
     
-    func removeProductFromCart(product: Product) {
-        cart.remove(object: product)
+    func removeProductFromCart(product: Product) -> Bool{
+        for index in 0..<cart.count {
+            let item = cart[index]
+            if item.product.productid == product.productid {
+                cart.remove(at: index)
+                return true
+            }
+        }
+        return false
+        //cart.remove(object: product)
+    }
+    
+    //Is called when + or - button is pressed
+    func updateProductQuantity(product: Product, increaseItemCount: Bool) {
+        for index in 0..<cart.count {
+            let item = cart[index]
+            if item.product.productid == product.productid {
+                if increaseItemCount == true {
+                    cart[index].itemQuantity += 1
+                } else {
+                    if cart[index].itemQuantity>1{
+                        cart[index].itemQuantity -= 1
+                    }
+                }
+            }
+        }
     }
 }

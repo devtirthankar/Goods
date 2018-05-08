@@ -15,11 +15,9 @@ protocol GDStoreThumbnailCellDelegate {
 
 class GDStoreThumbnailCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var overlayImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
     var delegate: GDStoreThumbnailCellDelegate?
     
     override func awakeFromNib() {
