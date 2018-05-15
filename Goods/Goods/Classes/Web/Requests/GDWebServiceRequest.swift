@@ -89,7 +89,7 @@ extension GDWebServiceRequest{
     
     func responseSuccess(data : Data?){
         
-        GDWebServiceManager.sharedManager.closeService(service: self)
+        //GDWebServiceManager.sharedManager.closeService(service: self)
         
         DispatchQueue.main.async {
             self.block(data,nil)

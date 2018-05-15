@@ -57,9 +57,12 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
             let product: Product = searchViewModel.products[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
             cell.titleLabel.text = product.productname
-            if let image = product.productimages?[0] {
-                let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
-                cell.loadThumbImage(url: imageURL)
+            if let images = product.productimages {
+                if images.count > 0 {
+                    let image = images[0]
+                    let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
+                    cell.loadThumbImage(url: imageURL)
+                }
             }
             return cell;
         }

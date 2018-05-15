@@ -75,6 +75,13 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
             header.loadThumbImage(url: imageURL)
         }
+        if let images = product.productimages {
+            if images.count > 0 {
+                let image = images[0]
+                let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
+                header.loadThumbImage(url: imageURL)
+            }
+        }
         return header
     }
     

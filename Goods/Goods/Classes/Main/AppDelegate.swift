@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        GMSServices.provideAPIKey("AIzaSyAixZt2Gq4ogzgIw5LEKIdhQgCc1wRxRMM")
-        GMSPlacesClient.provideAPIKey("AIzaSyAixZt2Gq4ogzgIw5LEKIdhQgCc1wRxRMM")
+        GMSServices.provideAPIKey("AIzaSyCWRKgXnnalWlhEcSA81S_wEAc0D9AQqCA")//("AIzaSyAixZt2Gq4ogzgIw5LEKIdhQgCc1wRxRMM")
+        GMSPlacesClient.provideAPIKey("AIzaSyCWRKgXnnalWlhEcSA81S_wEAc0D9AQqCA")//("AIzaSyAixZt2Gq4ogzgIw5LEKIdhQgCc1wRxRMM")
         IQKeyboardManager.sharedManager().enable = true
         GDStorage.sharedStorage.startCoreDataStack()
         return true

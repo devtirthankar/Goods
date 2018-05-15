@@ -37,7 +37,7 @@ struct ProductCategory: Decodable {
 }
 
 struct ProductImage: Decodable {
-    let imgpath: URL
+    let imgpath: String
 }
 
 struct ProductStatus: Decodable {

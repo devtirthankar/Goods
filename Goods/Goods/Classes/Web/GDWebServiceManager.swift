@@ -36,8 +36,8 @@ enum GDServerURL: String {
 
 class GDWebServiceManager: NSObject {
     var serviceArray = [GDWebServiceRequest]()
-    var baseURL = GDServerURL.development.rawValue
-    var baseImageURL = GDWebServiceURLEndPoints.imageurldevelopment
+    var baseURL = GDServerURL.production.rawValue
+    var baseImageURL = GDWebServiceURLEndPoints.imageurlproduction
     
     static let sharedManager : GDWebServiceManager = {
         let instance = GDWebServiceManager()

@@ -27,7 +27,7 @@ class GDMapViewVC: GDBaseVC, GMSMapViewDelegate {
         // Dispose of any resources that can be recreated.
         _mapView.delegate = self
         fetchStores()
-        //recenterMap()
+        recenterMap()
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton){
@@ -37,8 +37,8 @@ class GDMapViewVC: GDBaseVC, GMSMapViewDelegate {
     
     func recenterMap() {
         
-        var latitude = 17.336840183595562
-        var longitude = 78.57341475784779
+        var latitude = 21.510472500000017
+        var longitude = 39.16535546874998
         
         if let userlocation = GDLocationManager.sharedManager.userLocation {
             latitude = userlocation.coordinate.latitude

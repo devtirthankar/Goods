@@ -23,19 +23,17 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         
         setColorForTitleViews()
         
-        var userLatitude = 17.336840183595562
-        var userLongitude = 78.57341475784779
+        var userLatitude = 21.510472500000017
+        var userLongitude = 39.16535546874998
         
         if let currentLocation = GDLocationManager.sharedManager.userLocation {
             userLatitude = currentLocation.coordinate.latitude
             userLongitude = currentLocation.coordinate.longitude
         }
-        
-        nearYouViewModel.fetchStores(latitude: userLatitude, longitude: userLongitude)
-        //nearYouViewModel.fetchTopStores(latitude: 17.336840183595562, longitude: 78.57341475784779)
         nearYouViewModel.delegate = self
-
-        // Do any additional setup after loading the view.
+        nearYouViewModel.fetchStores(latitude: userLatitude, longitude: userLongitude)
+        nearYouViewModel.fetchTopStores(latitude: 17.336840183595562, longitude: 78.57341475784779)
+        
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         _collectionView.register(UINib.init(nibName: cellReuseIdentifierTopStore, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifierTopStore)
         _collectionView.register(UINib.init(nibName: headerReuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
@@ -74,6 +72,10 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         let store: Store = nearYouViewModel.stores[indexPath.row]
         let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreThumbnailCell
         cell.titleLabel.text = store.storename
+        if let imagepath = store.logo {
+            let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"
+            cell.loadThumbImage(url: imageURL)
+        }
         return cell
     }
     
