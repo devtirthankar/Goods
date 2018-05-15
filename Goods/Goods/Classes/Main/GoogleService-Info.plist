@@ -7,34 +7,36 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>363338991577-se75isea5c3677omkf1rlv7j57vv3qo9.apps.googleusercontent.com</string>
+	<string>19920187507-9j5t8cb9r6vkf0qnuv5q9mk3adrl5h6q.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.363338991577-se75isea5c3677omkf1rlv7j57vv3qo9</string>
+	<string>com.googleusercontent.apps.19920187507-9j5t8cb9r6vkf0qnuv5q9mk3adrl5h6q</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>19920187507-0ch0uorofj07mel4o0lt75tdg80htvuc.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCHn-jBD7uzqQqbe1UEcU0-Q44Ehg1SgbU</string>
+	<string>AIzaSyCWRKgXnnalWlhEcSA81S_wEAc0D9AQqCA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>363338991577</string>
+	<string>19920187507</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.demansoltech.wagrapp</string>
+	<string>com.mmit.goodscustomer</string>
 	<key>PROJECT_ID</key>
-	<string>testwagr</string>
+	<string>goods-dts</string>
 	<key>STORAGE_BUCKET</key>
-	<string>testwagr.appspot.com</string>
+	<string>goods-dts.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
 	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:363338991577:ios:79411e59088266f9</string>
+	<string>1:19920187507:ios:5900e2c0a04273c5</string>
 	<key>DATABASE_URL</key>
-	<string>https://testwagr.firebaseio.com</string>
+	<string>https://goods-dts.firebaseio.com</string>
 </dict>
 </plist>

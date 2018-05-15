@@ -46,15 +46,17 @@ class GDCartManager: NSObject {
         
     }
     
-    func removeProductFromCart(product: Product) -> Bool{
+    func removeProductFromCart(product: Product) -> (status: Bool, price: Float) {
+        var price = Float(0.0)
         for index in 0..<cart.count {
             let item = cart[index]
             if item.product.productid == product.productid {
+                price = product.price! * Float(item.itemQuantity)
                 cart.remove(at: index)
-                return true
+                return (true, price)
             }
         }
-        return false
+        return (false, price)
         //cart.remove(object: product)
     }
     

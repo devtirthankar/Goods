@@ -11,7 +11,7 @@ import Foundation
 typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 
 enum GDWebServiceURLEndPoints{
-    static let registration = "register"
+    static let registration = "user"
     static let login = "login"
     static let otp = "otp"
     static let listCountries = "countries"
@@ -55,18 +55,19 @@ class GDWebServiceManager: NSObject {
         guard let ser = service else{
             return
         }
+        /*
         if self.serviceArray.contains(ser) == true{
             self.serviceArray.remove(object: ser)
-        }
+        }*/
+        self.serviceArray.remove(object: ser)
         print("service pending = \(self.serviceArray.count)")
     }
-    
 }
 
 extension GDWebServiceManager{
     
-    func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String, block : @escaping GDWSCompletionBlock){
-        let service = GDWSRegistrationRequest.init(manager: self, name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype, block: block)
+    func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, block : @escaping GDWSCompletionBlock){
+        let service = GDWSRegistrationRequest.init(manager: self, name: name, email: email, password: password, phone: phone, countrycode: countrycode, block: block)
         self.startRequest(service: service)
     }
     

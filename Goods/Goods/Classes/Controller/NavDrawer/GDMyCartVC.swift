@@ -66,7 +66,23 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     
     @IBAction func checkoutButtonPressed(_ sender: UIButton) {
         //Make API call here
+        for item in GDCartManager.sharedManager.cart {
+            let productId = item.product.productid
+            let quantity = item.itemQuantity
+            GDWebServiceManager.sharedManager.placeOrder(productid: productId, quantity: quantity, block: {[weak self](response, error) in
+                if let err = error {
+                    //GDAlertAndLoader.showAlertMessage(err.localizedDescription)
+                    print("\(err.localizedDescription)")
+                }
+                else {
+                    print("\(GDMessage.selectCountry)")
+                    //GDAlertAndLoader.showAlertMessage(GDMessage.selectCountry)
+                }
+            })
+        }
+        
     }
+    
     @IBAction func continueShoppingButtonPressed(_ sender: UIButton) {
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -99,6 +115,11 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     func decreaseCartValue(price: Float) {
         _totalPrice = _totalPrice - price
         _totalPriceLabel.text = "\(_totalPrice)"
+    }
+    func removedItemFromCart(price: Float) {
+        _totalPrice = _totalPrice - price
+        _totalPriceLabel.text = "\(_totalPrice)"
+        _collectionView.reloadData()
     }
     
 }

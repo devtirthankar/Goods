@@ -115,9 +115,10 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: GDStoreSegmentContainerCellDelegate
     func didSelectProductAtIndexPath(_ indexPath: IndexPath){
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDProductVC")
-        controller?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(controller!, animated: true)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDProductVC") as! GDProductVC
+        controller.hidesBottomBarWhenPushed = true
+        controller.product = storeViewModel.products[indexPath.row]
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: GDStoreViewModelDelegate

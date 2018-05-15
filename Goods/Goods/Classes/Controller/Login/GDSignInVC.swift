@@ -22,8 +22,6 @@ class GDSignInVC: GDBaseVC {
         setColorForLabels()
         initializeUI()
         
-        _mobile.text = "536154619"
-        _password.text = "test1234"
     }
     
     func initializeUI() {
@@ -33,9 +31,9 @@ class GDSignInVC: GDBaseVC {
     }
     
     @IBAction func signInPressed(_ sender: UIButton) {
-        GDLocationManager.sharedManager
-        bringUpDashboard()
-        return
+//        let _ = GDLocationManager.sharedManager
+//        bringUpDashboard()
+//        return
         let _ = GDLocationManager.sharedManager
         if _mobile.text?.count == 0 {
             GDAlertAndLoader.showAlertMessage(GDErrorAlertMessage.emptyMobile)

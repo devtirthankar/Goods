@@ -12,6 +12,7 @@ import UIKit
 protocol GDMyCartItemCellDelegate {
     func increaseCartValue(price: Float)
     func decreaseCartValue(price: Float)
+    func removedItemFromCart(price: Float)
 }
 
 class GDMyCartItemCell: UICollectionViewCell {
@@ -63,6 +64,13 @@ class GDMyCartItemCell: UICollectionViewCell {
             _quantity.text = "\(_noOfQuantity)"
             self.delegate?.decreaseCartValue(price: product.price!)
             GDCartManager.sharedManager.updateProductQuantity(product: product, increaseItemCount: false)
+        }
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        let status = GDCartManager.sharedManager.removeProductFromCart(product: product)
+        if status.status == true {
+            self.delegate?.removedItemFromCart(price: status.price)
         }
     }
     

@@ -22,7 +22,7 @@ class GDRegistrationVM: NSObject {
         self.delegate = delegate
     }
     
-    func onRegistratButtonPressed(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String) {
+    func onRegistratButtonPressed(name : String, email: String, password: String, phone: String, countrycode: String) {
         
         var message: String = ""
         if name.count == 0 {
@@ -43,18 +43,14 @@ class GDRegistrationVM: NSObject {
         else if countrycode.count == 0 {
             message = GDErrorAlertMessage.emptyCountryCode
         }
-            
-        if message.count == 0 {
-            self.delegate?.invalidInputDetected(message)
-        }
         else {
             //if validation successfull, call register api
-            registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype)
+            registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode)
         }
     }
     
-    private func registerUser(name : String, email: String, password: String, phone: String, countrycode: String, usertype:String) {
-        GDWebServiceManager.sharedManager.registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, usertype: usertype, block: {[weak self](response, error) in
+    private func registerUser(name : String, email: String, password: String, phone: String, countrycode: String) {
+        GDWebServiceManager.sharedManager.registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, block: {[weak self](response, error) in
             if let err = error {
                 self?.delegate?.registraionError(err.localizedDescription)
             }

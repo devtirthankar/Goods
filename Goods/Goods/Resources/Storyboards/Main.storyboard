@@ -583,7 +583,7 @@
                                             <action selector="backPressed:" destination="fuF-eB-kuW" eventType="touchUpInside" id="dFk-qx-N7H"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-gH-LX5">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-gH-LX5">
                                         <rect key="frame" x="319" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="MsK-tW-txr"/>

@@ -48,7 +48,9 @@ class GDOTPVC: GDBaseVC {
                 }
                 else {
                     DispatchQueue.main.async {
-                        self?.bringUpDashboard()
+                        //self?.bringUpDashboard()
+                        GDAlertAndLoader.showAlertMessage(GDMessage.registrationSuccess)
+                        self?.navigationController?.popToRootViewController(animated: true)
                     }
                 }
             })

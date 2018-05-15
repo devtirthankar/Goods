@@ -16,3 +16,8 @@ enum GDErrorAlertMessage {
     static let emptyCountryCode = "Please enter country code"
 }
 
+enum GDMessage {
+    static let selectCountry = "Choose Country"
+    static let registrationSuccess = "Registration sucessful"
+}
+
