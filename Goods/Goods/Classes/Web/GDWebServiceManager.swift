@@ -23,18 +23,21 @@ enum GDWebServiceURLEndPoints{
     static let productsbystore = "/productsbystore"
     static let productsbyid = "/productsbyid"
     static let productsbyrating = "/productsbyrating"
+    static let imageurlproduction = "https://api.goods-dts.com"
+    static let imageurldevelopment = "https://api.smj.ltd/"
 }
 
 enum GDServerURL: String {
     case development = "https://api.smj.ltd/api/v1/"
     case test = "test"
-    case production = "https://api.goods-dts.com/"
-    case staging = "http://www.goods-dts.com/goodsapp"
+    case production = "https://api.goods-dts.com/api/v1/"
+    case staging = "http://www.goods-dts.com/goodsapp/"
 }
 
 class GDWebServiceManager: NSObject {
     var serviceArray = [GDWebServiceRequest]()
     var baseURL = GDServerURL.development.rawValue
+    var baseImageURL = GDWebServiceURLEndPoints.imageurldevelopment
     
     static let sharedManager : GDWebServiceManager = {
         let instance = GDWebServiceManager()

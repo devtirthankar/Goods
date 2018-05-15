@@ -57,14 +57,21 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
             let product: Product = searchViewModel.products[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
             cell.titleLabel.text = product.productname
+            if let image = product.productimages?[0] {
+                let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
+                cell.loadThumbImage(url: imageURL)
+            }
             return cell;
         }
         else {
             let store: Store = searchViewModel.stores[indexPath.row]
             let cell: GDStoreBannerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellStoreIdentifier, for: indexPath) as! GDStoreBannerCell
             cell.titleLabel.text = store.storename
-            cell.descriptionLabel.text = store.storename
-            cell.loadBannerImage(url: store.logo?.description)
+            cell.descriptionLabel.text = store.slogan
+            if let imagepath = store.logo {
+                let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"
+                cell.loadBannerImage(url: imageURL)
+            }
             return cell;
         }
     }

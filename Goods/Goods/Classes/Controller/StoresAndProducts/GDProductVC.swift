@@ -71,6 +71,10 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView{
         
         let header: GDProductBannerHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseIdentifierHeaderBanner, for: indexPath) as! GDProductBannerHeader
+        if let image = product.productimages?[0] {
+            let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(image.imgpath)"
+            header.loadThumbImage(url: imageURL)
+        }
         return header
     }
     

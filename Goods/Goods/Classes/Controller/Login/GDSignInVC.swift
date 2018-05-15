@@ -68,7 +68,6 @@ class GDSignInVC: GDBaseVC {
     }
     
     func bringUpDashboard() {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
         self.navigationController?.pushViewController(controller, animated: true)

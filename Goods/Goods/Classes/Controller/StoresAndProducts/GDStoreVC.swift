@@ -89,6 +89,11 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
     
         if indexPath.section == 0 {
             let header: GDStoreBannerHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifierBanner, for: indexPath) as! GDStoreBannerHeader
+            if let imagepath = store.logo {
+                let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"
+                header.loadThumbImage(url: imageURL)
+            }
+            
             return header
         }else{
             let header: GDStoreSegmentHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifierSegment, for: indexPath) as! GDStoreSegmentHeader

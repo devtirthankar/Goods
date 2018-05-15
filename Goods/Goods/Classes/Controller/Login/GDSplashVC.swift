@@ -19,15 +19,24 @@ class GDSplashVC: GDBaseVC {
         _goodsLogo.image = _goodsLogo.image!.withRenderingMode(.alwaysTemplate)
         _goodsLogo.tintColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.bringUpLoginView()
+            if let _ = GDLogin.loggedInUser()?.token {
+                self.bringUpDashboard()
+            }else {
+                self.bringUpLoginView()
+            }
         }
     }
     
     func bringUpLoginView() {
-        
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "GDSignInVC")
         self.navigationController?.pushViewController(controller, animated: false)
+    }
+    
+    func bringUpDashboard() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

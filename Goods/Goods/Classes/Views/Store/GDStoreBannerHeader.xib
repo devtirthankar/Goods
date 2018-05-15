@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rHz-fE-4iK">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rHz-fE-4iK">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 </imageView>
             </subviews>
@@ -26,7 +26,7 @@
                 <constraint firstAttribute="trailing" secondItem="rHz-fE-4iK" secondAttribute="trailing" id="vTI-Pf-554"/>
             </constraints>
             <connections>
-                <outlet property="_imageView" destination="rHz-fE-4iK" id="uha-Wl-YB6"/>
+                <outlet property="_imageView" destination="rHz-fE-4iK" id="aPc-bi-0aL"/>
             </connections>
         </collectionReusableView>
     </objects>
