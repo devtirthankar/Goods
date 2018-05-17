@@ -69,7 +69,9 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         for item in GDCartManager.sharedManager.cart {
             let productId = item.product.productid
             let quantity = item.itemQuantity
+            GDAlertAndLoader.showLoading()
             GDWebServiceManager.sharedManager.placeOrder(productid: productId, quantity: quantity, block: {[weak self](response, error) in
+                GDAlertAndLoader.hideLoading()
                 if let err = error {
                     //GDAlertAndLoader.showAlertMessage(err.localizedDescription)
                     print("\(err.localizedDescription)")

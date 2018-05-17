@@ -40,7 +40,9 @@ class GDOTPVC: GDBaseVC {
             GDAlertAndLoader.showAlertMessage("Please enter OTP.")
         }
         else {
+            GDAlertAndLoader.showLoading()
             GDWebServiceManager.sharedManager.validateOTP(otp: _otp.text!, block : {[weak self](response, error) in
+                GDAlertAndLoader.hideLoading()
                 if let err = error as NSError? {
                     if let errorMessage = err.userInfo["message"] as? String {
                         GDAlertAndLoader.showAlertMessage(errorMessage)

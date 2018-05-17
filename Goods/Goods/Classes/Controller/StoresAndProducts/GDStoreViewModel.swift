@@ -17,7 +17,9 @@ class GDStoreViewModel {
     
     //MARK: Fetch Data
     func fetchProductsForStore(storeId: Int64) {
+        GDAlertAndLoader.showLoading()
         GDWebServiceManager.sharedManager.getProductsForStore(storeId: storeId, block: {[weak self](response, error) in
+            GDAlertAndLoader.hideLoading()
             DispatchQueue.main.async {
                 guard let data = response as? Data else {
                     print("No product data")

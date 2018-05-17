@@ -50,7 +50,9 @@ class GDRegistrationVM: NSObject {
     }
     
     private func registerUser(name : String, email: String, password: String, phone: String, countrycode: String) {
+        GDAlertAndLoader.showLoading()
         GDWebServiceManager.sharedManager.registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode, block: {[weak self](response, error) in
+            GDAlertAndLoader.hideLoading()
             if let err = error {
                 self?.delegate?.registraionError(err.localizedDescription)
             }

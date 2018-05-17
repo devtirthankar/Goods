@@ -79,7 +79,9 @@ class GDMapViewVC: GDBaseVC, GMSMapViewDelegate {
     
     //MARK: Fetch Data
     func fetchStores() {
+        GDAlertAndLoader.showLoading()
         GDWebServiceManager.sharedManager.getStores(block: {[weak self](response, error) in
+            GDAlertAndLoader.hideLoading()
             DispatchQueue.main.async {
                 guard let data = response as? Data else {
                     print("No product data")

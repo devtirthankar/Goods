@@ -468,25 +468,25 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJM-RN-Oq4">
-                                <rect key="frame" x="32" y="172" width="311" height="30"/>
+                                <rect key="frame" x="8" y="162" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2t-5V-038">
-                                <rect key="frame" x="32" y="268" width="311" height="30"/>
+                                <rect key="frame" x="8" y="238" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxb-6w-vEi">
-                                <rect key="frame" x="32" y="124" width="311" height="30"/>
+                                <rect key="frame" x="8" y="124" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUZ-eb-miM">
-                                <rect key="frame" x="32" y="220" width="311" height="30"/>
+                                <rect key="frame" x="8" y="200" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -495,19 +495,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VUZ-eb-miM" firstAttribute="centerX" secondItem="vxb-6w-vEi" secondAttribute="centerX" id="0RT-XQ-nsb"/>
-                            <constraint firstItem="q2t-5V-038" firstAttribute="top" secondItem="VUZ-eb-miM" secondAttribute="bottom" constant="18" id="6bB-6g-ZGj"/>
+                            <constraint firstItem="q2t-5V-038" firstAttribute="top" secondItem="VUZ-eb-miM" secondAttribute="bottom" constant="8" id="6bB-6g-ZGj"/>
                             <constraint firstItem="q2t-5V-038" firstAttribute="centerX" secondItem="vxb-6w-vEi" secondAttribute="centerX" id="7EN-ov-ci4"/>
                             <constraint firstItem="4Zk-Wp-Hbc" firstAttribute="leading" secondItem="kTM-ep-gRN" secondAttribute="leading" id="8GG-Sk-Bh4"/>
-                            <constraint firstItem="eJM-RN-Oq4" firstAttribute="top" secondItem="vxb-6w-vEi" secondAttribute="bottom" constant="18" id="MWQ-q1-hsw"/>
+                            <constraint firstItem="eJM-RN-Oq4" firstAttribute="top" secondItem="vxb-6w-vEi" secondAttribute="bottom" constant="8" id="MWQ-q1-hsw"/>
                             <constraint firstItem="q2t-5V-038" firstAttribute="width" secondItem="vxb-6w-vEi" secondAttribute="width" id="Md3-dB-yXc"/>
-                            <constraint firstAttribute="trailing" secondItem="vxb-6w-vEi" secondAttribute="trailing" constant="32" id="OfT-Ps-jRT"/>
+                            <constraint firstAttribute="trailing" secondItem="vxb-6w-vEi" secondAttribute="trailing" constant="8" id="OfT-Ps-jRT"/>
                             <constraint firstItem="4Zk-Wp-Hbc" firstAttribute="top" secondItem="kTM-ep-gRN" secondAttribute="top" id="aLj-VU-qXZ"/>
-                            <constraint firstItem="vxb-6w-vEi" firstAttribute="leading" secondItem="kTM-ep-gRN" secondAttribute="leading" constant="32" id="fYB-J7-ebG"/>
+                            <constraint firstItem="vxb-6w-vEi" firstAttribute="leading" secondItem="kTM-ep-gRN" secondAttribute="leading" constant="8" id="fYB-J7-ebG"/>
                             <constraint firstAttribute="trailing" secondItem="4Zk-Wp-Hbc" secondAttribute="trailing" id="i61-Sg-WyS"/>
                             <constraint firstItem="VUZ-eb-miM" firstAttribute="width" secondItem="vxb-6w-vEi" secondAttribute="width" id="ivP-b0-YDU"/>
                             <constraint firstItem="vxb-6w-vEi" firstAttribute="top" secondItem="4Zk-Wp-Hbc" secondAttribute="bottom" constant="60" id="n8D-ZC-VMg"/>
                             <constraint firstItem="eJM-RN-Oq4" firstAttribute="centerX" secondItem="vxb-6w-vEi" secondAttribute="centerX" id="nNY-FW-PfO"/>
-                            <constraint firstItem="VUZ-eb-miM" firstAttribute="top" secondItem="eJM-RN-Oq4" secondAttribute="bottom" constant="18" id="vD7-Ye-KSY"/>
+                            <constraint firstItem="VUZ-eb-miM" firstAttribute="top" secondItem="eJM-RN-Oq4" secondAttribute="bottom" constant="8" id="vD7-Ye-KSY"/>
                             <constraint firstItem="eJM-RN-Oq4" firstAttribute="width" secondItem="vxb-6w-vEi" secondAttribute="width" id="zP4-Gm-41O"/>
                         </constraints>
                     </view>

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class GDAlertAndLoader{
     class func showAlertMessage(_ message : String){
@@ -20,5 +21,20 @@ class GDAlertAndLoader{
         let controller = app?.window?.rootViewController
         
         controller?.present(alert, animated: true, completion: nil)
+    }
+    
+    class func showLoading(){
+        let app = UIApplication.shared.delegate as? AppDelegate
+        let controller = app?.window?.rootViewController
+        MBProgressHUD.showAdded(to: (controller?.view)!, animated: true)
+    }
+    
+    class func hideLoading(){
+        let app = UIApplication.shared.delegate as? AppDelegate
+        let controller = app?.window?.rootViewController
+        DispatchQueue.main.async {
+            //HUD.hide()
+            MBProgressHUD.hide(for: (controller?.view)!, animated: false)
+        }
     }
 }
