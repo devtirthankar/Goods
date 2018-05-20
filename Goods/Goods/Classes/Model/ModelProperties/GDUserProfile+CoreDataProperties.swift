@@ -2,7 +2,7 @@
 //  GDUserProfile+CoreDataProperties.swift
 //  Goods
 //
-//  Created by nabanita on 02/05/18.
+//  Created by nabanita on 17/05/18.
 //  Copyright © 2018 company. All rights reserved.
 //
 //
@@ -18,8 +18,9 @@ extension GDUserProfile {
     }
 
     @NSManaged public var countrycode: Int32
-    @NSManaged public var mobile: Int32
+    @NSManaged public var mobile: String?
     @NSManaged public var name: String?
+    @NSManaged public var email: String?
     @NSManaged public var login: GDLogin?
 
 }

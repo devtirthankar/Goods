@@ -7,12 +7,13 @@
     </entity>
     <entity name="GDUserProfile" representedClassName="GDUserProfile" syncable="YES">
         <attribute name="countrycode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="mobile" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="login" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GDLogin" inverseName="user" inverseEntity="GDLogin" syncable="YES"/>
     </entity>
     <elements>
         <element name="GDLogin" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="GDUserProfile" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="GDUserProfile" positionX="-54" positionY="-9" width="128" height="120"/>
     </elements>
 </model>

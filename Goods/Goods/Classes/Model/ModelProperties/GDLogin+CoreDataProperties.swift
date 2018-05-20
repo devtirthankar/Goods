@@ -2,7 +2,7 @@
 //  GDLogin+CoreDataProperties.swift
 //  Goods
 //
-//  Created by nabanita on 02/05/18.
+//  Created by nabanita on 17/05/18.
 //  Copyright © 2018 company. All rights reserved.
 //
 //

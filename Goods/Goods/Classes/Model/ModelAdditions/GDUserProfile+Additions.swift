@@ -16,15 +16,37 @@ extension GDUserProfile {
         self.name = dictionary["name"] as? String
         //TODO: mobile as string
         //self.mobile = (dictionary["mobile"] as? Int32)!
-        if let mobileno = dictionary["mobile"] as? Int32 {
+        if let mobileno = dictionary["mobile"] as? String {
             self.mobile = mobileno
         }else{
-            self.mobile = 0
+            self.mobile = ""
         }
         if let cCode = dictionary["countrycode"] as? Int32 {
             self.countrycode = cCode
         }else{
             self.countrycode = 0
         }
+        if let email = dictionary["email"] as? String {
+            self.email = email
+        }else{
+            self.email = ""
+        }
+    }
+    
+    public static func loggedInUser() -> GDUserProfile?{
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "GDUserProfile")
+        weak var moc = GDStorage.sharedStorage.moc
+        var entity : GDUserProfile? = nil
+        moc?.performAndWait({
+            do{
+                let objects = try moc?.fetch(request) as? [GDUserProfile]
+                if let objects = objects{
+                    if objects.count > 0{
+                        entity = objects.last
+                    }
+                }
+            }catch{}
+        })
+        return entity
     }
 }

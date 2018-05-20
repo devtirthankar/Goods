@@ -32,6 +32,7 @@ class GDSearchViewModel {
                     print("Error: Couldn't decode data into Stores")
                     return
                 }
+                self?.stores.removeAll()
                 for item in storelist.result {
                     self?.stores.append(item)
                 }
@@ -54,6 +55,7 @@ class GDSearchViewModel {
                     print("Error: Couldn't decode data into Products")
                     return
                 }
+                self?.products.removeAll()
                 for item in productlist.result {
                     self?.products.append(item)
                 }

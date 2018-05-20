@@ -106,11 +106,23 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
             controller.hidesBottomBarWhenPushed = true
             let navcon = self.selectedViewController as! UINavigationController;
             navcon.pushViewController(controller, animated: true);
+            
+        case .logout:
+            logoutuser()
         }
     }
     
     func bringUpMyCartScreen() {
         
+    }
+    
+    func logoutuser() {
+        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDLogin")
+        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDUserProfile")
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "GDSettingsVC")
+        let navcon = self.selectedViewController as! UINavigationController;
+        navcon.popToRootViewController(animated: true)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

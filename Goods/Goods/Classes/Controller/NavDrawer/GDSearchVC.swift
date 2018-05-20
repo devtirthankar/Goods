@@ -15,7 +15,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     
     let cellProductIdentifier = "GDStoreThumbnailCell"
     let cellStoreIdentifier = "GDStoreBannerCell"
-
+    lazy var _refreshControl = UIRefreshControl()
+    var _isRefreshing = false
     var searchViewModel = GDSearchViewModel()
 
     override func viewDidLoad() {
@@ -27,9 +28,28 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         
         _collectionView.register(UINib.init(nibName: cellProductIdentifier, bundle: nil), forCellWithReuseIdentifier: cellProductIdentifier)
         _collectionView.register(UINib.init(nibName: cellStoreIdentifier, bundle: nil), forCellWithReuseIdentifier: cellStoreIdentifier)
-        searchViewModel.fetchStores()
-        searchViewModel.fetchProducts()
+        _refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        _collectionView.addSubview(_refreshControl)
         searchViewModel.delegate = self
+        searchViewModel.fetchProducts()
+        searchViewModel.fetchStores()
+        
+    }
+    
+    func refresh() {
+        if _isRefreshing {return}
+        if _segmentControl.selectedSegmentIndex == 0 {
+            DispatchQueue.main.async {
+                self._isRefreshing = true
+                self.searchViewModel.fetchProducts()
+            }
+        }
+        else {
+            DispatchQueue.main.async {
+                self._isRefreshing = true
+                self.searchViewModel.fetchStores()
+            }
+        }
     }
 
     @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
@@ -140,6 +160,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func didFetchData() {
+        _isRefreshing = false
+        _refreshControl.endRefreshing()
         _collectionView.reloadData()
     }
     
