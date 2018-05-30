@@ -52,6 +52,10 @@ class GDSignInVC: GDBaseVC {
         self.navigationController?.pushViewController(controller!, animated: true)
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
     func login() {
         GDAlertAndLoader.showLoading()
         GDWebServiceManager.sharedManager.loginUser(mobile: _mobile.text!, password: _password.text!, block : {[weak self](response, error) in
@@ -63,16 +67,41 @@ class GDSignInVC: GDBaseVC {
             }
             else {
                 DispatchQueue.main.async {
-                    self?.bringUpDashboard()
+                    self?.bringUpDestinationController()
                 }
             }
         })
     }
     
-    func bringUpDashboard() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
-        self.navigationController?.pushViewController(controller, animated: true)
+    
+    func bringUpDestinationController() {
+        let destinationType = global.destinationViewType
+        switch destinationType {
+        case DestinationViewType.dashboard:
+            _ = self.navigationController?.popViewController(animated: true)
+        case DestinationViewType.mycart:
+            bringUpMyCart()
+        case DestinationViewType.myaccount:
+            bringUpMyAccount()
+        }
+    }
+    
+//    func bringUpDashboard() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "GDTabBarController")
+//        self.navigationController?.pushViewController(controller, animated: true)
+//    }
+    
+    func bringUpMyCart() {
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDMyCartVC")
+        self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
+    func bringUpMyAccount() {
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDMyAccountVC")
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

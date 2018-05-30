@@ -32,17 +32,30 @@ class GDNavDrawerVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
     var delegate: GDNavDrawerDelegate?
     let _cellReuseIdentifier = "GDNavDrawerItemCell"
     let _cellReuseheadridentifier = "GDNavDrawerHeaderCell"
-    let _cellTitles = ["My Cart", "My Account", "Settings", "Logout"]
+    var _cellTitles = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
-        
+        initializePrimaryElements()
+    }
+    
+    func initializePrimaryElements() {
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(backPressed))
         swipeGestureRecognizer.direction = .left
         _tableView.addGestureRecognizer(swipeGestureRecognizer)
         _tableView.dataSource = self
         _tableView.delegate = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if GDLogin.loggedInUser()?.token != nil {
+            _cellTitles = ["My Cart", "My Account", "Settings", "Logout"]
+        }else {
+            _cellTitles = ["My Cart", "My Account", "Settings", "Login"]
+        }
         _tableView.reloadData()
     }
     
@@ -55,11 +68,15 @@ class GDNavDrawerVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
         if indexPath.row == 0 {
             let cell: GDNavDrawerHeaderCell = _tableView.dequeueReusableCell(withIdentifier: _cellReuseheadridentifier) as! GDNavDrawerHeaderCell
-            cell.name.text = GDUserProfile.loggedInUser()?.name?.capitalized
-            cell.mobile.text = GDUserProfile.loggedInUser()?.mobile
+            if let _ = GDLogin.loggedInUser()?.token {
+                cell.name.text = GDUserProfile.loggedInUser()?.name?.capitalized
+                cell.mobile.text = GDUserProfile.loggedInUser()?.mobile
+            }else {
+                cell.name.text = NSLocalizedString(GDMessage.guestUser, comment: GDMessage.guestUser)
+                cell.mobile.text = ""
+            }
             return cell
         } else {
             let cell: GDNavDrawerItemCell = _tableView.dequeueReusableCell(withIdentifier: _cellReuseIdentifier) as! GDNavDrawerItemCell

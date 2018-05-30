@@ -61,10 +61,25 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton){
-        let _ = self.navigationController?.popViewController(animated: true)
+        if global.destinationViewType == DestinationViewType.mycart {
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+            for aViewController in viewControllers {
+                if(aViewController is GDNearYouVC || aViewController is GDSearchVC || aViewController is GDMapViewVC){
+                    global.destinationViewType = DestinationViewType.dashboard
+                    self.navigationController!.popToViewController(aViewController, animated: true)
+                    return
+                }
+            }
+        }else {
+            _ = self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func checkoutButtonPressed(_ sender: UIButton) {
+        if GDCartManager.sharedManager.cart.count == 0 {
+            GDAlertAndLoader.showAlertMessage(GDErrorAlertMessage.emptyCart)
+            return
+        }
         //Make API call here
         for item in GDCartManager.sharedManager.cart {
             let productId = item.product.productid
@@ -78,7 +93,7 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
                 }
                 else {
                     print("\(GDMessage.selectCountry)")
-                    //GDAlertAndLoader.showAlertMessage(GDMessage.selectCountry)
+                    GDAlertAndLoader.showAlertMessage(GDMessage.orderPlaced)
                 }
             })
         }

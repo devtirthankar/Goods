@@ -16,6 +16,7 @@
 		0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B0F20425CA30001063F /* ArrayExtension.swift */; };
 		0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */; };
 		0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B132042CE190001063F /* GDRegistrationVM.swift */; };
+		0D567B6320B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */; };
 		0D5F0974203D4DC500D6812D /* GDProductBannerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */; };
 		0D5F0975203D4DC500D6812D /* GDProductBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */; };
 		0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */; };
@@ -38,6 +39,8 @@
 		0D7DFCDA2044028100ED0505 /* GDUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7DFCD92044028100ED0505 /* GDUtilities.swift */; };
 		0D826F5E1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */; };
 		0D826F601FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */; };
+		0D991DA520B891F500772EEE /* GDUserMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D991DA320B891F200772EEE /* GDUserMarkerView.swift */; };
+		0D991DA620B891F500772EEE /* GDUserMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D991DA420B891F300772EEE /* GDUserMarkerView.xib */; };
 		0D9A359B1FFF4F18007F786B /* GDStoreReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */; };
 		0D9A359D1FFF4F4E007F786B /* GDStoreReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */; };
 		0DA26B8720A8A841008753D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DA26B8620A8A841008753D1 /* GoogleService-Info.plist */; };
@@ -136,6 +139,7 @@
 		0D449B0F20425CA30001063F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWSRegistrationRequest.swift; sourceTree = "<group>"; };
 		0D449B132042CE190001063F /* GDRegistrationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDRegistrationVM.swift; sourceTree = "<group>"; };
+		0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDEditAccountDetailsVC.swift; sourceTree = "<group>"; };
 		0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductBannerHeader.swift; sourceTree = "<group>"; };
 		0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductBannerHeader.xib; sourceTree = "<group>"; };
 		0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductDescriptionCell.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		0D7DFCD92044028100ED0505 /* GDUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDUtilities.swift; sourceTree = "<group>"; };
 		0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDNearYouSectionHeaderView.xib; sourceTree = "<group>"; };
 		0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDNearYouSectionHeaderView.swift; sourceTree = "<group>"; };
+		0D991DA320B891F200772EEE /* GDUserMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDUserMarkerView.swift; sourceTree = "<group>"; };
+		0D991DA420B891F300772EEE /* GDUserMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDUserMarkerView.xib; sourceTree = "<group>"; };
 		0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreReviewCell.xib; sourceTree = "<group>"; };
 		0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreReviewCell.swift; sourceTree = "<group>"; };
 		0DA26B8620A8A841008753D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -545,6 +551,8 @@
 		0DE1299D1FE67645005A766B /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				0D991DA320B891F200772EEE /* GDUserMarkerView.swift */,
+				0D991DA420B891F300772EEE /* GDUserMarkerView.xib */,
 				0DE1299E1FE6766E005A766B /* GDMarkerView.xib */,
 				0DE129A01FE677E7005A766B /* GDMarkerView.swift */,
 			);
@@ -558,6 +566,7 @@
 				0DE6D1A11FEA470D004795F5 /* GDMyCartVC.swift */,
 				0DE6D1A21FEA470D004795F5 /* GDNavDrawerVC.swift */,
 				0DE6D1A41FEA470D004795F5 /* GDSettingsVC.swift */,
+				0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */,
 			);
 			path = NavDrawer;
 			sourceTree = "<group>";
@@ -712,6 +721,7 @@
 				0DDC3D2B1FE3084A00C0640B /* StoreThmb5.png in Resources */,
 				0DD670781FDEF0EC009AC39C /* grad_overlay@3x.png in Resources */,
 				0DE1299F1FE6766E005A766B /* GDMarkerView.xib in Resources */,
+				0D991DA620B891F500772EEE /* GDUserMarkerView.xib in Resources */,
 				0D9A359B1FFF4F18007F786B /* GDStoreReviewCell.xib in Resources */,
 				0DDC3D281FE3084A00C0640B /* StoreThmb2.png in Resources */,
 				0DD6706D1FDED55F009AC39C /* GDStoreThumbnailCell.xib in Resources */,
@@ -838,6 +848,7 @@
 				0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */,
 				0D0B01452097AB490000E9EF /* GDDataModel.xcdatamodeld in Sources */,
 				9E33ADA71FDAA95B00A02475 /* GDMapViewVC.swift in Sources */,
+				0D567B6320B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift in Sources */,
 				0DDBE4C11FF8867800AA576F /* GDBaseVC.swift in Sources */,
 				0D76CD5520983EFD007DBE3E /* GDWebServiceStoreRequest.swift in Sources */,
 				0DB400CD1FF3B855003DC383 /* GDStoreContainerCell.swift in Sources */,
@@ -862,6 +873,7 @@
 				0DE6D1A61FEA470D004795F5 /* GDMyCartVC.swift in Sources */,
 				0DE6D1A81FEA470D004795F5 /* GDSearchVC.swift in Sources */,
 				0DE129A11FE677E7005A766B /* GDMarkerView.swift in Sources */,
+				0D991DA520B891F500772EEE /* GDUserMarkerView.swift in Sources */,
 				0DDBE4C81FF8895900AA576F /* GDTheme.swift in Sources */,
 				0DB8B89E20979B9C0022C81D /* GDAlertAndLoader.swift in Sources */,
 				0DE086931FD9AE22007C228F /* AppDelegate.swift in Sources */,

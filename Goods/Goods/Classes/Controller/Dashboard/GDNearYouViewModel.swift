@@ -32,6 +32,7 @@ class GDSNearYouViewModel {
                     print("Error: Couldn't decode data into Stores")
                     return
                 }
+                self?.stores.removeAll()
                 for item in storelist.result {
                     self?.stores.append(item)
                 }
@@ -55,6 +56,7 @@ class GDSNearYouViewModel {
                     print("Error: Couldn't decode data into Stores")
                     return
                 }
+                self?.topStores.removeAll()
                 for item in storelist.result {
                     self?.topStores.append(item)
                 }

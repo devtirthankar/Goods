@@ -30,6 +30,7 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         _collectionView.register(UINib.init(nibName: cellStoreIdentifier, bundle: nil), forCellWithReuseIdentifier: cellStoreIdentifier)
         _refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
         _collectionView.addSubview(_refreshControl)
+        _collectionView.alwaysBounceVertical = true
         searchViewModel.delegate = self
         searchViewModel.fetchProducts()
         searchViewModel.fetchStores()

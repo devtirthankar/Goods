@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum DestinationViewType {
+    case dashboard
+    case mycart
+    case myaccount
+}
+
 class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
     var _fadedBackgroundView: UIView!
     var _navDrawerVC: GDNavDrawerVC!
@@ -23,7 +29,6 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         _fadedBackgroundView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)
     }
 
-       
     func openDrawer() {
         self.addChildViewController(_navDrawerVC)
         _navDrawerVC.beginAppearanceTransition(true, animated: true)
@@ -85,19 +90,28 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
             navcon.pushViewController(controller, animated: true);
             
         case .myCart:
-            
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "GDMyCartVC")
-            controller.hidesBottomBarWhenPushed = true
-            let navcon = self.selectedViewController as! UINavigationController;
-            navcon.pushViewController(controller, animated: true);
+            if let _ = GDLogin.loggedInUser()?.token {
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "GDMyCartVC")
+                controller.hidesBottomBarWhenPushed = true
+                let navcon = self.selectedViewController as! UINavigationController;
+                navcon.pushViewController(controller, animated: true);
+            }else {
+                global.destinationViewType = DestinationViewType.mycart
+                bringUpLoginView()
+            }
             
         case .myAccount:
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "GDMyAccountVC")
-            controller.hidesBottomBarWhenPushed = true
-            let navcon = self.selectedViewController as! UINavigationController;
-            navcon.pushViewController(controller, animated: true);
+            if let _ = GDLogin.loggedInUser()?.token {
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "GDMyAccountVC")
+                controller.hidesBottomBarWhenPushed = true
+                let navcon = self.selectedViewController as! UINavigationController;
+                navcon.pushViewController(controller, animated: true);
+            }else {
+                global.destinationViewType = DestinationViewType.myaccount
+                bringUpLoginView()
+            }
             
         case .settings:
             
@@ -110,19 +124,31 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         case .logout:
             logoutuser()
         }
-    }
-    
-    func bringUpMyCartScreen() {
-        
+//        global.destinationViewType = DestinationViewType.dashboard
+//        print("-------- Default view set to DASHBOARD --------")
     }
     
     func logoutuser() {
-        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDLogin")
-        GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDUserProfile")
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "GDSettingsVC")
+        if let _ = GDLogin.loggedInUser()?.token {
+            GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDLogin")
+            GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDUserProfile")
+            //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //        let controller = storyboard.instantiateViewController(withIdentifier: "GDSettingsVC")
+            let navcon = self.selectedViewController as! UINavigationController;
+            navcon.popToRootViewController(animated: true)
+        }
+        else {
+            global.destinationViewType = DestinationViewType.dashboard
+            bringUpLoginView()
+        }
+    }
+    
+    func bringUpLoginView() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "GDSignInVC")
+        controller.hidesBottomBarWhenPushed = true
         let navcon = self.selectedViewController as! UINavigationController;
-        navcon.popToRootViewController(animated: true)
+        navcon.pushViewController(controller, animated: true);
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -132,5 +158,4 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
             }
         }
     }
-
 }

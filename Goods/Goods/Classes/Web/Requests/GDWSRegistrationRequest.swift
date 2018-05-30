@@ -114,3 +114,34 @@ class GDWSCountryCodeRequest: GDWebServiceRequest {
         url = manager.baseURL + GDWebServiceURLEndPoints.listCountries
     }
 }
+
+class GDWSUpdateNameRequest: GDWebServiceRequest {
+    init(manager: GDWebServiceManager, name: String, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.put
+        url = manager.baseURL + GDWebServiceURLEndPoints.updatename
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        body?["name"] = name
+    }
+}
+
+class GDWSUpdateEmailRequest: GDWebServiceRequest {
+    init(manager: GDWebServiceManager, email: String, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.put
+        url = manager.baseURL + GDWebServiceURLEndPoints.updateemail
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        body?["email"] = email
+    }
+}
+
+class GDWSUpdatePasswordRequest: GDWebServiceRequest {
+    init(manager: GDWebServiceManager, oldpassword: String, newpassword: String, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.put
+        url = manager.baseURL + GDWebServiceURLEndPoints.updateemail
+        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        body?["oldpassword"] = oldpassword
+        body?["password"] = newpassword
+    }
+}

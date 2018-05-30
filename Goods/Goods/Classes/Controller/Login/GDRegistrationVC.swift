@@ -57,8 +57,8 @@ class GDRegistrationVC: GDBaseVC, GDDropDownViewDelegate {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registraionSucessfull()
-        return
+//        registraionSucessfull()
+//        return
         let countryCode = "966"
         registrationVM?.onRegistratButtonPressed(name: _name.text!, email: _email.text!, password: _password.text!, phone: _phone.text!, countrycode: countryCode)
     }

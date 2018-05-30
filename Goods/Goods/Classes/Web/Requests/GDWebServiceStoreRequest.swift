@@ -61,7 +61,7 @@ class GDWebServiceStoreRequest: GDWebServiceRequest {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.get
         url = manager.baseURL + GDWebServiceURLEndPoints.stores
-        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
 }
 
@@ -70,7 +70,7 @@ class GDWebServiceStoresNearYouRequest: GDWebServiceRequest {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.post
         url = manager.baseURL + GDWebServiceURLEndPoints.stores
-        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
         body?["lat"] = latitude
         body?["lng"] = longitude
     }

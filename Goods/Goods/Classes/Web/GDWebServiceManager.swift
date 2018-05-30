@@ -13,6 +13,9 @@ typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 enum GDWebServiceURLEndPoints{
     static let registration = "user"
     static let login = "login"
+    static let updatename = "name"
+    static let updateemail = "email"
+    static let updatepassword = "password"
     static let otp = "otp"
     static let listCountries = "countries"
     static let stores = "stores"
@@ -86,6 +89,21 @@ extension GDWebServiceManager{
     
     func validateOTP(otp: String, block : @escaping GDWSCompletionBlock) {
         let service = GDWSOTPValidationRequest(manager: self, otp: otp, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func updateName(name: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSUpdateNameRequest(manager: self, name: name, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func updateEmail(email: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSUpdateEmailRequest(manager: self, email: email, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func updatePassword(oldpassword: String, newpassword: String, block : @escaping GDWSCompletionBlock) {
+        let service = GDWSUpdatePasswordRequest(manager: self, oldpassword: oldpassword, newpassword: newpassword, block: block)
         self.startRequest(service: service)
     }
     

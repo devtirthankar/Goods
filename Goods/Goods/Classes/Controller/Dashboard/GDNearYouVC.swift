@@ -13,7 +13,10 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
     @IBOutlet weak var _collectionView: UICollectionView!
     
     var nearYouViewModel = GDSNearYouViewModel()
-    
+    lazy var _refreshControl = UIRefreshControl()
+    var _isRefreshing = false
+    var userLatitude = 21.510472500000017
+    var userLongitude = 39.16535546874998
     let cellReuseIdentifier = "GDStoreThumbnailCell"
     let headerReuseIdentifier = "GDNearYouSectionHeaderView"
     let cellReuseIdentifierTopStore = "GDStoreContainerCell"
@@ -23,23 +26,38 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         
         setColorForTitleViews()
         
-        var userLatitude = 21.510472500000017
-        var userLongitude = 39.16535546874998
-        
         if let currentLocation = GDLocationManager.sharedManager.userLocation {
             userLatitude = currentLocation.coordinate.latitude
             userLongitude = currentLocation.coordinate.longitude
         }
         nearYouViewModel.delegate = self
         nearYouViewModel.fetchStores(latitude: userLatitude, longitude: userLongitude)
-        nearYouViewModel.fetchTopStores(latitude: 17.336840183595562, longitude: 78.57341475784779)
+        nearYouViewModel.fetchTopStores(latitude: 21.510472500000017, longitude: 39.16535546874998)
         
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         _collectionView.register(UINib.init(nibName: cellReuseIdentifierTopStore, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifierTopStore)
         _collectionView.register(UINib.init(nibName: headerReuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
+        _collectionView.alwaysBounceVertical = true
         let layout = _collectionView.collectionViewLayout as? UICollectionViewFlowLayout 
         layout?.sectionHeadersPinToVisibleBounds = true
+        _refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        _collectionView.addSubview(_refreshControl)
+        _collectionView.alwaysBounceVertical = true
         
+    }
+    
+    func refresh() {
+        if _isRefreshing {return}
+        DispatchQueue.main.async {
+            self._isRefreshing = true
+            if let currentLocation = GDLocationManager.sharedManager.userLocation {
+                self.userLatitude = currentLocation.coordinate.latitude
+                self.userLongitude = currentLocation.coordinate.longitude
+            }
+            self.userLatitude = 21.510472500000017
+            self.userLongitude = 39.16535546874998
+            self.nearYouViewModel.fetchStores(latitude: self.userLatitude, longitude: self.userLongitude)
+        }
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton){
@@ -155,6 +173,8 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
     
     //MARK: GDNearYouViewModelDelegate
     func didFetchData() {
+        _isRefreshing = false
+        _refreshControl.endRefreshing()
         _collectionView.reloadData()
     }
 

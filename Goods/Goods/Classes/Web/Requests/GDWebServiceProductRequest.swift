@@ -58,7 +58,7 @@ class GDWebServiceProductRequest: GDWebServiceRequest {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.get
         url = manager.baseURL + GDWebServiceURLEndPoints.products
-        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
 }
 
@@ -67,7 +67,7 @@ class GDWSProductsForStoreRequest: GDWebServiceRequest {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.get
         url = manager.baseURL + "store/" + "\(storeId)/" + "products"
-        headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
 }
 

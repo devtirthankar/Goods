@@ -47,6 +47,26 @@ class GDMapViewVC: GDBaseVC, GMSMapViewDelegate {
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 15.5)
         _mapView.animate(to: camera)
+        placeUserAnnotation()
+    }
+    
+    func placeUserAnnotation() {
+        if let userlocation = GDLocationManager.sharedManager.userLocation {
+            let latitude = userlocation.coordinate.latitude
+            let longitude = userlocation.coordinate.longitude
+            
+            let markerView = UINib(nibName: "GDUserMarkerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GDUserMarkerView
+            markerView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            markerView.markerImage.image = markerView.markerImage.image!.withRenderingMode(.alwaysTemplate)
+            markerView.markerImage.tintColor = UIColor.colorForHex(GDColor.Red as NSString)
+            let position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            
+            let marker = GMSMarker(position: position)
+            marker.iconView = markerView
+            marker.tracksViewChanges = true
+            marker.map = _mapView
+        }
+        
     }
     
     func placeMarkerOnMap() {
