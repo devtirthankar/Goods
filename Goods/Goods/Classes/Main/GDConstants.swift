@@ -24,6 +24,7 @@ enum GDErrorAlertMessage {
 enum GDMessage {
     static let selectCountry = "Choose Country"
     static let registrationSuccess = "Registration successful"
+    static let logoutSuccess = "You are successfully logged out of Goods"
     static let guestUser = "Guest user"
     static let updationSuccess = "Update succeeded"
     static let orderPlaced = "Your order is placed successfully!"

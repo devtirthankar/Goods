@@ -28,7 +28,7 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         _fadedBackgroundView.frame = self.view.bounds;
         _fadedBackgroundView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)
     }
-
+    
     func openDrawer() {
         self.addChildViewController(_navDrawerVC)
         _navDrawerVC.beginAppearanceTransition(true, animated: true)
@@ -38,7 +38,7 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         
         _navDrawerVC.view.frame = CGRect(x: -navDrawerWidth, y: 0, width: -navDrawerWidth, height: self.view.frame.height)
         yaxis = 0;
-    
+        
         _fadedBackgroundView.alpha = 0.0
         
         UIView.animate(withDuration: 0.5, animations: {
@@ -68,7 +68,7 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
             self._fadedBackgroundView.removeFromSuperview()
             self._navDrawerVC.removeFromParentViewController()
         })
-
+        
     }
     
     //MARK: GDNavDrawerDelegate
@@ -79,8 +79,8 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
     func didSelectItemType (_ type: NavDrawerItemType) {
         self.closeDrawer()
         switch (type){
-        //case .home:
-            //break
+            //case .home:
+        //break
         case .search:
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -124,18 +124,15 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         case .logout:
             logoutuser()
         }
-//        global.destinationViewType = DestinationViewType.dashboard
-//        print("-------- Default view set to DASHBOARD --------")
+        //        global.destinationViewType = DestinationViewType.dashboard
+        //        print("-------- Default view set to DASHBOARD --------")
     }
     
     func logoutuser() {
         if let _ = GDLogin.loggedInUser()?.token {
             GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDLogin")
             GDStorage.sharedStorage.deleteEntityFromDBEntityName("GDUserProfile")
-            //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            //        let controller = storyboard.instantiateViewController(withIdentifier: "GDSettingsVC")
-            let navcon = self.selectedViewController as! UINavigationController;
-            navcon.popToRootViewController(animated: true)
+            backToDashboard()
         }
         else {
             global.destinationViewType = DestinationViewType.dashboard
@@ -149,6 +146,18 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
         controller.hidesBottomBarWhenPushed = true
         let navcon = self.selectedViewController as! UINavigationController;
         navcon.pushViewController(controller, animated: true);
+    }
+    
+    func backToDashboard() {
+        GDAlertAndLoader.showAlertMessage(NSLocalizedString(GDMessage.logoutSuccess, comment: ""))
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+        for aViewController in viewControllers {
+            if(aViewController is GDNearYouVC || aViewController is GDSearchVC || aViewController is GDMapViewVC){
+                global.destinationViewType = DestinationViewType.dashboard
+                self.navigationController!.popToViewController(aViewController, animated: true)
+                return
+            }
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
