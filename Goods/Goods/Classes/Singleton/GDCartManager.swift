@@ -29,18 +29,18 @@ class GDCartManager: NSObject {
         super.init()
     }
     
-    func addProductToCart(product: Product) {
+    func addProductToCart(product: Product, quantity: Int32) {
         
         var isItemExisting = false
         for index in 0..<cart.count {
             let item = cart[index]
             if item.product.productid == product.productid {
-                cart[index].itemQuantity += 1
+                cart[index].itemQuantity += Int(quantity)
                 isItemExisting = true
             }
         }
         if isItemExisting == false {
-            let newItem = CartItem(product: product, itemQuantity: 1)
+            let newItem = CartItem(product: product, itemQuantity: Int(quantity))
             cart.append(newItem)
         }
         
@@ -74,5 +74,9 @@ class GDCartManager: NSObject {
                 }
             }
         }
+    }
+    
+    func clearCart() {
+        cart = [CartItem]()
     }
 }

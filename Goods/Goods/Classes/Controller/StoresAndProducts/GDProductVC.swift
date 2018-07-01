@@ -15,7 +15,8 @@ class GDProductVC: GDBaseVC, GDProductActionCellDelegate {
     let reuseIdentifierCellDescription = "GDProductDescriptionCell"
     let reuseIdentifierHeaderBanner = "GDProductBannerHeader"
     let reuseIdentifierCellAction = "GDProductActionCell"
-    
+    var _quantityView : GDDropDownView!
+    var _transparentView : UIView!
     var product: Product! = nil
 
     override func viewDidLoad() {
@@ -87,8 +88,69 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     //MARK: GDProductActionCellDelegate
     func addProductToCart() {
-        GDCartManager.sharedManager.addProductToCart(product: product)
-        GDAlertAndLoader.showAlertMessage("Product added to cart")
+        addTransparentView()
+        addQuantityView()
+        if let quantity = product.quantity {
+            let itemQuantity = Int(quantity)
+            var quantityList = [String]()
+            for i in 1...itemQuantity {
+                quantityList.append("\(i)")
+            }
+            _quantityView.pickerDataSource = quantityList
+            self.view.addSubview(_quantityView)
+            
+        } else {
+            removeTransparentView()
+            GDAlertAndLoader.showAlertMessage(NSLocalizedString(GDMessage.itemOutOfStock, comment: ""))
+        }
+    }
+}
+
+extension GDProductVC: GDDropDownViewDelegate {
+    
+    func addTransparentView() {
+        _transparentView = UIView();
+        _transparentView.backgroundColor = UIColor.black;
+        _transparentView.alpha = 0.6
+        _transparentView.frame = self.view.frame
+        
+        self.view.addSubview(_transparentView)
+    }
+    
+    func addQuantityView() {
+        _quantityView = UINib(nibName: "GDDropDownView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GDDropDownView
+        _quantityView.delegate = self
+        
+        _quantityView.bounds.size.width = self.view.bounds.size.width
+        _quantityView.bounds.size.height = 287
+        _quantityView.frame.origin = CGPoint.init(x: 0, y: self.view.bounds.size.height - 287)
+        _quantityView._headerTitle.text = GDMessage.selectCountry
+    }
+    
+    func removeTransparentView() {
+        if _transparentView != nil {
+            _transparentView.removeFromSuperview()
+            _transparentView = nil
+        }
+        if _quantityView  != nil {
+            _quantityView.removeFromSuperview()
+            _quantityView = nil
+        }
+    }
+    
+    //MARK: GODropDownViewDelegate
+    func donePressed(selectedValue: String, pickerHeader: String) {
+        let quantity: Int32 = Int32(selectedValue)!
+        if _transparentView != nil {
+            _transparentView.removeFromSuperview()
+            _transparentView = nil
+        }
+        if _quantityView  != nil {
+            _quantityView.removeFromSuperview()
+            _quantityView = nil
+        }
+        GDCartManager.sharedManager.addProductToCart(product: product, quantity: quantity)
+        GDAlertAndLoader.showAlertMessage(NSLocalizedString(GDMessage.productAddedToCart, comment: ""))
     }
 }
 

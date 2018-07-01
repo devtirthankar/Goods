@@ -81,6 +81,8 @@ class GDSignInVC: GDBaseVC {
             _ = self.navigationController?.popViewController(animated: true)
         case DestinationViewType.mycart:
             bringUpMyCart()
+        case DestinationViewType.orders:
+            bringOrderHistory()
         case DestinationViewType.myaccount:
             bringUpMyAccount()
         }
@@ -95,6 +97,12 @@ class GDSignInVC: GDBaseVC {
     func bringUpMyCart() {
         //let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDMyCartVC")
+        self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
+    func bringOrderHistory() {
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDOrdersHistoryVC")
         self.navigationController?.pushViewController(controller!, animated: true)
     }
     

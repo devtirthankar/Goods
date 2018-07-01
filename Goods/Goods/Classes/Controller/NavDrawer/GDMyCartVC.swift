@@ -81,9 +81,11 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
             return
         }
         //Make API call here
+        var counter = 0
         for item in GDCartManager.sharedManager.cart {
             let productId = item.product.productid
             let quantity = item.itemQuantity
+            counter += 1
             GDAlertAndLoader.showLoading()
             GDWebServiceManager.sharedManager.placeOrder(productid: productId, quantity: quantity, block: {[weak self](response, error) in
                 GDAlertAndLoader.hideLoading()
@@ -94,6 +96,12 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
                 else {
                     print("\(GDMessage.selectCountry)")
                     GDAlertAndLoader.showAlertMessage(GDMessage.orderPlaced)
+                }
+                if counter == GDCartManager.sharedManager.cart.count {
+                    GDCartManager.sharedManager.clearCart()
+                    DispatchQueue.main.async {
+                        self?._collectionView.reloadData()
+                    }
                 }
             })
         }

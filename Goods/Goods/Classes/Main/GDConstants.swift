@@ -23,11 +23,14 @@ enum GDErrorAlertMessage {
 
 enum GDMessage {
     static let selectCountry = "Choose Country"
+    static let selectQuantity = "Choose Quantity"
     static let registrationSuccess = "Registration successful"
     static let logoutSuccess = "You are successfully logged out of Goods"
     static let guestUser = "Guest user"
     static let updationSuccess = "Update succeeded"
     static let orderPlaced = "Your order is placed successfully!"
+    static let itemOutOfStock = "Sorry! The item is out of stock at this moment!"
+    static let productAddedToCart = "Product added to cart"
 }
 
 class Global {

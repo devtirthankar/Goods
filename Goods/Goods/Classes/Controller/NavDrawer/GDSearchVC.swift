@@ -62,6 +62,25 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         tabBar.openDrawer()
     }
     
+    @IBAction func cartButtonPressed(_ sender: UIButton){
+        if let _ = GDLogin.loggedInUser()?.token {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "GDMyCartVC")
+            controller.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(controller, animated: true)
+        }else {
+            global.destinationViewType = DestinationViewType.mycart
+            bringUpLoginView()
+        }
+    }
+    
+    func bringUpLoginView() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "GDSignInVC")
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true);
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
         if _segmentControl.selectedSegmentIndex == 0 {

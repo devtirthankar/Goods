@@ -22,6 +22,7 @@ enum GDWebServiceURLEndPoints{
     static let products = "products"
     static let rating = "rating"
     static let orders = "orders"
+    static let orderhistory = "orders"
     static let placeorders = "order"
     static let productsbystore = "/productsbystore"
     static let productsbyid = "/productsbyid"

@@ -17,6 +17,7 @@ enum NavDrawerItemType {
     //case home
     case search
     case myCart
+    case orders
     case myAccount
     case settings
     case logout
@@ -52,9 +53,9 @@ class GDNavDrawerVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if GDLogin.loggedInUser()?.token != nil {
-            _cellTitles = ["My Cart", "My Account", "Settings", "Logout"]
+            _cellTitles = ["My Cart", "My Account", "Orders", "Settings", "Logout"]
         }else {
-            _cellTitles = ["My Cart", "My Account", "Settings", "Login"]
+            _cellTitles = ["My Cart", "My Account", "Orders", "Settings", "Login"]
         }
         _tableView.reloadData()
     }
@@ -99,8 +100,10 @@ class GDNavDrawerVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
         }else if indexPath.row == 2 {
             self.delegate?.didSelectItemType(.myAccount)
         }else if indexPath.row == 3 {
-            self.delegate?.didSelectItemType(.settings)
+            self.delegate?.didSelectItemType(.orders)
         }else if indexPath.row == 4 {
+            self.delegate?.didSelectItemType(.settings)
+        }else if indexPath.row == 5 {
             self.delegate?.didSelectItemType(.logout)
         }
     }

@@ -114,6 +114,9 @@
 		9EAF53CC1FEA7ED6001C9892 /* Prod7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C31FEA7ED6001C9892 /* Prod7.png */; };
 		9EAF53CD1FEA7ED6001C9892 /* Prod8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C41FEA7ED6001C9892 /* Prod8.png */; };
 		9EAF53CE1FEA7ED6001C9892 /* Prod9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C51FEA7ED6001C9892 /* Prod9.png */; };
+		AE884DB320CBEC9A0094C379 /* GDOrdersHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */; };
+		AE884DB620CBF2880094C379 /* GDOrderHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */; };
+		AE884DB720CBF2880094C379 /* GDOrderHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -240,6 +243,9 @@
 		9EAF53C31FEA7ED6001C9892 /* Prod7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod7.png; sourceTree = "<group>"; };
 		9EAF53C41FEA7ED6001C9892 /* Prod8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod8.png; sourceTree = "<group>"; };
 		9EAF53C51FEA7ED6001C9892 /* Prod9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod9.png; sourceTree = "<group>"; };
+		AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersHistoryVC.swift; sourceTree = "<group>"; };
+		AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrderHistoryCell.swift; sourceTree = "<group>"; };
+		AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDOrderHistoryCell.xib; sourceTree = "<group>"; };
 		E000415017B5D423AFBDB3BB /* Pods_Goods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -273,6 +279,8 @@
 			children = (
 				0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */,
 				0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */,
+				AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */,
+				AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */,
 			);
 			path = "My Cart";
 			sourceTree = "<group>";
@@ -567,6 +575,7 @@
 				0DE6D1A21FEA470D004795F5 /* GDNavDrawerVC.swift */,
 				0DE6D1A41FEA470D004795F5 /* GDSettingsVC.swift */,
 				0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */,
+				AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */,
 			);
 			path = NavDrawer;
 			sourceTree = "<group>";
@@ -713,6 +722,7 @@
 				9EAF53C81FEA7ED6001C9892 /* Prod3.png in Resources */,
 				0DA26B8720A8A841008753D1 /* GoogleService-Info.plist in Resources */,
 				0D5F0979203D4ED800D6812D /* GDProductDescriptionCell.xib in Resources */,
+				AE884DB720CBF2880094C379 /* GDOrderHistoryCell.xib in Resources */,
 				0DE086971FD9AF7C007C228F /* LaunchScreen.storyboard in Resources */,
 				9EAF53CC1FEA7ED6001C9892 /* Prod7.png in Resources */,
 				0DDC3D2A1FE3084A00C0640B /* StoreThmb4.png in Resources */,
@@ -820,6 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE884DB620CBF2880094C379 /* GDOrderHistoryCell.swift in Sources */,
 				0DC2ECC11FE3615A005B7E11 /* GDStoreBannerCell.swift in Sources */,
 				9E33ADA31FDAA92800A02475 /* GDNearYouVC.swift in Sources */,
 				0D300AC3209C4C01004BE9B7 /* GDWebServiceOrderRequest.swift in Sources */,
@@ -843,6 +854,7 @@
 				0D76CD4A20982BE5007DBE3E /* GDUserProfile+CoreDataClass.swift in Sources */,
 				0DDBE4CB1FF88AA800AA576F /* UIColor+Additions.swift in Sources */,
 				0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */,
+				AE884DB320CBEC9A0094C379 /* GDOrdersHistoryVC.swift in Sources */,
 				0DE0869B1FD9B0D3007C228F /* GDSplashVC.swift in Sources */,
 				0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */,
 				0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */,
@@ -983,7 +995,8 @@
 			baseConfigurationReference = 211CA9381F0D16E70DDB026D /* Pods-Goods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Abdulrahman Khawaji (96F8K2R6V4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 96F8K2R6V4;
 				INFOPLIST_FILE = Goods/Info.plist;
@@ -992,7 +1005,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmit.goodscustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3d700246-12d3-45fe-bba5-26275ff8cf8c";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = GoodsCustomerAppStore;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1002,7 +1015,8 @@
 			baseConfigurationReference = 257568E96E7FB89BFD4157C3 /* Pods-Goods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Abdulrahman Khawaji (96F8K2R6V4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 96F8K2R6V4;
 				INFOPLIST_FILE = Goods/Info.plist;
@@ -1011,7 +1025,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmit.goodscustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3d700246-12d3-45fe-bba5-26275ff8cf8c";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = GoodsCustomerAppStore;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

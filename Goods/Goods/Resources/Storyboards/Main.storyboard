@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jjf-7w-NLt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jjf-7w-NLt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoodsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="GgD-rl-h2f">
-                                <rect key="frame" x="102" y="115" width="171" height="171"/>
+                                <rect key="frame" x="102" y="114.5" width="171" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="JLK-pd-EzT"/>
                                     <constraint firstAttribute="width" constant="171" id="YGb-EJ-FCj"/>
@@ -102,12 +102,25 @@
                                             <action selector="menuButtonPressed:" destination="Xrv-ko-3LM" eventType="touchUpInside" id="Qed-Vm-6Br"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI1-pq-vBA">
+                                        <rect key="frame" x="327" y="12" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="3Rd-Kf-hJi"/>
+                                            <constraint firstAttribute="height" constant="40" id="BjP-M0-Qpg"/>
+                                        </constraints>
+                                        <state key="normal" image="cartButton"/>
+                                        <connections>
+                                            <action selector="cartButtonPressed:" destination="Xrv-ko-3LM" eventType="touchUpInside" id="T0n-cj-PIG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549018" green="0.74509803921568629" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="HI1-pq-vBA" firstAttribute="centerY" secondItem="s7K-sL-XAg" secondAttribute="centerY" id="5Si-8P-AJX"/>
                                     <constraint firstAttribute="height" constant="64" id="9wr-ba-jLe"/>
                                     <constraint firstItem="s7K-sL-XAg" firstAttribute="top" secondItem="YwQ-b5-vi2" secondAttribute="top" constant="8" id="IOI-S7-oKc"/>
                                     <constraint firstAttribute="trailing" secondItem="h1x-eM-QBA" secondAttribute="trailing" constant="60" id="NXK-AH-ZMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="HI1-pq-vBA" secondAttribute="trailing" constant="8" id="f9T-nG-KgT"/>
                                     <constraint firstItem="h1x-eM-QBA" firstAttribute="leading" secondItem="YwQ-b5-vi2" secondAttribute="leading" constant="60" id="fM8-wM-C1d"/>
                                     <constraint firstItem="s7K-sL-XAg" firstAttribute="leading" secondItem="YwQ-b5-vi2" secondAttribute="leading" constant="8" id="kit-pk-jlW"/>
                                     <constraint firstItem="h1x-eM-QBA" firstAttribute="centerY" secondItem="YwQ-b5-vi2" secondAttribute="centerY" id="q51-S2-Kfi"/>
@@ -181,13 +194,13 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUk-cs-xtu">
-                                                    <rect key="frame" x="8" y="6" width="359" height="20.5"/>
+                                                    <rect key="frame" x="8" y="6" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zln-bC-HE2">
-                                                    <rect key="frame" x="8" y="26.5" width="359" height="19.5"/>
+                                                    <rect key="frame" x="8" y="27" width="359" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -375,14 +388,27 @@
                                             <action selector="menuButtonPressed:" destination="vBk-i5-Qfx" eventType="touchUpInside" id="9Lx-lA-Ccs"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di5-cN-p83">
+                                        <rect key="frame" x="327" y="12" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="2pr-bK-een"/>
+                                            <constraint firstAttribute="height" constant="40" id="Rro-nz-3DU"/>
+                                        </constraints>
+                                        <state key="normal" image="cartButton"/>
+                                        <connections>
+                                            <action selector="cartButtonPressed:" destination="vBk-i5-Qfx" eventType="touchUpInside" id="aDZ-KY-i3w"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.74509803919999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="4XP-Hs-MjB" firstAttribute="top" secondItem="rtv-bK-XHi" secondAttribute="top" constant="8" id="6os-A2-O55"/>
                                     <constraint firstItem="RYY-lK-fJU" firstAttribute="leading" secondItem="rtv-bK-XHi" secondAttribute="leading" constant="60" id="EgY-dj-OGp"/>
+                                    <constraint firstItem="di5-cN-p83" firstAttribute="centerY" secondItem="4XP-Hs-MjB" secondAttribute="centerY" id="QlQ-2y-DZv"/>
                                     <constraint firstItem="RYY-lK-fJU" firstAttribute="centerY" secondItem="rtv-bK-XHi" secondAttribute="centerY" id="ieN-Re-9FS"/>
                                     <constraint firstAttribute="height" constant="64" id="lML-CG-2FQ"/>
                                     <constraint firstAttribute="trailing" secondItem="RYY-lK-fJU" secondAttribute="trailing" constant="60" id="o5H-lt-Qvj"/>
+                                    <constraint firstAttribute="trailing" secondItem="di5-cN-p83" secondAttribute="trailing" constant="8" id="q5q-MD-yKE"/>
                                     <constraint firstItem="4XP-Hs-MjB" firstAttribute="leading" secondItem="rtv-bK-XHi" secondAttribute="leading" constant="8" id="zcK-52-mKF"/>
                                 </constraints>
                             </view>
@@ -444,15 +470,28 @@
                                             <action selector="menuButtonPressed:" destination="Gfl-YP-Zar" eventType="touchUpInside" id="0rI-2a-aCh"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSq-vC-Z7A">
+                                        <rect key="frame" x="327" y="12" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Rhh-L0-fzF"/>
+                                            <constraint firstAttribute="height" constant="40" id="dro-fM-uI5"/>
+                                        </constraints>
+                                        <state key="normal" image="cartButton"/>
+                                        <connections>
+                                            <action selector="cartButtonPressed:" destination="Gfl-YP-Zar" eventType="touchUpInside" id="mTg-Y2-t1k"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.74509803919999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="VqV-6t-OMk" firstAttribute="leading" secondItem="Bqh-hp-5j8" secondAttribute="leading" constant="60" id="97W-Y7-p39"/>
+                                    <constraint firstItem="BSq-vC-Z7A" firstAttribute="centerY" secondItem="qyN-H3-O9j" secondAttribute="centerY" id="BFq-6O-ZNh"/>
                                     <constraint firstAttribute="trailing" secondItem="VqV-6t-OMk" secondAttribute="trailing" constant="60" id="bU0-tu-cbg"/>
                                     <constraint firstItem="qyN-H3-O9j" firstAttribute="leading" secondItem="Bqh-hp-5j8" secondAttribute="leading" constant="8" id="cVe-rs-Hsj"/>
                                     <constraint firstItem="qyN-H3-O9j" firstAttribute="top" secondItem="Bqh-hp-5j8" secondAttribute="top" constant="8" id="d0o-Jc-aZx"/>
                                     <constraint firstAttribute="height" constant="64" id="nPe-5N-dh8"/>
                                     <constraint firstItem="VqV-6t-OMk" firstAttribute="centerY" secondItem="Bqh-hp-5j8" secondAttribute="centerY" id="t2e-HN-4ws"/>
+                                    <constraint firstAttribute="trailing" secondItem="BSq-vC-Z7A" secondAttribute="trailing" constant="8" id="u1c-6M-j13"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DiI-LZ-qtr">
@@ -860,6 +899,7 @@
     </scenes>
     <resources>
         <image name="GoodsLogo" width="167" height="167"/>
+        <image name="cartButton" width="50" height="50"/>
         <image name="icon_back_white" width="24" height="30"/>
         <image name="icon_hamburger" width="33" height="22"/>
         <image name="mapview" width="25" height="25"/>

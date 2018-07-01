@@ -9,6 +9,28 @@
 import Foundation
 import Alamofire
 
+struct Orders: Decodable {
+    let result: [Order]
+}
+
+struct Order: Decodable {
+    let orderid: Int64
+    let orderstatus: Orderstatus?
+    let quantity: Int?
+    let userinfo: Userinfo?
+    let product: Product
+}
+
+struct Orderstatus: Decodable {
+    let orderstatusname: String?
+    let orderstatusnamear: String?
+}
+
+struct Userinfo: Decodable {
+    let mobile: String?
+    let name: String?
+}
+
 class GDWebServiceOrderRequest: GDWebServiceRequest {
     override init(manager: GDWebServiceManager, block : @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)

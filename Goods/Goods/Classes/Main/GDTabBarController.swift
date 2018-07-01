@@ -11,6 +11,7 @@ import UIKit
 enum DestinationViewType {
     case dashboard
     case mycart
+    case orders
     case myaccount
 }
 
@@ -98,6 +99,18 @@ class GDTabBarController: UITabBarController, GDNavDrawerDelegate {
                 navcon.pushViewController(controller, animated: true);
             }else {
                 global.destinationViewType = DestinationViewType.mycart
+                bringUpLoginView()
+            }
+            
+        case .orders:
+            if let _ = GDLogin.loggedInUser()?.token {
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "GDOrdersHistoryVC")
+                controller.hidesBottomBarWhenPushed = true
+                let navcon = self.selectedViewController as! UINavigationController;
+                navcon.pushViewController(controller, animated: true);
+            }else {
+                global.destinationViewType = DestinationViewType.orders
                 bringUpLoginView()
             }
             
