@@ -18,6 +18,7 @@ class GDEditAccountDetailsVC: GDBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setColorForTitleViews()
         initializeUI()
     }
     

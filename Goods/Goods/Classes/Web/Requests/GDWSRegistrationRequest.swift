@@ -139,7 +139,7 @@ class GDWSUpdatePasswordRequest: GDWebServiceRequest {
     init(manager: GDWebServiceManager, oldpassword: String, newpassword: String, block: @escaping GDWSCompletionBlock) {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.put
-        url = manager.baseURL + GDWebServiceURLEndPoints.updateemail
+        url = manager.baseURL + GDWebServiceURLEndPoints.updatepassword
         headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
         body?["oldpassword"] = oldpassword
         body?["password"] = newpassword

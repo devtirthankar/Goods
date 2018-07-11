@@ -16,6 +16,9 @@ class GDNavDrawerHeaderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        name.textColor = UIColor.white
+//        mobile.textColor = UIColor.white
+        self.backgroundColor = UIColor.colorForHex(GDColor.ThemeColor as NSString)
     }
 
 }

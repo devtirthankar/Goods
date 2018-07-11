@@ -13,9 +13,9 @@ typealias GDWSCompletionBlock = (_ object : Any?, _ error : Error?) -> Void
 enum GDWebServiceURLEndPoints{
     static let registration = "user"
     static let login = "login"
-    static let updatename = "name"
-    static let updateemail = "email"
-    static let updatepassword = "password"
+    static let updatename = "user/name"
+    static let updateemail = "user/email"
+    static let updatepassword = "user/password"
     static let otp = "otp"
     static let listCountries = "countries"
     static let stores = "stores"

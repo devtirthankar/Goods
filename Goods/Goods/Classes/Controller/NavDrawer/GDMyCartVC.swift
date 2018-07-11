@@ -109,15 +109,14 @@ class GDMyCartVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     @IBAction func continueShoppingButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        
         return GDCartManager.sharedManager.cart.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
-        
         let cell: GDMyCartItemCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDMyCartItemCell
         cell.delegate = self
         let serailNo = indexPath.row + 1

@@ -13,7 +13,7 @@ enum GDErrorAlertMessage {
     static let emptyOldPassword = "Please enter your old password"
     static let emptyNewPassword = "Please enter new password"
     static let emptyConfirmPassword = "Please confirm your new password"
-    static let mismatchPassword = "The entered passwords do not match. Please check again."
+    static let mismatchPassword = "The new password and confirm password do not match. Please check again."
     static let emptyEmail = "Please enter email"
     static let invalidEmail = "Please enter a valid email"
     static let emptyName = "Please enter name"

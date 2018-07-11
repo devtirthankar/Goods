@@ -49,4 +49,12 @@ extension GDUserProfile {
         })
         return entity
     }
+    
+    public static func updateUserName(userProfile: GDUserProfile, name: String) {
+        userProfile.name = name
+    }
+    
+    public static func updateUserEmail(userProfile: GDUserProfile, email: String) {
+        userProfile.email = email
+    }
 }

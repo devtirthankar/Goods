@@ -18,6 +18,7 @@ class GDMyAccountVC: GDBaseVC {
     var initialNameValue = ""
     var initialEmailValue = ""
     var isEditButtonEnable = false
+    var userProfile: GDUserProfile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class GDMyAccountVC: GDBaseVC {
         editButton.layer.borderWidth = 1.0
         editButton.alpha = 0.5
         editButton.isUserInteractionEnabled = false
+        userProfile = GDUserProfile.loggedInUser()
         name.text = GDUserProfile.loggedInUser()?.name?.capitalized
         if let emailId = GDUserProfile.loggedInUser()?.email {
             email.text = emailId
@@ -86,6 +88,7 @@ class GDMyAccountVC: GDBaseVC {
                 }
             }
             else {
+                self?.userProfile?.name = self?.name.text
                 DispatchQueue.main.async {
                     GDAlertAndLoader.showAlertMessage(GDMessage.updationSuccess)
                     self?.isEditButtonEnable = false
@@ -104,6 +107,7 @@ class GDMyAccountVC: GDBaseVC {
                 }
             }
             else {
+                self?.userProfile?.email = self?.email.text
                 DispatchQueue.main.async {
                     GDAlertAndLoader.showAlertMessage(GDMessage.updationSuccess)
                     self?.isEditButtonEnable = false
