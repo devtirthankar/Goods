@@ -52,6 +52,11 @@ class GDSignInVC: GDBaseVC {
         self.navigationController?.pushViewController(controller!, animated: true)
     }
     
+    @IBAction func forgotPasswordPressed(_ sender: UIButton) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GDForgotPasswordVC")
+        self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         _ = self.navigationController?.popViewController(animated: true)
     }

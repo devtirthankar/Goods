@@ -1,5 +1,27 @@
 PODS:
   - Alamofire (4.6.0)
+  - Firebase/Core (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.1)
+  - Firebase/CoreOnly (5.4.0):
+    - FirebaseCore (= 5.0.5)
+  - Firebase/Messaging (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.0.3)
+  - FirebaseAnalytics (5.0.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.0.5):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (3.1.1):
+    - FirebaseCore (~> 5.0)
+  - FirebaseMessaging (3.0.3):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
   - GoogleMaps (2.3.0):
     - GoogleMaps/Maps (= 2.3.0)
   - GoogleMaps/Base (2.3.0)
@@ -7,26 +29,64 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.3.0):
     - GoogleMaps/Base (= 2.3.0)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
   - IQKeyboardManagerSwift (5.0.7)
   - Kingfisher (4.7.0)
   - MBProgressHUD (1.1.0)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - Protobuf (3.6.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Firebase/Core
+  - Firebase/Messaging
   - GoogleMaps
   - GooglePlaces
   - IQKeyboardManagerSwift
   - Kingfisher
   - MBProgressHUD
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - GoogleMaps
+    - GooglePlaces
+    - GoogleToolboxForMac
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MBProgressHUD
+    - nanopb
+    - Protobuf
+
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
+  FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
+  FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
+  FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FirebaseMessaging: f43eb0c0e1da096e659de6f713038e74862a62cd
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   GooglePlaces: 74d322c74184ea4576184089b496d291cf0dcd38
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
 
-PODFILE CHECKSUM: fabb751d1216293fe08d800cdc552d724597bafd
+PODFILE CHECKSUM: de95c3cd8ad8e96d8ea5481f5ca148c4603b333e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

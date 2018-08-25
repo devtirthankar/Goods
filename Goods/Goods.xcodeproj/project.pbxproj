@@ -114,6 +114,7 @@
 		9EAF53CC1FEA7ED6001C9892 /* Prod7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C31FEA7ED6001C9892 /* Prod7.png */; };
 		9EAF53CD1FEA7ED6001C9892 /* Prod8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C41FEA7ED6001C9892 /* Prod8.png */; };
 		9EAF53CE1FEA7ED6001C9892 /* Prod9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C51FEA7ED6001C9892 /* Prod9.png */; };
+		AE491215210DC66E00B997AE /* GDForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE491214210DC66E00B997AE /* GDForgotPasswordVC.swift */; };
 		AE884DB320CBEC9A0094C379 /* GDOrdersHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */; };
 		AE884DB620CBF2880094C379 /* GDOrderHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */; };
 		AE884DB720CBF2880094C379 /* GDOrderHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */; };
@@ -243,6 +244,7 @@
 		9EAF53C31FEA7ED6001C9892 /* Prod7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod7.png; sourceTree = "<group>"; };
 		9EAF53C41FEA7ED6001C9892 /* Prod8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod8.png; sourceTree = "<group>"; };
 		9EAF53C51FEA7ED6001C9892 /* Prod9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod9.png; sourceTree = "<group>"; };
+		AE491214210DC66E00B997AE /* GDForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDForgotPasswordVC.swift; sourceTree = "<group>"; };
 		AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersHistoryVC.swift; sourceTree = "<group>"; };
 		AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrderHistoryCell.swift; sourceTree = "<group>"; };
 		AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDOrderHistoryCell.xib; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				0DE0869C1FD9B204007C228F /* GDSignInVC.swift */,
 				9E33AD9D1FDA90A800A02475 /* GDRegistrationVC.swift */,
 				0D449B132042CE190001063F /* GDRegistrationVM.swift */,
+				AE491214210DC66E00B997AE /* GDForgotPasswordVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -807,16 +810,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Goods/Pods-Goods-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -857,6 +866,7 @@
 				AE884DB320CBEC9A0094C379 /* GDOrdersHistoryVC.swift in Sources */,
 				0DE0869B1FD9B0D3007C228F /* GDSplashVC.swift in Sources */,
 				0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */,
+				AE491215210DC66E00B997AE /* GDForgotPasswordVC.swift in Sources */,
 				0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */,
 				0D0B01452097AB490000E9EF /* GDDataModel.xcdatamodeld in Sources */,
 				9E33ADA71FDAA95B00A02475 /* GDMapViewVC.swift in Sources */,

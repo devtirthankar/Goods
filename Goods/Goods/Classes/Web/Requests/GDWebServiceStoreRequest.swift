@@ -61,7 +61,14 @@ class GDWebServiceStoreRequest: GDWebServiceRequest {
         super.init(manager: manager, block: block)
         httpMethod = HTTPMethod.get
         url = manager.baseURL + GDWebServiceURLEndPoints.stores
-        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
+    }
+}
+
+class GDWSFeaturedStoreRequest: GDWebServiceRequest {
+    override init(manager : GDWebServiceManager, block : @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.get
+        url = manager.baseURL + GDWebServiceURLEndPoints.storesfeatured
     }
 }
 

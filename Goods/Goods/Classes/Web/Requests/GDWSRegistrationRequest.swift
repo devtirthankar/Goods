@@ -9,6 +9,15 @@
 import Foundation
 import Alamofire
 
+struct Countries: Decodable {
+    let result: [Country]
+}
+
+struct Country: Decodable {
+    let countryname: String?
+    let countrynamear: String?
+}
+
 class GDWSRegistrationRequest: GDWebServiceRequest {
     
     init(manager : GDWebServiceManager, name : String, email: String, password: String, phone: String, countrycode: String, block : @escaping GDWSCompletionBlock) {
@@ -113,6 +122,21 @@ class GDWSCountryCodeRequest: GDWebServiceRequest {
         httpMethod = HTTPMethod.get
         url = manager.baseURL + GDWebServiceURLEndPoints.listCountries
     }
+    
+    override func responseSuccess(data: Data?) {
+        guard let data = data else {
+            return
+        }
+        var json = [String: Any]()
+        do {
+            json = (try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any])!
+            
+        } catch {
+            print("Something went wrong")
+        }
+        print("\(json)")
+        super.responseSuccess(data: data)
+    }
 }
 
 class GDWSUpdateNameRequest: GDWebServiceRequest {
@@ -143,5 +167,14 @@ class GDWSUpdatePasswordRequest: GDWebServiceRequest {
         headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
         body?["oldpassword"] = oldpassword
         body?["password"] = newpassword
+    }
+}
+
+class GDWSResetPasswordRequest: GDWebServiceRequest {
+    override init(manager: GDWebServiceManager, block: @escaping GDWSCompletionBlock) {
+        super.init(manager: manager, block: block)
+        httpMethod = HTTPMethod.put
+        url = manager.baseURL + GDWebServiceURLEndPoints.passwordreset
+        //headers?["Authorization"] = "\((GDLogin.loggedInUser()?.token)!)"
     }
 }

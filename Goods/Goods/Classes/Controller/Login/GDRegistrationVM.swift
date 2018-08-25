@@ -12,6 +12,7 @@ protocol GDRegistrationVMDelegate {
     func registraionSucessfull()
     func registraionError(_ message: String)
     func invalidInputDetected(_ message: String)
+    //func countryListFetched(_ list:)
 }
 
 class GDRegistrationVM: NSObject {
@@ -43,8 +44,10 @@ class GDRegistrationVM: NSObject {
         else if countrycode.count == 0 {
             message = GDErrorAlertMessage.emptyCountryCode
         }
+        if message.count > 0 {
+            GDAlertAndLoader.showAlertMessage(message)
+        }
         else {
-            //if validation successfull, call register api
             registerUser(name: name, email: email, password: password, phone: phone, countrycode: countrycode)
         }
     }

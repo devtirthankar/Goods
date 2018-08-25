@@ -16,9 +16,11 @@ enum GDWebServiceURLEndPoints{
     static let updatename = "user/name"
     static let updateemail = "user/email"
     static let updatepassword = "user/password"
+    static let passwordreset = "user/passwordreset"
     static let otp = "otp"
     static let listCountries = "countries"
     static let stores = "stores"
+    static let storesfeatured = "stores/featured"
     static let products = "products"
     static let rating = "rating"
     static let orders = "orders"
@@ -33,14 +35,14 @@ enum GDWebServiceURLEndPoints{
 
 enum GDServerURL: String {
     case development = "https://api.smj.ltd/api/v1/"
-    case test = "test"
-    case production = "https://api.goods-dts.com/api/v1/"
+    case test = "https://api.goods-dts.com/api/v1/"
+    case production = "https://goodsdts-prod.azurewebsites.net/"//"https://api.goods-dts.com/api/v1/"
     case staging = "http://www.goods-dts.com/goodsapp/"
 }
 
 class GDWebServiceManager: NSObject {
     var serviceArray = [GDWebServiceRequest]()
-    var baseURL = GDServerURL.production.rawValue
+    var baseURL = GDServerURL.test.rawValue
     var baseImageURL = GDWebServiceURLEndPoints.imageurlproduction
     
     static let sharedManager : GDWebServiceManager = {
@@ -108,8 +110,18 @@ extension GDWebServiceManager{
         self.startRequest(service: service)
     }
     
+    func resetPassword(block : @escaping GDWSCompletionBlock) {
+        let service = GDWSResetPasswordRequest.init(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
     func getStores(block : @escaping GDWSCompletionBlock) {
         let service = GDWebServiceStoreRequest.init(manager: self, block: block)
+        self.startRequest(service: service)
+    }
+    
+    func getFeaturedStores(block : @escaping GDWSCompletionBlock) {
+        let service = GDWSFeaturedStoreRequest.init(manager: self, block: block)
         self.startRequest(service: service)
     }
     

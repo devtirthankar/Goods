@@ -31,6 +31,7 @@ enum GDMessage {
     static let orderPlaced = "Your order is placed successfully!"
     static let itemOutOfStock = "Sorry! The item is out of stock at this moment!"
     static let productAddedToCart = "Product added to cart"
+    static let passwordWillBeSent = "Temporary password will be sent to your mobile number"
 }
 
 class Global {

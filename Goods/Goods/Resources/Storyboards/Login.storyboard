@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FD-Qi-jra">
-                                <rect key="frame" x="151" y="20" width="72.5" height="21"/>
+                                <rect key="frame" x="151.5" y="20" width="72.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.3921568627" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -100,6 +100,9 @@
                                 <state key="normal" title="Forgot password?">
                                     <color key="titleColor" red="0.55694629600000001" green="0.58105844259999995" blue="0.54032558679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordPressed:" destination="9le-A4-fqA" eventType="touchUpInside" id="a1A-ja-xg4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoodsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-km-07q">
                                 <rect key="frame" x="104" y="116.5" width="167" height="167"/>
@@ -171,7 +174,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-Cg-i8A">
-                                <rect key="frame" x="119" y="20" width="138.5" height="21"/>
+                                <rect key="frame" x="118.5" y="20" width="138.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.3921568627" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -833,6 +836,129 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zwx-18-g5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1983" y="681"/>
+        </scene>
+        <!--Forgot PasswordVC-->
+        <scene sceneID="GbO-GN-hrw">
+            <objects>
+                <viewController storyboardIdentifier="GDForgotPasswordVC" id="xQl-00-MPj" customClass="GDForgotPasswordVC" customModule="Goods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d1c-xx-vrJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMV-m9-dXL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fK1-a4-jaE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvI-eo-BVC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-dQ-7f5">
+                                        <rect key="frame" x="60" y="23" width="255" height="19"/>
+                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urR-Rv-aDd">
+                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="479-v4-J7E"/>
+                                            <constraint firstAttribute="width" constant="48" id="GMO-aB-E7B"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_back_white"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="xQl-00-MPj" eventType="touchUpInside" id="HoR-MT-pxa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.74509803919999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="urR-Rv-aDd" firstAttribute="leading" secondItem="hvI-eo-BVC" secondAttribute="leading" constant="8" id="050-hG-z13"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sx0-dQ-7f5" secondAttribute="trailing" constant="60" id="0Py-7C-8h9"/>
+                                    <constraint firstAttribute="height" constant="64" id="IQz-bZ-qNX"/>
+                                    <constraint firstItem="Sx0-dQ-7f5" firstAttribute="centerY" secondItem="hvI-eo-BVC" secondAttribute="centerY" id="JB1-Dz-n23"/>
+                                    <constraint firstItem="Sx0-dQ-7f5" firstAttribute="leading" secondItem="hvI-eo-BVC" secondAttribute="leading" constant="60" id="fhT-0K-GpN"/>
+                                    <constraint firstItem="urR-Rv-aDd" firstAttribute="top" secondItem="hvI-eo-BVC" secondAttribute="top" constant="8" id="wUC-FY-dEU"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temporary password will be sent to your mobile number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83C-bT-ePh">
+                                <rect key="frame" x="16" y="104" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="15"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-RH-rbo">
+                                <rect key="frame" x="127" y="243.5" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bOY-Cc-gqd"/>
+                                    <constraint firstAttribute="width" constant="120" id="xxB-4V-44D"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="xQl-00-MPj" eventType="touchUpInside" id="VHh-rM-UTw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VG-gp-ni3">
+                                <rect key="frame" x="156.5" y="163.5" width="210.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qO-2l-4cx">
+                                <rect key="frame" x="8" y="163.5" width="140.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="MFk-dJ-E5c">
+                                <rect key="frame" x="120.5" y="168.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KBm-eX-2Ox"/>
+                                    <constraint firstAttribute="width" constant="20" id="izK-iQ-sNt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEh-tc-Qtz">
+                                <rect key="frame" x="8.5" y="161.5" width="140.5" height="34"/>
+                                <connections>
+                                    <action selector="countryCodeButtonPressed:" destination="xQl-00-MPj" eventType="touchUpInside" id="dUh-7c-Jgx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5VG-gp-ni3" secondAttribute="trailing" constant="8" id="6Db-VF-q0f"/>
+                            <constraint firstItem="VEh-tc-Qtz" firstAttribute="centerX" secondItem="8qO-2l-4cx" secondAttribute="centerX" id="7Ht-8i-iA9"/>
+                            <constraint firstItem="MFk-dJ-E5c" firstAttribute="centerY" secondItem="8qO-2l-4cx" secondAttribute="centerY" id="7dY-GL-Ibm"/>
+                            <constraint firstItem="8qO-2l-4cx" firstAttribute="leading" secondItem="fK1-a4-jaE" secondAttribute="leading" constant="8" id="7hJ-m3-boY"/>
+                            <constraint firstItem="5VG-gp-ni3" firstAttribute="leading" secondItem="8qO-2l-4cx" secondAttribute="trailing" constant="8" id="CWG-Sc-knl"/>
+                            <constraint firstItem="5VG-gp-ni3" firstAttribute="width" secondItem="8qO-2l-4cx" secondAttribute="width" multiplier="1.5" id="GmV-1w-3Ia"/>
+                            <constraint firstItem="VEh-tc-Qtz" firstAttribute="centerY" secondItem="8qO-2l-4cx" secondAttribute="centerY" id="LcI-VK-NEU"/>
+                            <constraint firstItem="8qO-2l-4cx" firstAttribute="top" secondItem="83C-bT-ePh" secondAttribute="bottom" constant="26" id="OPI-S3-OHd"/>
+                            <constraint firstAttribute="trailing" secondItem="83C-bT-ePh" secondAttribute="trailing" constant="16" id="RNv-O6-5Jb"/>
+                            <constraint firstItem="5VG-gp-ni3" firstAttribute="centerY" secondItem="8qO-2l-4cx" secondAttribute="centerY" id="SMy-ld-Hak"/>
+                            <constraint firstItem="hvI-eo-BVC" firstAttribute="top" secondItem="fK1-a4-jaE" secondAttribute="top" id="UV4-nB-zbU"/>
+                            <constraint firstAttribute="trailing" secondItem="hvI-eo-BVC" secondAttribute="trailing" id="XnY-0x-IPb"/>
+                            <constraint firstItem="VEh-tc-Qtz" firstAttribute="width" secondItem="8qO-2l-4cx" secondAttribute="width" id="b7V-ph-s7c"/>
+                            <constraint firstItem="5VG-gp-ni3" firstAttribute="leading" secondItem="MFk-dJ-E5c" secondAttribute="trailing" constant="16" id="hBK-dk-wSg"/>
+                            <constraint firstItem="Gy1-RH-rbo" firstAttribute="top" secondItem="VEh-tc-Qtz" secondAttribute="bottom" constant="48" id="k7V-JK-Lbt"/>
+                            <constraint firstItem="hvI-eo-BVC" firstAttribute="leading" secondItem="fK1-a4-jaE" secondAttribute="leading" id="kWz-I9-GbM"/>
+                            <constraint firstItem="83C-bT-ePh" firstAttribute="top" secondItem="hvI-eo-BVC" secondAttribute="bottom" constant="40" id="mz4-Yf-MeZ"/>
+                            <constraint firstItem="83C-bT-ePh" firstAttribute="leading" secondItem="fK1-a4-jaE" secondAttribute="leading" constant="16" id="r2a-LN-RFW"/>
+                            <constraint firstItem="Gy1-RH-rbo" firstAttribute="centerX" secondItem="fK1-a4-jaE" secondAttribute="centerX" id="wfY-xH-XRr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_countryCode" destination="8qO-2l-4cx" id="zKJ-Hf-fjn"/>
+                        <outlet property="_phone" destination="5VG-gp-ni3" id="HCj-aE-l27"/>
+                        <outlet property="saveButton" destination="Gy1-RH-rbo" id="0lH-pE-rcp"/>
+                        <outletCollection property="_themeView" destination="hvI-eo-BVC" collectionClass="NSMutableArray" id="p0f-KB-f1I"/>
+                        <outletCollection property="_themeView" destination="Gy1-RH-rbo" collectionClass="NSMutableArray" id="TpM-vQ-39P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gr1-9q-Heq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="1365.0674662668666"/>
         </scene>
     </scenes>
     <resources>

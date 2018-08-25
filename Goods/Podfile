@@ -19,4 +19,8 @@ pod 'Kingfisher'
 
 pod 'MBProgressHUD'
 
+pod 'Firebase/Core'
+
+pod 'Firebase/Messaging'
+
 end

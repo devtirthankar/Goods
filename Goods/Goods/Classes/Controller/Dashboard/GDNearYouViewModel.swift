@@ -44,7 +44,7 @@ class GDSNearYouViewModel {
     //Write service for top stores
     func fetchTopStores(latitude: Double, longitude: Double) {
         GDAlertAndLoader.showLoading()
-        GDWebServiceManager.sharedManager.getStoresNearYou(latitude: latitude, longitude: longitude, block: {[weak self](response, error) in
+        GDWebServiceManager.sharedManager.getFeaturedStores(block: {[weak self](response, error) in
             GDAlertAndLoader.hideLoading()
             DispatchQueue.main.async {
                 guard let data = response as? Data else {
