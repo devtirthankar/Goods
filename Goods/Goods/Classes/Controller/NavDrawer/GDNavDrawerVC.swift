@@ -53,9 +53,9 @@ class GDNavDrawerVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if GDLogin.loggedInUser()?.token != nil {
-            _cellTitles = ["My Cart", "My Account", "Orders", "Settings", "Logout"]
+            _cellTitles = ["My Cart".translate, "My Account".translate, "Orders".translate, "Settings".translate, "Logout".translate]
         }else {
-            _cellTitles = ["My Cart", "My Account", "Orders", "Settings", "Login"]
+            _cellTitles = ["My Cart".translate, "My Account".translate, "Orders".translate, "Settings".translate, "Login".translate]
         }
         _tableView.reloadData()
     }

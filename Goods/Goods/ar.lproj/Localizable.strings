@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Goods
+
+  Created by Tirthankar M on 30/08/18.
+  Copyright © 2018 company. All rights reserved.
+*/
+
+
+"Please enter mobile" = "فضلا أدخل رقم الجوال";
+"Please enter password" = "فضلا أدخل كلمة المرور";
+"Please enter your old password" = "فضلا أدخل كلمة المرور القديمة";
+"Please enter new password" = "فضلا أدخل كلمة المرور الجديدة";
+"Please confirm your new password" = "تأكيد كلمة المرور الجديدة";
+"The new password and confirm password do not match. Please check again." = "تأكيد كلمة المرور الجديدة غير مطابق،فضلا التأكد";
+"Please enter email" = "فضلا أدخل البريد الإلكتروني";
+"Please enter a valid email" = "البريد الإلكتروني غير صحيح";
+"Please enter name" = "فضلا أدخل الاسم";
+"Please enter country code" = "فضلا أدخل رمز الدولة";
+"Please add at least one item to your cart to place an order" = "فضلا أضف على الأقل منتج واحد في السلة لإكمال الطلب";
+"Choose Country" = "أختر الدولة";
+"Choose Quantity" = "أختر الكمية";
+"Registration successful" = "تم التسجيل بنجاح";
+"You are successfully logged out of Goods" = "تم تسجيل الخروج بنجاح";
+"Guest user" = "المستخدم الإفتراضي";
+"Update succeeded" = "تم التحديث بنجاح";
+"Your order is placed successfully!" = "تم تسجيل طلبك بنجاح";
+"Sorry! The item is out of stock at this moment!" = "عذرا، المنتج غير متوفر";
+"Product added to cart" = "تم إضافة المنتج لعربة التسوق";
+"Temporary password will be sent to your mobile number" = "تم إرسال كلمة المرور المؤقتة إلى جوالك";
+"Order Number:" = "رقم الطلب";
+"Quantity:" = "الكمية";
+"Order Status:" = "حالة الطلب";
+"Goods" = "المنتجات";
+"Ok" = "تم";
+"My Cart" = "عربة التسوق";
+"My Account" = "حسابي";
+"Orders" = "الطلبات";
+"Settings" = "الإعدادات";
+"Login" = "تسجيل الدخول";
+"Logout" = "تسجيل الخروج";
+"Guest user" = "المستخدم الإفتراضي";
+"Policy" = "الشروط والأحكام";
+"Notifications" = "التنبيهات";
+"Support" = "الدعم";
+"Privacy Policy" = "شروط وأحكام الخصوصية";
+"Terms of Services" = "شروط الخدمة";
+"Top stores" = "محلات مميزة";
+"Top Stores" = "محلات مميزة";
+"Near You" = "قريب منك";
+"Search" = "بحث";
+"Map view" = "عرض الخريطة";
+"Products" = "المنتجات";
+"Stores" = "المحلات";
+"Mobile" = "الجوال";
+"Password" = "كلمة المرور";
+"Forgot password?" = "إعادة تعيين كلمة المرور";
+"Confirm password" = "تأكيد كلمة المرور";
+"Old password" = "كلمة المرور القديمة";
+"New password" = "كلمة المرور الجديدة";
+"Sign in" = "تسجيل الدخول";
+"Register" = "تسجيل";
+"Registration" = "التسجيل";
+"Don't you have an account? Sign up" = "لايوجد حساب؟ سجل معنا";
+"Name" = "الاسم";
+"Email (optional)" = "البريد الإلكتروني (إختياري)";
+"OTP" = "كود التحقق";
+"Validate OTP" = "التحقق من رمز التفعيل";
+"Please enter OTP sent to your mobile" = "Please enter OTP sent to your mobile";
+"Submit" = "إرسال الطلب";
+"Total Price" = "السعر الإجمالي";
+"Proceed To Checkout" = "الذهاب لإنهاء الطلب";
+"Continue shopping" = "إكمال التسوق";
+"Save" = "حفظ";
+"Edit" = "تعديل";
+"Orders" = "الطلبات";
+"Temporary password will be sent to your mobile number" = "تم إرسال كلمة المرور المؤقتة إلى جوالك";
+"Product" = "المنتج";
+"Products" = "المنتجات";
+"Store" = "المحل";
+"Stores" = "المحلات";
+"New Stores" = "محل جديد";
+"Done" = "تم بنجاح";
+"Select Category" = "أختر التصنيف";
+"Description" = "تفاصيل المنتج";
+"Price" = "السعر";
+"Rate for thr product" = "قيم المنتج";
+"Add to cart" = "إضافة إلى السلة";
+"Store information" = "معلومات المحل";
+"Store feedback %" = "Store feedback %";
+"Go to store" = "إذهب إلى المحل";
+"Visit store page" = "إذهب إلى صفحة المحل";
+"Contact store" = "اتصل بالمتجر";
+"Reviews" = "التقيمات";
+"Pending" = "الطلبات المعلقة";
+"Delivered" = "الطلبات المكتملة";

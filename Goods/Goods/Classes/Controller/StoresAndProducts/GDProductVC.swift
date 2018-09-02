@@ -92,12 +92,18 @@ extension GDProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         addQuantityView()
         if let quantity = product.quantity {
             let itemQuantity = Int(quantity)
-            var quantityList = [String]()
-            for i in 1...itemQuantity {
-                quantityList.append("\(i)")
+            if itemQuantity > 0 {
+                var quantityList = [String]()
+                for i in 1...itemQuantity {
+                    quantityList.append("\(i)")
+                }
+                _quantityView.pickerDataSource = quantityList
+                self.view.addSubview(_quantityView)
             }
-            _quantityView.pickerDataSource = quantityList
-            self.view.addSubview(_quantityView)
+            else {
+                removeTransparentView()
+                GDAlertAndLoader.showAlertMessage(NSLocalizedString(GDMessage.itemOutOfStock, comment: ""))
+            }
             
         } else {
             removeTransparentView()

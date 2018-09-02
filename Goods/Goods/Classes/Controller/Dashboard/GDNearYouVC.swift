@@ -107,7 +107,8 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         }
         let store: Store = nearYouViewModel.stores[indexPath.row]
         let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreThumbnailCell
-        cell.titleLabel.text = store.storename
+        let storename: String = ((Locale.current.languageCode! == "ar") ? store.storenamear : store.storename)!
+        cell.titleLabel.text = storename
         if let imagepath = store.logo {
             let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"
             cell.loadThumbImage(url: imageURL)
@@ -151,9 +152,9 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         
 
         if indexPath.section == 0 {
-            header._titleLabel.text = "Top Stores"
+            header._titleLabel.text = "Top Stores".translate
         }else{
-            header._titleLabel.text = "Near You"
+            header._titleLabel.text = "Near You".translate
         }
         
         return header;

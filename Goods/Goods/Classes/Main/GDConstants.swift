@@ -8,30 +8,30 @@
 
 import Foundation
 enum GDErrorAlertMessage {
-    static let emptyMobile = "Please enter mobile"
-    static let emptyPassword = "Please enter password"
-    static let emptyOldPassword = "Please enter your old password"
-    static let emptyNewPassword = "Please enter new password"
-    static let emptyConfirmPassword = "Please confirm your new password"
-    static let mismatchPassword = "The new password and confirm password do not match. Please check again."
-    static let emptyEmail = "Please enter email"
-    static let invalidEmail = "Please enter a valid email"
-    static let emptyName = "Please enter name"
-    static let emptyCountryCode = "Please enter country code"
-    static let emptyCart = "Please add at least one item to your cart to place an order"
+    static let emptyMobile = "Please enter mobile".translate
+    static let emptyPassword = "Please enter password".translate
+    static let emptyOldPassword = "Please enter your old password".translate
+    static let emptyNewPassword = "Please enter new password".translate
+    static let emptyConfirmPassword = "Please confirm your new password".translate
+    static let mismatchPassword = "The new password and confirm password do not match. Please check again.".translate
+    static let emptyEmail = "Please enter email".translate
+    static let invalidEmail = "Please enter a valid email".translate
+    static let emptyName = "Please enter name".translate
+    static let emptyCountryCode = "Please enter country code".translate
+    static let emptyCart = "Please add at least one item to your cart to place an order".translate
 }
 
 enum GDMessage {
-    static let selectCountry = "Choose Country"
-    static let selectQuantity = "Choose Quantity"
-    static let registrationSuccess = "Registration successful"
-    static let logoutSuccess = "You are successfully logged out of Goods"
-    static let guestUser = "Guest user"
-    static let updationSuccess = "Update succeeded"
-    static let orderPlaced = "Your order is placed successfully!"
-    static let itemOutOfStock = "Sorry! The item is out of stock at this moment!"
-    static let productAddedToCart = "Product added to cart"
-    static let passwordWillBeSent = "Temporary password will be sent to your mobile number"
+    static let selectCountry = "Choose Country".translate
+    static let selectQuantity = "Choose Quantity".translate
+    static let registrationSuccess = "Registration successful".translate
+    static let logoutSuccess = "You are successfully logged out of Goods".translate
+    static let guestUser = "Guest user".translate
+    static let updationSuccess = "Update succeeded".translate
+    static let orderPlaced = "Your order is placed successfully!".translate
+    static let itemOutOfStock = "Sorry! The item is out of stock at this moment!".translate
+    static let productAddedToCart = "Product added to cart".translate
+    static let passwordWillBeSent = "Temporary password will be sent to your mobile number".translate
 }
 
 class Global {

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "4m5-TD-hJ4"; */
+"4m5-TD-hJ4.text" = "السعر:";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "97c-Zz-Piy"; */
+"97c-Zz-Piy.text" = "0.0";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "NG0-o7-rSy"; */
+"NG0-o7-rSy.text" = "تفاصيل المنتج";
+
+/* Class = "UILabel"; text = "Rate for the product"; ObjectID = "Ncd-V7-46g"; */
+"Ncd-V7-46g.text" = "قيم المنتج";

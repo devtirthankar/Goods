@@ -1,0 +1,129 @@
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "0wR-UA-JmP"; */
+"0wR-UA-JmP.normalTitle" = "تسجيل";
+
+/* Class = "UIButton"; normalTitle = "Forgot password?"; ObjectID = "1nI-Tg-4Qm"; */
+"1nI-Tg-4Qm.normalTitle" = "إعادة تعيين كلمة المرور?";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "2FD-Qi-jra"; */
+"2FD-Qi-jra.text" = "تسجيل الدخول";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "5VG-gp-ni3"; */
+"5VG-gp-ni3.placeholder" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Temporary password will be sent to your mobile number."; ObjectID = "83C-bT-ePh"; */
+"83C-bT-ePh.text" = "تم إرسال كلمة المرور المؤقتة إلى جوالك";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "8X1-jg-kN3"; */
+"8X1-jg-kN3.text" = "حسابي";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "8qO-2l-4cx"; */
+"8qO-2l-4cx.placeholder" = "بلد الشفرة";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "AWw-qN-Pdm"; */
+"AWw-qN-Pdm.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Orders"; ObjectID = "B5g-DH-VCh"; */
+"B5g-DH-VCh.text" = "الطلبات";
+
+/* Class = "UITextField"; placeholder = "OTP"; ObjectID = "BLr-OY-zOa"; */
+"BLr-OY-zOa.placeholder" = "كود التحقق";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Gy1-RH-rbo"; */
+"Gy1-RH-rbo.normalTitle" = "حفظ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "HFK-Lm-2LF"; */
+"HFK-Lm-2LF.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "IwV-ra-Hgi"; */
+"IwV-ra-Hgi.placeholder" = "الاسم";
+
+/* Class = "UILabel"; text = "Edit"; ObjectID = "JDy-ic-ffQ"; */
+"JDy-ic-ffQ.text" = "تعديل";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "OST-7e-O82"; */
+"OST-7e-O82.placeholder" = "كلمة المرور";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "ReZ-ns-0dr"; */
+"ReZ-ns-0dr.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Don't you have an account? Sign up"; ObjectID = "RpJ-SC-cd0"; */
+"RpJ-SC-cd0.text" = "لايوجد حساب؟ سجل معنا";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "Sx0-dQ-7f5"; */
+"Sx0-dQ-7f5.text" = "إعادة تعيين كلمة المرور";
+
+/* Class = "UILabel"; text = "Please enter OTP sent to your mobile:"; ObjectID = "UBe-Of-jTO"; */
+"UBe-Of-jTO.text" = "Please enter OTP sent to your mobile:";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "VPC-iN-vzP"; */
+"VPC-iN-vzP.placeholder" = "تأكيد كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "VUZ-eb-miM"; */
+"VUZ-eb-miM.placeholder" = "رقم الهاتف";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "Wem-Oh-2z5"; */
+"Wem-Oh-2z5.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Wog-tL-KSP"; */
+"Wog-tL-KSP.normalTitle" = "إرسال الطلب";
+
+/* Class = "UILabel"; text = "REGISTRATION"; ObjectID = "XKG-Cg-i8A"; */
+"XKG-Cg-i8A.text" = "التسجيل";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "Y65-Hj-BTO"; */
+"Y65-Hj-BTO.normalTitle" = "Change Password";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "aWO-OZ-nx9"; */
+"aWO-OZ-nx9.placeholder" = "تأكيد كلمة المرور";
+
+/* Class = "UILabel"; text = "Validate OTP"; ObjectID = "auX-oe-Jzw"; */
+"auX-oe-Jzw.text" = "التحقق من رمز التفعيل";
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "c6a-bR-SFI"; */
+"c6a-bR-SFI.placeholder" = "الجوال";
+
+/* Class = "UILabel"; text = "100$"; ObjectID = "dSq-UP-Ry5"; */
+"dSq-UP-Ry5.text" = "100$";
+
+/* Class = "UITextField"; placeholder = "Email (Optional)"; ObjectID = "eJM-RN-Oq4"; */
+"eJM-RN-Oq4.placeholder" = "البريد الإلكتروني (إختياري)";
+
+/* Class = "UILabel"; text = "Total Price:"; ObjectID = "fRL-dZ-HIr"; */
+"fRL-dZ-HIr.text" = "السعر الإجمالي:";
+
+/* Class = "UIButton"; normalTitle = "Proceed To Ckeckout"; ObjectID = "gUe-0k-cYu"; */
+"gUe-0k-cYu.normalTitle" = "الذهاب لإنهاء الطلب";
+
+/* Class = "UITextField"; placeholder = "New Password"; ObjectID = "i65-3N-wC2"; */
+"i65-3N-wC2.placeholder" = "كلمة المرور الجديدة";
+
+/* Class = "UITextField"; placeholder = "Email (Optional)"; ObjectID = "msr-EZ-RhX"; */
+"msr-EZ-RhX.placeholder" = "البريد الإلكتروني (إختياري)";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "nJ2-0E-td9"; */
+"nJ2-0E-td9.placeholder" = "بلد الشفرة";
+
+/* Class = "UILabel"; text = "My Cart"; ObjectID = "ncj-4N-Qfc"; */
+"ncj-4N-Qfc.text" = "عربة التسوق";
+
+/* Class = "UITextField"; placeholder = "Old Password"; ObjectID = "tH8-oU-TYk"; */
+"tH8-oU-TYk.placeholder" = "كلمة المرور القديمة";
+
+/* Class = "UIButton"; normalTitle = "Continue Shopping"; ObjectID = "tIi-rN-bPV"; */
+"tIi-rN-bPV.normalTitle" = "إكمال التسوق";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "tec-R0-YF0"; */
+"tec-R0-YF0.normalTitle" = "Change Password";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "uW1-CC-a54"; */
+"uW1-CC-a54.placeholder" = "رقم الهاتف";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "vxb-6w-vEi"; */
+"vxb-6w-vEi.placeholder" = "الاسم";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "x5V-Iw-fYo"; */
+"x5V-Iw-fYo.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "yfo-2n-sdF"; */
+"yfo-2n-sdF.normalTitle" = "Save";

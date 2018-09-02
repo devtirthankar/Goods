@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Regular.ttf">
+            <string>Comfortaa-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GDOrderHistoryCell" customModule="Goods" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="113"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="113"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeB-Z8-uZw">
+                        <rect key="frame" x="158.5" y="4" width="166.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REI-Zs-ZAa">
+                        <rect key="frame" x="8" y="24" width="317" height="18"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="16"/>
+                        <color key="textColor" red="0.12549019607843137" green="0.39215686274509803" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-b1-Nmd">
+                        <rect key="frame" x="8" y="46" width="317" height="16"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQC-ho-nXS">
+                        <rect key="frame" x="8" y="66" width="317" height="16"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-C9-IvY">
+                        <rect key="frame" x="8" y="86" width="317" height="16"/>
+                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rQC-ho-nXS" firstAttribute="top" secondItem="AxU-b1-Nmd" secondAttribute="bottom" constant="4" id="2kj-m0-EzC"/>
+                <constraint firstItem="REI-Zs-ZAa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="EJN-OA-OCW"/>
+                <constraint firstAttribute="trailing" secondItem="GeB-Z8-uZw" secondAttribute="trailing" constant="8" id="F6X-VU-KeJ"/>
+                <constraint firstItem="rQC-ho-nXS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="KWD-Jl-d1d"/>
+                <constraint firstItem="GeB-Z8-uZw" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="Kmy-MS-FsJ"/>
+                <constraint firstItem="GeB-Z8-uZw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="LKa-qy-FNO"/>
+                <constraint firstItem="AxU-b1-Nmd" firstAttribute="top" secondItem="REI-Zs-ZAa" secondAttribute="bottom" constant="4" id="MHG-f7-j4i"/>
+                <constraint firstItem="AxU-b1-Nmd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Zg8-eZ-I0q"/>
+                <constraint firstItem="REI-Zs-ZAa" firstAttribute="top" secondItem="GeB-Z8-uZw" secondAttribute="bottom" constant="4" id="cCd-vi-e4h"/>
+                <constraint firstAttribute="trailing" secondItem="REI-Zs-ZAa" secondAttribute="trailing" constant="8" id="h2N-rD-e6Z"/>
+                <constraint firstAttribute="trailing" secondItem="AxU-b1-Nmd" secondAttribute="trailing" constant="8" id="rqh-nG-FIs"/>
+                <constraint firstAttribute="trailing" secondItem="rQC-ho-nXS" secondAttribute="trailing" constant="8" id="sHl-dJ-0sT"/>
+                <constraint firstAttribute="trailing" secondItem="AMc-C9-IvY" secondAttribute="trailing" constant="8" id="shL-BP-Bch"/>
+                <constraint firstItem="AMc-C9-IvY" firstAttribute="top" secondItem="rQC-ho-nXS" secondAttribute="bottom" constant="4" id="xgh-XC-yie"/>
+                <constraint firstItem="AMc-C9-IvY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="z2g-cl-CW9"/>
+            </constraints>
+            <size key="customSize" width="333" height="113"/>
+            <connections>
+                <outlet property="orderDate" destination="GeB-Z8-uZw" id="EW4-UD-aSd"/>
+                <outlet property="orderNumber" destination="REI-Zs-ZAa" id="hW9-gx-IW4"/>
+                <outlet property="price" destination="AMc-C9-IvY" id="uyJ-ca-HlT"/>
+                <outlet property="productName" destination="AxU-b1-Nmd" id="EXl-e3-Ka4"/>
+                <outlet property="quantity" destination="rQC-ho-nXS" id="Y6K-mY-lKy"/>
+            </connections>
+            <point key="canvasLocation" x="-0.5" y="-38.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,48 @@
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "07p-WN-4hC"; */
+"07p-WN-4hC.title" = "بحث";
+
+/* Class = "UITabBarItem"; title = "Near You"; ObjectID = "8Wa-3i-cjO"; */
+"8Wa-3i-cjO.title" = "قريب منك";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FUk-cs-xtu"; */
+"FUk-cs-xtu.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "J6t-UJ-rpn"; */
+"J6t-UJ-rpn.text" = "Label";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "NTN-92-MM3"; */
+"NTN-92-MM3.text" = "المنتج";
+
+/* Class = "UILabel"; text = "Map View"; ObjectID = "RYY-lK-fJU"; */
+"RYY-lK-fJU.text" = "عرض الخريطة";
+
+/* Class = "UILabel"; text = "New Stores"; ObjectID = "STv-eA-PfB"; */
+"STv-eA-PfB.text" = "محل جديد";
+
+/* Class = "UISegmentedControl"; SiL-0Y-51g.segmentTitles[0] = "Products"; ObjectID = "SiL-0Y-51g"; */
+"SiL-0Y-51g.segmentTitles[0]" = "المنتجات";
+
+/* Class = "UISegmentedControl"; SiL-0Y-51g.segmentTitles[1] = "Stores"; ObjectID = "SiL-0Y-51g"; */
+"SiL-0Y-51g.segmentTitles[1]" = "المحلات";
+
+/* Class = "UILabel"; text = "Search"; ObjectID = "VqV-6t-OMk"; */
+"VqV-6t-OMk.text" = "بحث";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zln-bC-HE2"; */
+"Zln-bC-HE2.text" = "Label";
+
+/* Class = "UILabel"; text = "Near You"; ObjectID = "h1x-eM-QBA"; */
+"h1x-eM-QBA.text" = "قريب منك";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iTT-LL-IwV"; */
+"iTT-LL-IwV.text" = "Label";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "kJd-s1-C32"; */
+"kJd-s1-C32.text" = "الإعدادات";
+
+/* Class = "UITabBarItem"; title = "MapView"; ObjectID = "vEt-PR-ft4"; */
+"vEt-PR-ft4.title" = "بحث";
+
+/* Class = "UILabel"; text = "Store"; ObjectID = "vqb-Ct-ngc"; */
+"vqb-Ct-ngc.text" = "المحل";

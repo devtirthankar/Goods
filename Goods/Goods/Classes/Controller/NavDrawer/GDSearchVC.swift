@@ -96,7 +96,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         if _segmentControl.selectedSegmentIndex == 0 {
             let product: Product = searchViewModel.products[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
-            cell.titleLabel.text = product.productname
+            let prductname: String = ((Locale.current.languageCode! == "ar") ? product.productnamear : product.productname)!
+            cell.titleLabel.text = prductname
             if let images = product.productimages {
                 if images.count > 0 {
                     let image = images[0]
@@ -109,7 +110,8 @@ class GDSearchVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource
         else {
             let store: Store = searchViewModel.stores[indexPath.row]
             let cell: GDStoreBannerCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellStoreIdentifier, for: indexPath) as! GDStoreBannerCell
-            cell.titleLabel.text = store.storename
+            let storename: String = ((Locale.current.languageCode! == "ar") ? store.storenamear : store.storename)!
+            cell.titleLabel.text = storename
             cell.descriptionLabel.text = store.slogan
             if let imagepath = store.logo {
                 let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"

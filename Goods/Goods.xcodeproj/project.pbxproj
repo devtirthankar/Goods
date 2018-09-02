@@ -12,21 +12,16 @@
 		0D2BBEBA20425734009BB076 /* GDWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */; };
 		0D300AC3209C4C01004BE9B7 /* GDWebServiceOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D300AC2209C4C01004BE9B7 /* GDWebServiceOrderRequest.swift */; };
 		0D3953E21FE934AF00DE2B1D /* GDMyCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */; };
-		0D3953E41FE934C500DE2B1D /* GDMyCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */; };
 		0D449B1020425CA30001063F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B0F20425CA30001063F /* ArrayExtension.swift */; };
 		0D449B122042C2920001063F /* GDWSRegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */; };
 		0D449B142042CE190001063F /* GDRegistrationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D449B132042CE190001063F /* GDRegistrationVM.swift */; };
 		0D567B6320B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */; };
 		0D5F0974203D4DC500D6812D /* GDProductBannerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */; };
-		0D5F0975203D4DC500D6812D /* GDProductBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */; };
 		0D5F0978203D4ED800D6812D /* GDProductDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */; };
-		0D5F0979203D4ED800D6812D /* GDProductDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F0977203D4ED800D6812D /* GDProductDescriptionCell.xib */; };
 		0D5F097C203D586200D6812D /* GDProductActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F097A203D586200D6812D /* GDProductActionCell.swift */; };
-		0D5F097D203D586200D6812D /* GDProductActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5F097B203D586200D6812D /* GDProductActionCell.xib */; };
 		0D6748A1209A20B100765050 /* GDSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6748A0209A20B100765050 /* GDSearchViewModel.swift */; };
 		0D6748A3209B1A6E00765050 /* GDNearYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6748A2209B1A6E00765050 /* GDNearYouViewModel.swift */; };
 		0D6A0EA9209C8F6C00D2BD06 /* GDCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A0EA8209C8F6C00D2BD06 /* GDCartManager.swift */; };
-		0D761B3F20A1743900386421 /* GDDropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D761B3D20A1743800386421 /* GDDropDownView.xib */; };
 		0D761B4020A1743900386421 /* GDDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D761B3E20A1743800386421 /* GDDropDownView.swift */; };
 		0D761B4220A18F1F00386421 /* GDStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D761B4120A18F1F00386421 /* GDStoreViewModel.swift */; };
 		0D76CD4A20982BE5007DBE3E /* GDUserProfile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76CD4320982BE4007DBE3E /* GDUserProfile+CoreDataClass.swift */; };
@@ -37,14 +32,10 @@
 		0D76CD4F20982BE5007DBE3E /* GDLogin+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76CD4920982BE4007DBE3E /* GDLogin+Additions.swift */; };
 		0D76CD5520983EFD007DBE3E /* GDWebServiceStoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76CD5420983EFD007DBE3E /* GDWebServiceStoreRequest.swift */; };
 		0D7DFCDA2044028100ED0505 /* GDUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7DFCD92044028100ED0505 /* GDUtilities.swift */; };
-		0D826F5E1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */; };
 		0D826F601FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */; };
 		0D991DA520B891F500772EEE /* GDUserMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D991DA320B891F200772EEE /* GDUserMarkerView.swift */; };
-		0D991DA620B891F500772EEE /* GDUserMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D991DA420B891F300772EEE /* GDUserMarkerView.xib */; };
-		0D9A359B1FFF4F18007F786B /* GDStoreReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */; };
 		0D9A359D1FFF4F4E007F786B /* GDStoreReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */; };
 		0DA26B8720A8A841008753D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DA26B8620A8A841008753D1 /* GoogleService-Info.plist */; };
-		0DB400CB1FF3B800003DC383 /* GDStoreContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB400CA1FF3B800003DC383 /* GDStoreContainerCell.xib */; };
 		0DB400CD1FF3B855003DC383 /* GDStoreContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB400CC1FF3B855003DC383 /* GDStoreContainerCell.swift */; };
 		0DB8B89A20979B420022C81D /* GDOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89920979B410022C81D /* GDOTPVC.swift */; };
 		0DB8B89C20979B700022C81D /* GDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89B20979B700022C81D /* GDConstants.swift */; };
@@ -52,9 +43,7 @@
 		0DB8B8A020979BD00022C81D /* GDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B89F20979BD00022C81D /* GDStorage.swift */; };
 		0DB8B8A220979BED0022C81D /* GDWebServiceProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8B8A120979BED0022C81D /* GDWebServiceProductRequest.swift */; };
 		0DC2ECC11FE3615A005B7E11 /* GDStoreBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2ECC01FE3615A005B7E11 /* GDStoreBannerCell.swift */; };
-		0DC2ECC51FE3D3E1005B7E11 /* GDStoreBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC2ECC41FE3D3E1005B7E11 /* GDStoreBannerCell.xib */; };
 		0DCA1FB220B1138B0039D084 /* GDNavDrawerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA1FB120B1138B0039D084 /* GDNavDrawerHeaderCell.swift */; };
-		0DD6706D1FDED55F009AC39C /* GDStoreThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD6706C1FDED55F009AC39C /* GDStoreThumbnailCell.xib */; };
 		0DD670701FDED68B009AC39C /* GDStoreThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6706F1FDED68B009AC39C /* GDStoreThumbnailCell.swift */; };
 		0DD670731FDED6D3009AC39C /* StoreThumb1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD670711FDED6D3009AC39C /* StoreThumb1.png */; };
 		0DD670741FDED6D3009AC39C /* StoreThumb2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD670721FDED6D3009AC39C /* StoreThumb2.png */; };
@@ -76,11 +65,9 @@
 		0DE086801FD9ACC6007C228F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0867F1FD9ACC6007C228F /* Assets.xcassets */; };
 		0DE086931FD9AE22007C228F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE086921FD9AE22007C228F /* AppDelegate.swift */; };
 		0DE086971FD9AF7C007C228F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE086951FD9AF7C007C228F /* LaunchScreen.storyboard */; };
-		0DE086981FD9AF7C007C228F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE086961FD9AF7C007C228F /* Main.storyboard */; };
 		0DE0869B1FD9B0D3007C228F /* GDSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0869A1FD9B0D3007C228F /* GDSplashVC.swift */; };
 		0DE0869D1FD9B204007C228F /* GDSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0869C1FD9B204007C228F /* GDSignInVC.swift */; };
 		0DE1299A1FE63F8E005A766B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE129991FE63F8E005A766B /* CoreLocation.framework */; };
-		0DE1299F1FE6766E005A766B /* GDMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1299E1FE6766E005A766B /* GDMarkerView.xib */; };
 		0DE129A11FE677E7005A766B /* GDMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE129A01FE677E7005A766B /* GDMarkerView.swift */; };
 		0DE6D1A51FEA470D004795F5 /* GDMyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D1A01FEA470D004795F5 /* GDMyAccountVC.swift */; };
 		0DE6D1A61FEA470D004795F5 /* GDMyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D1A11FEA470D004795F5 /* GDMyCartVC.swift */; };
@@ -88,15 +75,11 @@
 		0DE6D1A81FEA470D004795F5 /* GDSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D1A31FEA470D004795F5 /* GDSearchVC.swift */; };
 		0DE6D1A91FEA470D004795F5 /* GDSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D1A41FEA470D004795F5 /* GDSettingsVC.swift */; };
 		0DF29E891FFCF2D5005831CA /* GDStoreBannerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF29E881FFCF2D5005831CA /* GDStoreBannerHeader.swift */; };
-		0DF29E8B1FFCF2F1005831CA /* GDStoreBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF29E8A1FFCF2F1005831CA /* GDStoreBannerHeader.xib */; };
 		0DF29E8D1FFD4DB9005831CA /* GDStoreSegmentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF29E8C1FFD4DB9005831CA /* GDStoreSegmentHeader.swift */; };
-		0DF29E8F1FFD4DCF005831CA /* GDStoreSegmentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF29E8E1FFD4DCF005831CA /* GDStoreSegmentHeader.xib */; };
 		0DF29E911FFD4EF4005831CA /* GDStoreSegmentContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF29E901FFD4EF4005831CA /* GDStoreSegmentContainerCell.swift */; };
-		0DF29E931FFD4F35005831CA /* GDStoreSegmentContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF29E921FFD4F35005831CA /* GDStoreSegmentContainerCell.xib */; };
 		0DF7354F1FDD5376009E2F81 /* GDStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7354E1FDD5376009E2F81 /* GDStoreVC.swift */; };
 		0DF735511FDD578F009E2F81 /* GDProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF735501FDD578F009E2F81 /* GDProductVC.swift */; };
 		57E55D14919C941A1E54558C /* Pods_Goods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E000415017B5D423AFBDB3BB /* Pods_Goods.framework */; };
-		9E33AD9C1FDA890F00A02475 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E33AD9B1FDA890F00A02475 /* Login.storyboard */; };
 		9E33AD9E1FDA90A800A02475 /* GDRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E33AD9D1FDA90A800A02475 /* GDRegistrationVC.swift */; };
 		9E33ADA31FDAA92800A02475 /* GDNearYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E33ADA21FDAA92800A02475 /* GDNearYouVC.swift */; };
 		9E33ADA51FDAA94900A02475 /* GDNewStoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E33ADA41FDAA94900A02475 /* GDNewStoresVC.swift */; };
@@ -114,10 +97,28 @@
 		9EAF53CC1FEA7ED6001C9892 /* Prod7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C31FEA7ED6001C9892 /* Prod7.png */; };
 		9EAF53CD1FEA7ED6001C9892 /* Prod8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C41FEA7ED6001C9892 /* Prod8.png */; };
 		9EAF53CE1FEA7ED6001C9892 /* Prod9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF53C51FEA7ED6001C9892 /* Prod9.png */; };
+		AE0E45052137B0F0000ECDC5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE0E45072137B0F0000ECDC5 /* Localizable.strings */; };
 		AE491215210DC66E00B997AE /* GDForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE491214210DC66E00B997AE /* GDForgotPasswordVC.swift */; };
 		AE884DB320CBEC9A0094C379 /* GDOrdersHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */; };
 		AE884DB620CBF2880094C379 /* GDOrderHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */; };
-		AE884DB720CBF2880094C379 /* GDOrderHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */; };
+		AECBE4F121315C2C0088CBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECBE4F321315C2C0088CBF7 /* Main.storyboard */; };
+		AECBE4F521315C690088CBF7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECBE4F721315C690088CBF7 /* Login.storyboard */; };
+		AECBE4FA21315CB00088CBF7 /* GDDropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE4FC21315CB00088CBF7 /* GDDropDownView.xib */; };
+		AECBE4FF21315CC50088CBF7 /* GDProductBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE50121315CC50088CBF7 /* GDProductBannerHeader.xib */; };
+		AECBE50421315CE10088CBF7 /* GDProductDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE50621315CE10088CBF7 /* GDProductDescriptionCell.xib */; };
+		AECBE50921315CEB0088CBF7 /* GDProductActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE50B21315CEB0088CBF7 /* GDProductActionCell.xib */; };
+		AECBE50E21315D000088CBF7 /* GDStoreBannerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE51021315D000088CBF7 /* GDStoreBannerHeader.xib */; };
+		AECBE51321315D0B0088CBF7 /* GDStoreSegmentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE51521315D0B0088CBF7 /* GDStoreSegmentHeader.xib */; };
+		AECBE51821315D140088CBF7 /* GDStoreSegmentContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE51A21315D140088CBF7 /* GDStoreSegmentContainerCell.xib */; };
+		AECBE51D21315D1D0088CBF7 /* GDStoreReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE51F21315D1D0088CBF7 /* GDStoreReviewCell.xib */; };
+		AECBE52221315D2C0088CBF7 /* GDMyCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE52421315D2C0088CBF7 /* GDMyCartItemCell.xib */; };
+		AECBE52721315D340088CBF7 /* GDOrderHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE52921315D340088CBF7 /* GDOrderHistoryCell.xib */; };
+		AECBE52C21315D440088CBF7 /* GDUserMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE52E21315D440088CBF7 /* GDUserMarkerView.xib */; };
+		AECBE53121315D4D0088CBF7 /* GDMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE53321315D4D0088CBF7 /* GDMarkerView.xib */; };
+		AECBE53621315D5A0088CBF7 /* GDStoreBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE53821315D5A0088CBF7 /* GDStoreBannerCell.xib */; };
+		AECBE53B21315D660088CBF7 /* GDNearYouSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE53D21315D660088CBF7 /* GDNearYouSectionHeaderView.xib */; };
+		AECBE54021315D6F0088CBF7 /* GDStoreThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE54221315D6F0088CBF7 /* GDStoreThumbnailCell.xib */; };
+		AECBE54521315D810088CBF7 /* GDStoreContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECBE54721315D810088CBF7 /* GDStoreContainerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,21 +140,16 @@
 		0D2BBEB920425734009BB076 /* GDWebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceManager.swift; sourceTree = "<group>"; };
 		0D300AC2209C4C01004BE9B7 /* GDWebServiceOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceOrderRequest.swift; sourceTree = "<group>"; };
 		0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyCartItemCell.swift; sourceTree = "<group>"; };
-		0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDMyCartItemCell.xib; sourceTree = "<group>"; };
 		0D449B0F20425CA30001063F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		0D449B112042C2920001063F /* GDWSRegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWSRegistrationRequest.swift; sourceTree = "<group>"; };
 		0D449B132042CE190001063F /* GDRegistrationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDRegistrationVM.swift; sourceTree = "<group>"; };
 		0D567B6220B34B6F006BE3E1 /* GDEditAccountDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDEditAccountDetailsVC.swift; sourceTree = "<group>"; };
 		0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductBannerHeader.swift; sourceTree = "<group>"; };
-		0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductBannerHeader.xib; sourceTree = "<group>"; };
 		0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductDescriptionCell.swift; sourceTree = "<group>"; };
-		0D5F0977203D4ED800D6812D /* GDProductDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductDescriptionCell.xib; sourceTree = "<group>"; };
 		0D5F097A203D586200D6812D /* GDProductActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDProductActionCell.swift; sourceTree = "<group>"; };
-		0D5F097B203D586200D6812D /* GDProductActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDProductActionCell.xib; sourceTree = "<group>"; };
 		0D6748A0209A20B100765050 /* GDSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSearchViewModel.swift; sourceTree = "<group>"; };
 		0D6748A2209B1A6E00765050 /* GDNearYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNearYouViewModel.swift; sourceTree = "<group>"; };
 		0D6A0EA8209C8F6C00D2BD06 /* GDCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCartManager.swift; sourceTree = "<group>"; };
-		0D761B3D20A1743800386421 /* GDDropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDDropDownView.xib; sourceTree = "<group>"; };
 		0D761B3E20A1743800386421 /* GDDropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDDropDownView.swift; sourceTree = "<group>"; };
 		0D761B4120A18F1F00386421 /* GDStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDStoreViewModel.swift; sourceTree = "<group>"; };
 		0D76CD4320982BE4007DBE3E /* GDUserProfile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GDUserProfile+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -164,14 +160,10 @@
 		0D76CD4920982BE4007DBE3E /* GDLogin+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GDLogin+Additions.swift"; sourceTree = "<group>"; };
 		0D76CD5420983EFD007DBE3E /* GDWebServiceStoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWebServiceStoreRequest.swift; sourceTree = "<group>"; };
 		0D7DFCD92044028100ED0505 /* GDUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDUtilities.swift; sourceTree = "<group>"; };
-		0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDNearYouSectionHeaderView.xib; sourceTree = "<group>"; };
 		0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDNearYouSectionHeaderView.swift; sourceTree = "<group>"; };
 		0D991DA320B891F200772EEE /* GDUserMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDUserMarkerView.swift; sourceTree = "<group>"; };
-		0D991DA420B891F300772EEE /* GDUserMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDUserMarkerView.xib; sourceTree = "<group>"; };
-		0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreReviewCell.xib; sourceTree = "<group>"; };
 		0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreReviewCell.swift; sourceTree = "<group>"; };
 		0DA26B8620A8A841008753D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0DB400CA1FF3B800003DC383 /* GDStoreContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreContainerCell.xib; sourceTree = "<group>"; };
 		0DB400CC1FF3B855003DC383 /* GDStoreContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreContainerCell.swift; sourceTree = "<group>"; };
 		0DB8B89920979B410022C81D /* GDOTPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDOTPVC.swift; sourceTree = "<group>"; };
 		0DB8B89B20979B700022C81D /* GDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDConstants.swift; sourceTree = "<group>"; };
@@ -179,9 +171,7 @@
 		0DB8B89F20979BD00022C81D /* GDStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStorage.swift; sourceTree = "<group>"; };
 		0DB8B8A120979BED0022C81D /* GDWebServiceProductRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDWebServiceProductRequest.swift; sourceTree = "<group>"; };
 		0DC2ECC01FE3615A005B7E11 /* GDStoreBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreBannerCell.swift; sourceTree = "<group>"; };
-		0DC2ECC41FE3D3E1005B7E11 /* GDStoreBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreBannerCell.xib; sourceTree = "<group>"; };
 		0DCA1FB120B1138B0039D084 /* GDNavDrawerHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNavDrawerHeaderCell.swift; sourceTree = "<group>"; };
-		0DD6706C1FDED55F009AC39C /* GDStoreThumbnailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreThumbnailCell.xib; sourceTree = "<group>"; };
 		0DD6706F1FDED68B009AC39C /* GDStoreThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreThumbnailCell.swift; sourceTree = "<group>"; };
 		0DD670711FDED6D3009AC39C /* StoreThumb1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreThumb1.png; sourceTree = "<group>"; };
 		0DD670721FDED6D3009AC39C /* StoreThumb2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreThumb2.png; sourceTree = "<group>"; };
@@ -205,11 +195,9 @@
 		0DE086841FD9ACC6007C228F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE086921FD9AE22007C228F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE086951FD9AF7C007C228F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0DE086961FD9AF7C007C228F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0DE0869A1FD9B0D3007C228F /* GDSplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDSplashVC.swift; sourceTree = "<group>"; };
 		0DE0869C1FD9B204007C228F /* GDSignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDSignInVC.swift; sourceTree = "<group>"; };
 		0DE129991FE63F8E005A766B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0DE1299E1FE6766E005A766B /* GDMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDMarkerView.xib; sourceTree = "<group>"; };
 		0DE129A01FE677E7005A766B /* GDMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMarkerView.swift; sourceTree = "<group>"; };
 		0DE6D1A01FEA470D004795F5 /* GDMyAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyAccountVC.swift; sourceTree = "<group>"; };
 		0DE6D1A11FEA470D004795F5 /* GDMyCartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMyCartVC.swift; sourceTree = "<group>"; };
@@ -217,16 +205,12 @@
 		0DE6D1A31FEA470D004795F5 /* GDSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDSearchVC.swift; path = ../NavDrawer/GDSearchVC.swift; sourceTree = "<group>"; };
 		0DE6D1A41FEA470D004795F5 /* GDSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDSettingsVC.swift; sourceTree = "<group>"; };
 		0DF29E881FFCF2D5005831CA /* GDStoreBannerHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreBannerHeader.swift; sourceTree = "<group>"; };
-		0DF29E8A1FFCF2F1005831CA /* GDStoreBannerHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreBannerHeader.xib; sourceTree = "<group>"; };
 		0DF29E8C1FFD4DB9005831CA /* GDStoreSegmentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreSegmentHeader.swift; sourceTree = "<group>"; };
-		0DF29E8E1FFD4DCF005831CA /* GDStoreSegmentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreSegmentHeader.xib; sourceTree = "<group>"; };
 		0DF29E901FFD4EF4005831CA /* GDStoreSegmentContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreSegmentContainerCell.swift; sourceTree = "<group>"; };
-		0DF29E921FFD4F35005831CA /* GDStoreSegmentContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDStoreSegmentContainerCell.xib; sourceTree = "<group>"; };
 		0DF7354E1FDD5376009E2F81 /* GDStoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDStoreVC.swift; sourceTree = "<group>"; };
 		0DF735501FDD578F009E2F81 /* GDProductVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDProductVC.swift; sourceTree = "<group>"; };
 		211CA9381F0D16E70DDB026D /* Pods-Goods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goods/Pods-Goods.debug.xcconfig"; sourceTree = "<group>"; };
 		257568E96E7FB89BFD4157C3 /* Pods-Goods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goods.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goods/Pods-Goods.release.xcconfig"; sourceTree = "<group>"; };
-		9E33AD9B1FDA890F00A02475 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9E33AD9D1FDA90A800A02475 /* GDRegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDRegistrationVC.swift; sourceTree = "<group>"; };
 		9E33ADA21FDAA92800A02475 /* GDNearYouVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDNearYouVC.swift; sourceTree = "<group>"; };
 		9E33ADA41FDAA94900A02475 /* GDNewStoresVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDNewStoresVC.swift; sourceTree = "<group>"; };
@@ -244,10 +228,47 @@
 		9EAF53C31FEA7ED6001C9892 /* Prod7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod7.png; sourceTree = "<group>"; };
 		9EAF53C41FEA7ED6001C9892 /* Prod8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod8.png; sourceTree = "<group>"; };
 		9EAF53C51FEA7ED6001C9892 /* Prod9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prod9.png; sourceTree = "<group>"; };
+		AE0E44CC21371335000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDOrderHistoryCell.xib; sourceTree = "<group>"; };
+		AE0E44CF21371335000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDStoreSegmentContainerCell.xib; sourceTree = "<group>"; };
+		AE0E44D021371335000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDMyCartItemCell.xib; sourceTree = "<group>"; };
+		AE0E44D321371336000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDStoreBannerCell.xib; sourceTree = "<group>"; };
+		AE0E44D421371336000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDMarkerView.xib; sourceTree = "<group>"; };
+		AE0E44D521371336000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDStoreBannerHeader.xib; sourceTree = "<group>"; };
+		AE0E44D821371337000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDUserMarkerView.xib; sourceTree = "<group>"; };
+		AE0E44DA21371337000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDStoreReviewCell.xib; sourceTree = "<group>"; };
+		AE0E44DD21371337000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/GDProductBannerHeader.xib; sourceTree = "<group>"; };
+		AE0E44F021371364000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDDropDownView.xib; sourceTree = "<group>"; };
+		AE0E44F121371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDProductBannerHeader.xib; sourceTree = "<group>"; };
+		AE0E44F221371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDProductDescriptionCell.xib; sourceTree = "<group>"; };
+		AE0E44F321371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDProductActionCell.xib; sourceTree = "<group>"; };
+		AE0E44F421371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreBannerHeader.xib; sourceTree = "<group>"; };
+		AE0E44F521371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreSegmentHeader.xib; sourceTree = "<group>"; };
+		AE0E44F621371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreSegmentContainerCell.xib; sourceTree = "<group>"; };
+		AE0E44F721371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreReviewCell.xib; sourceTree = "<group>"; };
+		AE0E44F821371365000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDMyCartItemCell.xib; sourceTree = "<group>"; };
+		AE0E44F921371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDOrderHistoryCell.xib; sourceTree = "<group>"; };
+		AE0E44FA21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDUserMarkerView.xib; sourceTree = "<group>"; };
+		AE0E44FB21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDMarkerView.xib; sourceTree = "<group>"; };
+		AE0E44FC21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreBannerCell.xib; sourceTree = "<group>"; };
+		AE0E44FD21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDNearYouSectionHeaderView.xib; sourceTree = "<group>"; };
+		AE0E44FE21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreThumbnailCell.xib; sourceTree = "<group>"; };
+		AE0E44FF21371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GDStoreContainerCell.xib; sourceTree = "<group>"; };
+		AE0E450021371366000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE0E450121371367000ECDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		AE0E45082137B119000ECDC5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AE491214210DC66E00B997AE /* GDForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDForgotPasswordVC.swift; sourceTree = "<group>"; };
+		AE63802621385F3A0067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
+		AE63802721385FC50067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		AE6380282138636A0067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDNearYouSectionHeaderView.strings; sourceTree = "<group>"; };
+		AE638029213863830067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDStoreThumbnailCell.strings; sourceTree = "<group>"; };
+		AE63802A213864000067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDStoreContainerCell.strings; sourceTree = "<group>"; };
+		AE63802B213868DC0067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDProductActionCell.strings; sourceTree = "<group>"; };
+		AE63802C213869C20067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDStoreSegmentHeader.strings; sourceTree = "<group>"; };
+		AE63802D21386A340067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDProductDescriptionCell.strings; sourceTree = "<group>"; };
+		AE63802E21386AE60067E803 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GDDropDownView.strings; sourceTree = "<group>"; };
 		AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersHistoryVC.swift; sourceTree = "<group>"; };
 		AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrderHistoryCell.swift; sourceTree = "<group>"; };
-		AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDOrderHistoryCell.xib; sourceTree = "<group>"; };
+		AE8D75DE2137B8E800A3CE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E000415017B5D423AFBDB3BB /* Pods_Goods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -280,9 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				0D3953E11FE934AF00DE2B1D /* GDMyCartItemCell.swift */,
-				0D3953E31FE934C500DE2B1D /* GDMyCartItemCell.xib */,
+				AECBE52421315D2C0088CBF7 /* GDMyCartItemCell.xib */,
 				AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */,
-				AE884DB520CBF2880094C379 /* GDOrderHistoryCell.xib */,
+				AECBE52921315D340088CBF7 /* GDOrderHistoryCell.xib */,
 			);
 			path = "My Cart";
 			sourceTree = "<group>";
@@ -291,11 +312,11 @@
 			isa = PBXGroup;
 			children = (
 				0D5F0972203D4DC500D6812D /* GDProductBannerHeader.swift */,
-				0D5F0973203D4DC500D6812D /* GDProductBannerHeader.xib */,
+				AECBE50121315CC50088CBF7 /* GDProductBannerHeader.xib */,
 				0D5F0976203D4ED800D6812D /* GDProductDescriptionCell.swift */,
-				0D5F0977203D4ED800D6812D /* GDProductDescriptionCell.xib */,
+				AECBE50621315CE10088CBF7 /* GDProductDescriptionCell.xib */,
 				0D5F097A203D586200D6812D /* GDProductActionCell.swift */,
-				0D5F097B203D586200D6812D /* GDProductActionCell.xib */,
+				AECBE50B21315CEB0088CBF7 /* GDProductActionCell.xib */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -341,7 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC2ECC01FE3615A005B7E11 /* GDStoreBannerCell.swift */,
-				0DC2ECC41FE3D3E1005B7E11 /* GDStoreBannerCell.xib */,
+				AECBE53821315D5A0088CBF7 /* GDStoreBannerCell.xib */,
 			);
 			path = "New Stores";
 			sourceTree = "<group>";
@@ -349,11 +370,11 @@
 		0DD6706B1FDED4D2009AC39C /* NearYou */ = {
 			isa = PBXGroup;
 			children = (
-				0D826F5D1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib */,
+				AECBE53D21315D660088CBF7 /* GDNearYouSectionHeaderView.xib */,
 				0D826F5F1FE1ABB0009CBEBF /* GDNearYouSectionHeaderView.swift */,
-				0DD6706C1FDED55F009AC39C /* GDStoreThumbnailCell.xib */,
+				AECBE54221315D6F0088CBF7 /* GDStoreThumbnailCell.xib */,
 				0DD6706F1FDED68B009AC39C /* GDStoreThumbnailCell.swift */,
-				0DB400CA1FF3B800003DC383 /* GDStoreContainerCell.xib */,
+				AECBE54721315D810088CBF7 /* GDStoreContainerCell.xib */,
 				0DB400CC1FF3B855003DC383 /* GDStoreContainerCell.swift */,
 			);
 			path = NearYou;
@@ -448,6 +469,7 @@
 				0DE0867F1FD9ACC6007C228F /* Assets.xcassets */,
 				0D0B01432097AB490000E9EF /* GDDataModel.xcdatamodeld */,
 				0DE086841FD9ACC6007C228F /* Info.plist */,
+				AE0E45072137B0F0000ECDC5 /* Localizable.strings */,
 			);
 			path = Goods;
 			sourceTree = "<group>";
@@ -513,7 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				0D761B3E20A1743800386421 /* GDDropDownView.swift */,
-				0D761B3D20A1743800386421 /* GDDropDownView.xib */,
+				AECBE4FC21315CB00088CBF7 /* GDDropDownView.xib */,
 				0D5F0971203D4D6800D6812D /* Product */,
 				0DF29E871FFCF2A1005831CA /* Store */,
 				0D3953E01FE9348200DE2B1D /* My Cart */,
@@ -540,8 +562,8 @@
 			isa = PBXGroup;
 			children = (
 				0DE086951FD9AF7C007C228F /* LaunchScreen.storyboard */,
-				0DE086961FD9AF7C007C228F /* Main.storyboard */,
-				9E33AD9B1FDA890F00A02475 /* Login.storyboard */,
+				AECBE4F321315C2C0088CBF7 /* Main.storyboard */,
+				AECBE4F721315C690088CBF7 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -563,8 +585,8 @@
 			isa = PBXGroup;
 			children = (
 				0D991DA320B891F200772EEE /* GDUserMarkerView.swift */,
-				0D991DA420B891F300772EEE /* GDUserMarkerView.xib */,
-				0DE1299E1FE6766E005A766B /* GDMarkerView.xib */,
+				AECBE52E21315D440088CBF7 /* GDUserMarkerView.xib */,
+				AECBE53321315D4D0088CBF7 /* GDMarkerView.xib */,
 				0DE129A01FE677E7005A766B /* GDMarkerView.swift */,
 			);
 			path = MapView;
@@ -587,12 +609,12 @@
 			isa = PBXGroup;
 			children = (
 				0DF29E881FFCF2D5005831CA /* GDStoreBannerHeader.swift */,
-				0DF29E8A1FFCF2F1005831CA /* GDStoreBannerHeader.xib */,
+				AECBE51021315D000088CBF7 /* GDStoreBannerHeader.xib */,
 				0DF29E8C1FFD4DB9005831CA /* GDStoreSegmentHeader.swift */,
-				0DF29E8E1FFD4DCF005831CA /* GDStoreSegmentHeader.xib */,
+				AECBE51521315D0B0088CBF7 /* GDStoreSegmentHeader.xib */,
 				0DF29E901FFD4EF4005831CA /* GDStoreSegmentContainerCell.swift */,
-				0DF29E921FFD4F35005831CA /* GDStoreSegmentContainerCell.xib */,
-				0D9A359A1FFF4F18007F786B /* GDStoreReviewCell.xib */,
+				AECBE51A21315D140088CBF7 /* GDStoreSegmentContainerCell.xib */,
+				AECBE51F21315D1D0088CBF7 /* GDStoreReviewCell.xib */,
 				0D9A359C1FFF4F4E007F786B /* GDStoreReviewCell.swift */,
 			);
 			path = Store;
@@ -696,6 +718,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ar,
 				Base,
 			);
 			mainGroup = 0DE0866C1FD9ACC6007C228F;
@@ -716,48 +739,49 @@
 				9EAF53CA1FEA7ED6001C9892 /* Prod5.png in Resources */,
 				0DD670731FDED6D3009AC39C /* StoreThumb1.png in Resources */,
 				0DDC3D2C1FE3084A00C0640B /* StoreThmb6.png in Resources */,
-				0DF29E8B1FFCF2F1005831CA /* GDStoreBannerHeader.xib in Resources */,
-				9E33AD9C1FDA890F00A02475 /* Login.storyboard in Resources */,
+				AECBE50E21315D000088CBF7 /* GDStoreBannerHeader.xib in Resources */,
+				AECBE4F521315C690088CBF7 /* Login.storyboard in Resources */,
 				9EAF53CB1FEA7ED6001C9892 /* Prod6.png in Resources */,
 				0DD670771FDEF0EC009AC39C /* grad_overlay@2x.png in Resources */,
 				9EAF53CD1FEA7ED6001C9892 /* Prod8.png in Resources */,
-				0DF29E931FFD4F35005831CA /* GDStoreSegmentContainerCell.xib in Resources */,
+				AECBE51821315D140088CBF7 /* GDStoreSegmentContainerCell.xib in Resources */,
 				9EAF53C81FEA7ED6001C9892 /* Prod3.png in Resources */,
 				0DA26B8720A8A841008753D1 /* GoogleService-Info.plist in Resources */,
-				0D5F0979203D4ED800D6812D /* GDProductDescriptionCell.xib in Resources */,
-				AE884DB720CBF2880094C379 /* GDOrderHistoryCell.xib in Resources */,
+				AECBE50421315CE10088CBF7 /* GDProductDescriptionCell.xib in Resources */,
+				AECBE52721315D340088CBF7 /* GDOrderHistoryCell.xib in Resources */,
 				0DE086971FD9AF7C007C228F /* LaunchScreen.storyboard in Resources */,
 				9EAF53CC1FEA7ED6001C9892 /* Prod7.png in Resources */,
 				0DDC3D2A1FE3084A00C0640B /* StoreThmb4.png in Resources */,
 				0DDC3D271FE3084A00C0640B /* StoreThmb1.png in Resources */,
-				0DF29E8F1FFD4DCF005831CA /* GDStoreSegmentHeader.xib in Resources */,
+				AECBE51321315D0B0088CBF7 /* GDStoreSegmentHeader.xib in Resources */,
 				0DDC3D2B1FE3084A00C0640B /* StoreThmb5.png in Resources */,
 				0DD670781FDEF0EC009AC39C /* grad_overlay@3x.png in Resources */,
-				0DE1299F1FE6766E005A766B /* GDMarkerView.xib in Resources */,
-				0D991DA620B891F500772EEE /* GDUserMarkerView.xib in Resources */,
-				0D9A359B1FFF4F18007F786B /* GDStoreReviewCell.xib in Resources */,
+				AECBE53121315D4D0088CBF7 /* GDMarkerView.xib in Resources */,
+				AECBE52C21315D440088CBF7 /* GDUserMarkerView.xib in Resources */,
+				AECBE51D21315D1D0088CBF7 /* GDStoreReviewCell.xib in Resources */,
 				0DDC3D281FE3084A00C0640B /* StoreThmb2.png in Resources */,
-				0DD6706D1FDED55F009AC39C /* GDStoreThumbnailCell.xib in Resources */,
-				0D5F097D203D586200D6812D /* GDProductActionCell.xib in Resources */,
+				AECBE54021315D6F0088CBF7 /* GDStoreThumbnailCell.xib in Resources */,
+				AE0E45052137B0F0000ECDC5 /* Localizable.strings in Resources */,
+				AECBE50921315CEB0088CBF7 /* GDProductActionCell.xib in Resources */,
 				9EAF53C71FEA7ED6001C9892 /* Prod2.png in Resources */,
 				9E33ADAE1FDAC04200A02475 /* Comfortaa-Bold.ttf in Resources */,
-				0D761B3F20A1743900386421 /* GDDropDownView.xib in Resources */,
+				AECBE4FA21315CB00088CBF7 /* GDDropDownView.xib in Resources */,
 				0DD670741FDED6D3009AC39C /* StoreThumb2.png in Resources */,
 				9E33ADB01FDAC04200A02475 /* Comfortaa-Regular.ttf in Resources */,
 				0DE086801FD9ACC6007C228F /* Assets.xcassets in Resources */,
-				0DB400CB1FF3B800003DC383 /* GDStoreContainerCell.xib in Resources */,
+				AECBE54521315D810088CBF7 /* GDStoreContainerCell.xib in Resources */,
 				0DDC3D291FE3084A00C0640B /* StoreThmb3.png in Resources */,
 				0DDC3D2D1FE3084A00C0640B /* StoreThmb7.png in Resources */,
 				9EAF53C61FEA7ED6001C9892 /* Prod1.png in Resources */,
-				0D3953E41FE934C500DE2B1D /* GDMyCartItemCell.xib in Resources */,
+				AECBE52221315D2C0088CBF7 /* GDMyCartItemCell.xib in Resources */,
 				9E33ADAF1FDAC04200A02475 /* Comfortaa-Light.ttf in Resources */,
 				0DDC3D2E1FE3084A00C0640B /* StoreThmb8.png in Resources */,
 				9EAF53C91FEA7ED6001C9892 /* Prod4.png in Resources */,
 				9EAF53CE1FEA7ED6001C9892 /* Prod9.png in Resources */,
-				0D826F5E1FE1AAA2009CBEBF /* GDNearYouSectionHeaderView.xib in Resources */,
-				0D5F0975203D4DC500D6812D /* GDProductBannerHeader.xib in Resources */,
-				0DC2ECC51FE3D3E1005B7E11 /* GDStoreBannerCell.xib in Resources */,
-				0DE086981FD9AF7C007C228F /* Main.storyboard in Resources */,
+				AECBE53B21315D660088CBF7 /* GDNearYouSectionHeaderView.xib in Resources */,
+				AECBE4FF21315CC50088CBF7 /* GDProductBannerHeader.xib in Resources */,
+				AECBE53621315D5A0088CBF7 /* GDStoreBannerCell.xib in Resources */,
+				AECBE4F121315C2C0088CBF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,11 +932,186 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		AE0E45072137B0F0000ECDC5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E45082137B119000ECDC5 /* ar */,
+				AE8D75DE2137B8E800A3CE73 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AECBE4F321315C2C0088CBF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E450021371366000ECDC5 /* Base */,
+				AE63802721385FC50067E803 /* ar */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AECBE4F721315C690088CBF7 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E450121371367000ECDC5 /* Base */,
+				AE63802621385F3A0067E803 /* ar */,
+			);
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		AECBE4FC21315CB00088CBF7 /* GDDropDownView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44F021371364000ECDC5 /* Base */,
+				AE63802E21386AE60067E803 /* ar */,
+			);
+			name = GDDropDownView.xib;
+			sourceTree = "<group>";
+		};
+		AECBE50121315CC50088CBF7 /* GDProductBannerHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44DD21371337000ECDC5 /* ar */,
+				AE0E44F121371365000ECDC5 /* Base */,
+			);
+			name = GDProductBannerHeader.xib;
+			sourceTree = "<group>";
+		};
+		AECBE50621315CE10088CBF7 /* GDProductDescriptionCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44F221371365000ECDC5 /* Base */,
+				AE63802D21386A340067E803 /* ar */,
+			);
+			name = GDProductDescriptionCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE50B21315CEB0088CBF7 /* GDProductActionCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44F321371365000ECDC5 /* Base */,
+				AE63802B213868DC0067E803 /* ar */,
+			);
+			name = GDProductActionCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE51021315D000088CBF7 /* GDStoreBannerHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44D521371336000ECDC5 /* ar */,
+				AE0E44F421371365000ECDC5 /* Base */,
+			);
+			name = GDStoreBannerHeader.xib;
+			sourceTree = "<group>";
+		};
+		AECBE51521315D0B0088CBF7 /* GDStoreSegmentHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44F521371365000ECDC5 /* Base */,
+				AE63802C213869C20067E803 /* ar */,
+			);
+			name = GDStoreSegmentHeader.xib;
+			sourceTree = "<group>";
+		};
+		AECBE51A21315D140088CBF7 /* GDStoreSegmentContainerCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44CF21371335000ECDC5 /* ar */,
+				AE0E44F621371365000ECDC5 /* Base */,
+			);
+			name = GDStoreSegmentContainerCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE51F21315D1D0088CBF7 /* GDStoreReviewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44DA21371337000ECDC5 /* ar */,
+				AE0E44F721371365000ECDC5 /* Base */,
+			);
+			name = GDStoreReviewCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE52421315D2C0088CBF7 /* GDMyCartItemCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44D021371335000ECDC5 /* ar */,
+				AE0E44F821371365000ECDC5 /* Base */,
+			);
+			name = GDMyCartItemCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE52921315D340088CBF7 /* GDOrderHistoryCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44CC21371335000ECDC5 /* ar */,
+				AE0E44F921371366000ECDC5 /* Base */,
+			);
+			name = GDOrderHistoryCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE52E21315D440088CBF7 /* GDUserMarkerView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44D821371337000ECDC5 /* ar */,
+				AE0E44FA21371366000ECDC5 /* Base */,
+			);
+			name = GDUserMarkerView.xib;
+			sourceTree = "<group>";
+		};
+		AECBE53321315D4D0088CBF7 /* GDMarkerView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44D421371336000ECDC5 /* ar */,
+				AE0E44FB21371366000ECDC5 /* Base */,
+			);
+			name = GDMarkerView.xib;
+			sourceTree = "<group>";
+		};
+		AECBE53821315D5A0088CBF7 /* GDStoreBannerCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44D321371336000ECDC5 /* ar */,
+				AE0E44FC21371366000ECDC5 /* Base */,
+			);
+			name = GDStoreBannerCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE53D21315D660088CBF7 /* GDNearYouSectionHeaderView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44FD21371366000ECDC5 /* Base */,
+				AE6380282138636A0067E803 /* ar */,
+			);
+			name = GDNearYouSectionHeaderView.xib;
+			sourceTree = "<group>";
+		};
+		AECBE54221315D6F0088CBF7 /* GDStoreThumbnailCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44FE21371366000ECDC5 /* Base */,
+				AE638029213863830067E803 /* ar */,
+			);
+			name = GDStoreThumbnailCell.xib;
+			sourceTree = "<group>";
+		};
+		AECBE54721315D810088CBF7 /* GDStoreContainerCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0E44FF21371366000ECDC5 /* Base */,
+				AE63802A213864000067E803 /* ar */,
+			);
+			name = GDStoreContainerCell.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		0DE086851FD9ACC6007C228F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -962,6 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

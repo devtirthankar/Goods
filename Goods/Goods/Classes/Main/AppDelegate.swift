@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         IQKeyboardManager.sharedManager().enable = true
         GDStorage.sharedStorage.startCoreDataStack()
         
+        
         /*
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)

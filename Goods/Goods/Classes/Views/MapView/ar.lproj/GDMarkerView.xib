@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="GDMarkerView" id="iN0-l3-epB" customClass="GDMarkerView" customModule="Goods" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartOnMapIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Jta-zQ-anP">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jta-zQ-anP" secondAttribute="trailing" id="7ID-7R-Twd"/>
+                <constraint firstItem="Jta-zQ-anP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="C4f-1r-C2e"/>
+                <constraint firstItem="Jta-zQ-anP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kgb-zO-08a"/>
+                <constraint firstAttribute="bottom" secondItem="Jta-zQ-anP" secondAttribute="bottom" id="ShN-ye-1qj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="markerImage" destination="Jta-zQ-anP" id="4z0-Xo-ddh"/>
+            </connections>
+            <point key="canvasLocation" x="-233" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cartOnMapIcon" width="67" height="67"/>
+    </resources>
+</document>
