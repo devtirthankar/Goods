@@ -16,6 +16,17 @@ class GDUtilities: NSObject {
         let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
         return emailTest.evaluate(with: email)
     }
+    
+    class func isPreferredLanguageArabic() -> Bool {
+        if GDUtilities.getPreferredLanguage() == "ar" {
+            return true
+        }
+        return false
+    }
+    
+    class func getPreferredLanguage() -> String {
+        return NSLocale.preferredLanguages[0]
+    }
 
 }
 

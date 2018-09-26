@@ -32,10 +32,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wem-Oh-2z5">
-                                <rect key="frame" x="8" y="15.5" width="30" height="30"/>
+                                <rect key="frame" x="8" y="6.5" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="WjI-r0-YCw"/>
-                                    <constraint firstAttribute="height" constant="30" id="ftz-S2-tiE"/>
+                                    <constraint firstAttribute="width" constant="48" id="WjI-r0-YCw"/>
+                                    <constraint firstAttribute="height" constant="48" id="ftz-S2-tiE"/>
                                 </constraints>
                                 <state key="normal" title="Back" image="backBttn"/>
                                 <connections>
@@ -144,6 +144,7 @@
                         <outlet property="_signInButton" destination="ReZ-ns-0dr" id="1Bg-a5-jFA"/>
                         <outletCollection property="_themeView" destination="ReZ-ns-0dr" collectionClass="NSMutableArray" id="ahh-IJ-oVG"/>
                         <outletCollection property="_themeLabel" destination="RpJ-SC-cd0" collectionClass="NSMutableArray" id="Lf6-D3-9Bj"/>
+                        <outletCollection property="_flippableView" destination="Wem-Oh-2z5" collectionClass="NSMutableArray" id="N2c-dc-c3I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi0-Ds-879" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,10 +164,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWw-qN-Pdm">
-                                <rect key="frame" x="8" y="15.5" width="30" height="30"/>
+                                <rect key="frame" x="8" y="6.5" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="SuF-xr-ZOY"/>
-                                    <constraint firstAttribute="height" constant="30" id="dzt-EB-3ww"/>
+                                    <constraint firstAttribute="width" constant="48" id="SuF-xr-ZOY"/>
+                                    <constraint firstAttribute="height" constant="48" id="dzt-EB-3ww"/>
                                 </constraints>
                                 <state key="normal" title="Back" image="backBttn"/>
                                 <connections>
@@ -287,6 +288,7 @@
                         <outlet property="_registrationBtton" destination="0wR-UA-JmP" id="kV1-fi-Jfk"/>
                         <outletCollection property="_themeLabel" destination="XKG-Cg-i8A" collectionClass="NSMutableArray" id="dQs-2Z-oST"/>
                         <outletCollection property="_themeView" destination="0wR-UA-JmP" collectionClass="NSMutableArray" id="Qh4-eW-rGu"/>
+                        <outletCollection property="_flippableView" destination="AWw-qN-Pdm" collectionClass="NSMutableArray" id="yZW-pt-cwm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzz-Ue-Bqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,7 +317,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lp-qG-VrG">
-                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="9Y2-hR-UQF"/>
                                             <constraint firstAttribute="width" constant="48" id="MUr-cc-can"/>
@@ -332,7 +334,7 @@
                                     <constraint firstItem="ncj-4N-Qfc" firstAttribute="centerY" secondItem="AfE-Kf-v2f" secondAttribute="centerY" id="N1W-Je-w9b"/>
                                     <constraint firstItem="ncj-4N-Qfc" firstAttribute="leading" secondItem="AfE-Kf-v2f" secondAttribute="leading" constant="60" id="ViF-nI-XwG"/>
                                     <constraint firstAttribute="height" constant="64" id="ZC9-3v-Rzs"/>
-                                    <constraint firstItem="6Lp-qG-VrG" firstAttribute="leading" secondItem="AfE-Kf-v2f" secondAttribute="leading" constant="8" id="aUb-Jy-d5E"/>
+                                    <constraint firstItem="6Lp-qG-VrG" firstAttribute="leading" secondItem="AfE-Kf-v2f" secondAttribute="leading" id="aUb-Jy-d5E"/>
                                     <constraint firstItem="6Lp-qG-VrG" firstAttribute="top" secondItem="AfE-Kf-v2f" secondAttribute="top" constant="8" id="sWp-4o-GEv"/>
                                 </constraints>
                             </view>
@@ -433,6 +435,7 @@
                         <outlet property="_totalPriceLabel" destination="dSq-UP-Ry5" id="5DY-Qg-Nee"/>
                         <outletCollection property="_themeView" destination="AfE-Kf-v2f" collectionClass="NSMutableArray" id="nGs-lN-28O"/>
                         <outletCollection property="_themeView" destination="tIi-rN-bPV" collectionClass="NSMutableArray" id="LLL-9z-hbE"/>
+                        <outletCollection property="_flippableView" destination="6Lp-qG-VrG" collectionClass="NSMutableArray" id="d1X-Xv-iCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khr-EX-4cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -461,7 +464,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-ai-wa1">
-                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="k2a-ii-vbn"/>
                                             <constraint firstAttribute="width" constant="48" id="ttk-dM-qcp"/>
@@ -476,7 +479,7 @@
                                 <constraints>
                                     <constraint firstItem="8X1-jg-kN3" firstAttribute="centerY" secondItem="4Zk-Wp-Hbc" secondAttribute="centerY" id="4Oj-et-xXT"/>
                                     <constraint firstAttribute="trailing" secondItem="8X1-jg-kN3" secondAttribute="trailing" constant="60" id="PZJ-cM-xcg"/>
-                                    <constraint firstItem="eUO-ai-wa1" firstAttribute="leading" secondItem="4Zk-Wp-Hbc" secondAttribute="leading" constant="8" id="WzI-OK-Rqb"/>
+                                    <constraint firstItem="eUO-ai-wa1" firstAttribute="leading" secondItem="4Zk-Wp-Hbc" secondAttribute="leading" id="WzI-OK-Rqb"/>
                                     <constraint firstItem="eUO-ai-wa1" firstAttribute="top" secondItem="4Zk-Wp-Hbc" secondAttribute="top" constant="8" id="qG5-R8-3FP"/>
                                     <constraint firstAttribute="height" constant="64" id="t91-RP-mhO"/>
                                     <constraint firstItem="8X1-jg-kN3" firstAttribute="leading" secondItem="4Zk-Wp-Hbc" secondAttribute="leading" constant="60" id="yjO-bE-4B3"/>
@@ -566,6 +569,7 @@
                         <outlet property="phone" destination="VUZ-eb-miM" id="aM0-08-wf0"/>
                         <outletCollection property="_themeView" destination="4Zk-Wp-Hbc" collectionClass="NSMutableArray" id="tEP-Mq-L0N"/>
                         <outletCollection property="_themeView" destination="tec-R0-YF0" collectionClass="NSMutableArray" id="jtD-o4-kqB"/>
+                        <outletCollection property="_flippableView" destination="eUO-ai-wa1" collectionClass="NSMutableArray" id="ed4-aA-tML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pog-fw-oUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -585,13 +589,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter OTP sent to your mobile:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBe-Of-jTO">
-                                <rect key="frame" x="16" y="77.5" width="343" height="18"/>
+                                <rect key="frame" x="16" y="86.5" width="343" height="18"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="16"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BLr-OY-zOa">
-                                <rect key="frame" x="137.5" y="127.5" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="136.5" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tsg-N6-QVA"/>
                                     <constraint firstAttribute="height" constant="30" id="waS-na-sL9"/>
@@ -601,7 +605,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wog-tL-KSP">
-                                <rect key="frame" x="48" y="189.5" width="279" height="34"/>
+                                <rect key="frame" x="48" y="198.5" width="279" height="34"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.12549019610000001" green="0.3921568627" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -610,10 +614,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-Iw-fYo">
-                                <rect key="frame" x="8" y="15.5" width="30" height="30"/>
+                                <rect key="frame" x="8" y="6.5" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Peg-I5-32O"/>
-                                    <constraint firstAttribute="width" constant="30" id="r5z-eG-MlR"/>
+                                    <constraint firstAttribute="height" constant="48" id="Peg-I5-32O"/>
+                                    <constraint firstAttribute="width" constant="48" id="r5z-eG-MlR"/>
                                 </constraints>
                                 <state key="normal" title="Back" image="backBttn"/>
                                 <connections>
@@ -647,6 +651,7 @@
                     <connections>
                         <outlet property="_otp" destination="BLr-OY-zOa" id="NMD-Sj-VG8"/>
                         <outlet property="_submitButton" destination="Wog-tL-KSP" id="mdV-n1-ANR"/>
+                        <outletCollection property="_flippableView" destination="x5V-Iw-fYo" collectionClass="NSMutableArray" id="zBr-Yf-0ZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRg-v9-2Ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,7 +680,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-eR-WiR">
-                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="BOf-Rv-N9D"/>
                                             <constraint firstAttribute="height" constant="48" id="IGX-Jq-WZT"/>
@@ -693,7 +698,7 @@
                                     <constraint firstItem="JDy-ic-ffQ" firstAttribute="leading" secondItem="1ko-Nx-EeM" secondAttribute="leading" constant="60" id="Qzx-DY-PPk"/>
                                     <constraint firstAttribute="height" constant="64" id="RE5-qg-S2C"/>
                                     <constraint firstAttribute="trailing" secondItem="JDy-ic-ffQ" secondAttribute="trailing" constant="60" id="RZv-zr-LTB"/>
-                                    <constraint firstItem="w8I-eR-WiR" firstAttribute="leading" secondItem="1ko-Nx-EeM" secondAttribute="leading" constant="8" id="lBL-bh-TsB"/>
+                                    <constraint firstItem="w8I-eR-WiR" firstAttribute="leading" secondItem="1ko-Nx-EeM" secondAttribute="leading" id="lBL-bh-TsB"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tH8-oU-TYk">
@@ -752,6 +757,7 @@
                         <outlet property="saveButton" destination="Y65-Hj-BTO" id="zbG-SH-q43"/>
                         <outletCollection property="_themeView" destination="1ko-Nx-EeM" collectionClass="NSMutableArray" id="kPn-t6-aHQ"/>
                         <outletCollection property="_themeView" destination="Y65-Hj-BTO" collectionClass="NSMutableArray" id="Baj-84-P7N"/>
+                        <outletCollection property="_flippableView" destination="w8I-eR-WiR" collectionClass="NSMutableArray" id="Sad-di-olf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="406-dz-hww" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -780,7 +786,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uF-sp-gG1">
-                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="4fw-pb-f40"/>
                                             <constraint firstAttribute="width" constant="48" id="U8J-m3-ftz"/>
@@ -795,7 +801,7 @@
                                 <constraints>
                                     <constraint firstItem="3uF-sp-gG1" firstAttribute="top" secondItem="gHD-8T-Y0M" secondAttribute="top" constant="8" id="CED-Pw-u9z"/>
                                     <constraint firstItem="B5g-DH-VCh" firstAttribute="leading" secondItem="gHD-8T-Y0M" secondAttribute="leading" constant="60" id="HYL-3K-7kx"/>
-                                    <constraint firstItem="3uF-sp-gG1" firstAttribute="leading" secondItem="gHD-8T-Y0M" secondAttribute="leading" constant="8" id="YW2-BE-z3O"/>
+                                    <constraint firstItem="3uF-sp-gG1" firstAttribute="leading" secondItem="gHD-8T-Y0M" secondAttribute="leading" id="YW2-BE-z3O"/>
                                     <constraint firstAttribute="height" constant="64" id="fJf-RN-ibA"/>
                                     <constraint firstItem="B5g-DH-VCh" firstAttribute="centerY" secondItem="gHD-8T-Y0M" secondAttribute="centerY" id="fSL-ZB-q9d"/>
                                     <constraint firstAttribute="trailing" secondItem="B5g-DH-VCh" secondAttribute="trailing" constant="60" id="yGW-dv-oJe"/>
@@ -831,6 +837,7 @@
                     <connections>
                         <outlet property="_collectionView" destination="AGe-mi-2fd" id="2Xp-Gm-lTQ"/>
                         <outletCollection property="_themeView" destination="gHD-8T-Y0M" collectionClass="NSMutableArray" id="dTQ-Nl-po7"/>
+                        <outletCollection property="_flippableView" destination="3uF-sp-gG1" collectionClass="NSMutableArray" id="vs6-GZ-lb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zwx-18-g5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -859,7 +866,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urR-Rv-aDd">
-                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="479-v4-J7E"/>
                                             <constraint firstAttribute="width" constant="48" id="GMO-aB-E7B"/>
@@ -872,7 +879,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.74509803919999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="urR-Rv-aDd" firstAttribute="leading" secondItem="hvI-eo-BVC" secondAttribute="leading" constant="8" id="050-hG-z13"/>
+                                    <constraint firstItem="urR-Rv-aDd" firstAttribute="leading" secondItem="hvI-eo-BVC" secondAttribute="leading" id="050-hG-z13"/>
                                     <constraint firstAttribute="trailing" secondItem="Sx0-dQ-7f5" secondAttribute="trailing" constant="60" id="0Py-7C-8h9"/>
                                     <constraint firstAttribute="height" constant="64" id="IQz-bZ-qNX"/>
                                     <constraint firstItem="Sx0-dQ-7f5" firstAttribute="centerY" secondItem="hvI-eo-BVC" secondAttribute="centerY" id="JB1-Dz-n23"/>
@@ -954,6 +961,7 @@
                         <outlet property="saveButton" destination="Gy1-RH-rbo" id="0lH-pE-rcp"/>
                         <outletCollection property="_themeView" destination="hvI-eo-BVC" collectionClass="NSMutableArray" id="p0f-KB-f1I"/>
                         <outletCollection property="_themeView" destination="Gy1-RH-rbo" collectionClass="NSMutableArray" id="TpM-vQ-39P"/>
+                        <outletCollection property="_flippableView" destination="urR-Rv-aDd" collectionClass="NSMutableArray" id="6vg-2P-Olo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr1-9q-Heq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,129 @@
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "0wR-UA-JmP"; */
+"0wR-UA-JmP.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Forgot password?"; ObjectID = "1nI-Tg-4Qm"; */
+"1nI-Tg-4Qm.normalTitle" = "Forgot password?";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "2FD-Qi-jra"; */
+"2FD-Qi-jra.text" = "SIGN IN";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "5VG-gp-ni3"; */
+"5VG-gp-ni3.placeholder" = "Phone number";
+
+/* Class = "UILabel"; text = "Temporary password will be sent to your mobile number."; ObjectID = "83C-bT-ePh"; */
+"83C-bT-ePh.text" = "Temporary password will be sent to your mobile number.";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "8X1-jg-kN3"; */
+"8X1-jg-kN3.text" = "My Account";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "8qO-2l-4cx"; */
+"8qO-2l-4cx.placeholder" = "Country Code";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "AWw-qN-Pdm"; */
+"AWw-qN-Pdm.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Orders"; ObjectID = "B5g-DH-VCh"; */
+"B5g-DH-VCh.text" = "Orders";
+
+/* Class = "UITextField"; placeholder = "OTP"; ObjectID = "BLr-OY-zOa"; */
+"BLr-OY-zOa.placeholder" = "OTP";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Gy1-RH-rbo"; */
+"Gy1-RH-rbo.normalTitle" = "Save";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "HFK-Lm-2LF"; */
+"HFK-Lm-2LF.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "IwV-ra-Hgi"; */
+"IwV-ra-Hgi.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "Edit"; ObjectID = "JDy-ic-ffQ"; */
+"JDy-ic-ffQ.text" = "Edit";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "OST-7e-O82"; */
+"OST-7e-O82.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "ReZ-ns-0dr"; */
+"ReZ-ns-0dr.normalTitle" = "Sign in";
+
+/* Class = "UILabel"; text = "Don't you have an account? Sign up"; ObjectID = "RpJ-SC-cd0"; */
+"RpJ-SC-cd0.text" = "Don't you have an account? Sign up";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "Sx0-dQ-7f5"; */
+"Sx0-dQ-7f5.text" = "Forgot Password";
+
+/* Class = "UILabel"; text = "Please enter OTP sent to your mobile:"; ObjectID = "UBe-Of-jTO"; */
+"UBe-Of-jTO.text" = "Please enter OTP sent to your mobile:";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "VPC-iN-vzP"; */
+"VPC-iN-vzP.placeholder" = "Confirm Password";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "VUZ-eb-miM"; */
+"VUZ-eb-miM.placeholder" = "Phone number";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "Wem-Oh-2z5"; */
+"Wem-Oh-2z5.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Wog-tL-KSP"; */
+"Wog-tL-KSP.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "REGISTRATION"; ObjectID = "XKG-Cg-i8A"; */
+"XKG-Cg-i8A.text" = "REGISTRATION";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "Y65-Hj-BTO"; */
+"Y65-Hj-BTO.normalTitle" = "Change Password";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "aWO-OZ-nx9"; */
+"aWO-OZ-nx9.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Validate OTP"; ObjectID = "auX-oe-Jzw"; */
+"auX-oe-Jzw.text" = "Validate OTP";
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "c6a-bR-SFI"; */
+"c6a-bR-SFI.placeholder" = "Mobile";
+
+/* Class = "UILabel"; text = "100$"; ObjectID = "dSq-UP-Ry5"; */
+"dSq-UP-Ry5.text" = "100$";
+
+/* Class = "UITextField"; placeholder = "Email (Optional)"; ObjectID = "eJM-RN-Oq4"; */
+"eJM-RN-Oq4.placeholder" = "Email (Optional)";
+
+/* Class = "UILabel"; text = "Total Price:"; ObjectID = "fRL-dZ-HIr"; */
+"fRL-dZ-HIr.text" = "Total Price:";
+
+/* Class = "UIButton"; normalTitle = "Proceed To Ckeckout"; ObjectID = "gUe-0k-cYu"; */
+"gUe-0k-cYu.normalTitle" = "Proceed To Ckeckout";
+
+/* Class = "UITextField"; placeholder = "New Password"; ObjectID = "i65-3N-wC2"; */
+"i65-3N-wC2.placeholder" = "New Password";
+
+/* Class = "UITextField"; placeholder = "Email (Optional)"; ObjectID = "msr-EZ-RhX"; */
+"msr-EZ-RhX.placeholder" = "Email (Optional)";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "nJ2-0E-td9"; */
+"nJ2-0E-td9.placeholder" = "Country Code";
+
+/* Class = "UILabel"; text = "My Cart"; ObjectID = "ncj-4N-Qfc"; */
+"ncj-4N-Qfc.text" = "My Cart";
+
+/* Class = "UITextField"; placeholder = "Old Password"; ObjectID = "tH8-oU-TYk"; */
+"tH8-oU-TYk.placeholder" = "Old Password";
+
+/* Class = "UIButton"; normalTitle = "Continue Shopping"; ObjectID = "tIi-rN-bPV"; */
+"tIi-rN-bPV.normalTitle" = "Continue Shopping";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "tec-R0-YF0"; */
+"tec-R0-YF0.normalTitle" = "Change Password";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "uW1-CC-a54"; */
+"uW1-CC-a54.placeholder" = "Phone number";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "vxb-6w-vEi"; */
+"vxb-6w-vEi.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "x5V-Iw-fYo"; */
+"x5V-Iw-fYo.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "yfo-2n-sdF"; */
+"yfo-2n-sdF.normalTitle" = "Save";

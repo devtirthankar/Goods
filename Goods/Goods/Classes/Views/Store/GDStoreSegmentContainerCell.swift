@@ -59,7 +59,7 @@ class GDStoreSegmentContainerCell: UICollectionViewCell, UICollectionViewDelegat
         if _selectedSegmentIndex == 0 {
             let product: Product = productList[indexPath.row]
             let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellProductIdentifier, for: indexPath) as! GDStoreThumbnailCell
-            let prductname: String = ((Locale.current.languageCode! == "ar") ? product.productnamear : product.productname)!
+            let prductname: String = (GDUtilities.isPreferredLanguageArabic() ? product.productnamear : product.productname)!
             cell.titleLabel.text = prductname
             if let images = product.productimages {
                 if images.count > 0 {

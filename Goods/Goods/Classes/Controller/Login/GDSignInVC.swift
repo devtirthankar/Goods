@@ -19,6 +19,7 @@ class GDSignInVC: GDBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         setColorForLabels()
         initializeUI()
         

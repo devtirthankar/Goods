@@ -269,6 +269,24 @@
 		AE884DB220CBEC9A0094C379 /* GDOrdersHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrdersHistoryVC.swift; sourceTree = "<group>"; };
 		AE884DB420CBF2880094C379 /* GDOrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDOrderHistoryCell.swift; sourceTree = "<group>"; };
 		AE8D75DE2137B8E800A3CE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AEC3AB99215BB55D00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AEC3AB9B215BB57000AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
+		AEC3AB9D215BB59600AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDDropDownView.strings; sourceTree = "<group>"; };
+		AEC3AB9F215BB59D00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDProductBannerHeader.strings; sourceTree = "<group>"; };
+		AEC3ABA1215BB5A200AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDProductDescriptionCell.strings; sourceTree = "<group>"; };
+		AEC3ABA3215BB5A600AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDProductActionCell.strings; sourceTree = "<group>"; };
+		AEC3ABA5215BB5AC00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreBannerHeader.strings; sourceTree = "<group>"; };
+		AEC3ABA7215BB5AF00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreSegmentHeader.strings; sourceTree = "<group>"; };
+		AEC3ABA9215BB5B300AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreSegmentContainerCell.strings; sourceTree = "<group>"; };
+		AEC3ABAB215BB5B700AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreReviewCell.strings; sourceTree = "<group>"; };
+		AEC3ABAD215BB5BD00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDMyCartItemCell.strings; sourceTree = "<group>"; };
+		AEC3ABAF215BB5C000AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDOrderHistoryCell.strings; sourceTree = "<group>"; };
+		AEC3ABB1215BB5C700AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDUserMarkerView.strings; sourceTree = "<group>"; };
+		AEC3ABB3215BB5CA00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDMarkerView.strings; sourceTree = "<group>"; };
+		AEC3ABB5215BB5CF00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreBannerCell.strings; sourceTree = "<group>"; };
+		AEC3ABB7215BB5D500AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDNearYouSectionHeaderView.strings; sourceTree = "<group>"; };
+		AEC3ABB9215BB5D800AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreThumbnailCell.strings; sourceTree = "<group>"; };
+		AEC3ABBB215BB5DC00AAD0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GDStoreContainerCell.strings; sourceTree = "<group>"; };
 		E000415017B5D423AFBDB3BB /* Pods_Goods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -947,6 +965,7 @@
 			children = (
 				AE0E450021371366000ECDC5 /* Base */,
 				AE63802721385FC50067E803 /* ar */,
+				AEC3AB99215BB55D00AAD0E6 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -956,6 +975,7 @@
 			children = (
 				AE0E450121371367000ECDC5 /* Base */,
 				AE63802621385F3A0067E803 /* ar */,
+				AEC3AB9B215BB57000AAD0E6 /* en */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -965,6 +985,7 @@
 			children = (
 				AE0E44F021371364000ECDC5 /* Base */,
 				AE63802E21386AE60067E803 /* ar */,
+				AEC3AB9D215BB59600AAD0E6 /* en */,
 			);
 			name = GDDropDownView.xib;
 			sourceTree = "<group>";
@@ -974,6 +995,7 @@
 			children = (
 				AE0E44DD21371337000ECDC5 /* ar */,
 				AE0E44F121371365000ECDC5 /* Base */,
+				AEC3AB9F215BB59D00AAD0E6 /* en */,
 			);
 			name = GDProductBannerHeader.xib;
 			sourceTree = "<group>";
@@ -983,6 +1005,7 @@
 			children = (
 				AE0E44F221371365000ECDC5 /* Base */,
 				AE63802D21386A340067E803 /* ar */,
+				AEC3ABA1215BB5A200AAD0E6 /* en */,
 			);
 			name = GDProductDescriptionCell.xib;
 			sourceTree = "<group>";
@@ -992,6 +1015,7 @@
 			children = (
 				AE0E44F321371365000ECDC5 /* Base */,
 				AE63802B213868DC0067E803 /* ar */,
+				AEC3ABA3215BB5A600AAD0E6 /* en */,
 			);
 			name = GDProductActionCell.xib;
 			sourceTree = "<group>";
@@ -1001,6 +1025,7 @@
 			children = (
 				AE0E44D521371336000ECDC5 /* ar */,
 				AE0E44F421371365000ECDC5 /* Base */,
+				AEC3ABA5215BB5AC00AAD0E6 /* en */,
 			);
 			name = GDStoreBannerHeader.xib;
 			sourceTree = "<group>";
@@ -1010,6 +1035,7 @@
 			children = (
 				AE0E44F521371365000ECDC5 /* Base */,
 				AE63802C213869C20067E803 /* ar */,
+				AEC3ABA7215BB5AF00AAD0E6 /* en */,
 			);
 			name = GDStoreSegmentHeader.xib;
 			sourceTree = "<group>";
@@ -1019,6 +1045,7 @@
 			children = (
 				AE0E44CF21371335000ECDC5 /* ar */,
 				AE0E44F621371365000ECDC5 /* Base */,
+				AEC3ABA9215BB5B300AAD0E6 /* en */,
 			);
 			name = GDStoreSegmentContainerCell.xib;
 			sourceTree = "<group>";
@@ -1028,6 +1055,7 @@
 			children = (
 				AE0E44DA21371337000ECDC5 /* ar */,
 				AE0E44F721371365000ECDC5 /* Base */,
+				AEC3ABAB215BB5B700AAD0E6 /* en */,
 			);
 			name = GDStoreReviewCell.xib;
 			sourceTree = "<group>";
@@ -1037,6 +1065,7 @@
 			children = (
 				AE0E44D021371335000ECDC5 /* ar */,
 				AE0E44F821371365000ECDC5 /* Base */,
+				AEC3ABAD215BB5BD00AAD0E6 /* en */,
 			);
 			name = GDMyCartItemCell.xib;
 			sourceTree = "<group>";
@@ -1046,6 +1075,7 @@
 			children = (
 				AE0E44CC21371335000ECDC5 /* ar */,
 				AE0E44F921371366000ECDC5 /* Base */,
+				AEC3ABAF215BB5C000AAD0E6 /* en */,
 			);
 			name = GDOrderHistoryCell.xib;
 			sourceTree = "<group>";
@@ -1055,6 +1085,7 @@
 			children = (
 				AE0E44D821371337000ECDC5 /* ar */,
 				AE0E44FA21371366000ECDC5 /* Base */,
+				AEC3ABB1215BB5C700AAD0E6 /* en */,
 			);
 			name = GDUserMarkerView.xib;
 			sourceTree = "<group>";
@@ -1064,6 +1095,7 @@
 			children = (
 				AE0E44D421371336000ECDC5 /* ar */,
 				AE0E44FB21371366000ECDC5 /* Base */,
+				AEC3ABB3215BB5CA00AAD0E6 /* en */,
 			);
 			name = GDMarkerView.xib;
 			sourceTree = "<group>";
@@ -1073,6 +1105,7 @@
 			children = (
 				AE0E44D321371336000ECDC5 /* ar */,
 				AE0E44FC21371366000ECDC5 /* Base */,
+				AEC3ABB5215BB5CF00AAD0E6 /* en */,
 			);
 			name = GDStoreBannerCell.xib;
 			sourceTree = "<group>";
@@ -1082,6 +1115,7 @@
 			children = (
 				AE0E44FD21371366000ECDC5 /* Base */,
 				AE6380282138636A0067E803 /* ar */,
+				AEC3ABB7215BB5D500AAD0E6 /* en */,
 			);
 			name = GDNearYouSectionHeaderView.xib;
 			sourceTree = "<group>";
@@ -1091,6 +1125,7 @@
 			children = (
 				AE0E44FE21371366000ECDC5 /* Base */,
 				AE638029213863830067E803 /* ar */,
+				AEC3ABB9215BB5D800AAD0E6 /* en */,
 			);
 			name = GDStoreThumbnailCell.xib;
 			sourceTree = "<group>";
@@ -1100,6 +1135,7 @@
 			children = (
 				AE0E44FF21371366000ECDC5 /* Base */,
 				AE63802A213864000067E803 /* ar */,
+				AEC3ABBB215BB5DC00AAD0E6 /* en */,
 			);
 			name = GDStoreContainerCell.xib;
 			sourceTree = "<group>";

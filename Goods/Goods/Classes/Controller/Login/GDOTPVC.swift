@@ -18,6 +18,7 @@ class GDOTPVC: GDBaseVC {
 
         // Do any additional setup after loading the view.
         initializeUI()
+        setFlipViewForLanguage()
     }
     
     func initializeUI() {

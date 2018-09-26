@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Add to Cart"; ObjectID = "4xn-uu-6rr"; */
+"4xn-uu-6rr.normalTitle" = "Add to Cart";
+
+/* Class = "UIButton"; normalTitle = "Go to store"; ObjectID = "9pL-6d-CWC"; */
+"9pL-6d-CWC.normalTitle" = "Go to store";
+
+/* Class = "UILabel"; text = "Store Information"; ObjectID = "Qva-FG-Beu"; */
+"Qva-FG-Beu.text" = "Store Information";
+
+/* Class = "UIButton"; normalTitle = "Visit store page"; ObjectID = "Ylr-2a-Lge"; */
+"Ylr-2a-Lge.normalTitle" = "Visit store page";
+
+/* Class = "UILabel"; text = "Store feedback %"; ObjectID = "eIh-3P-tpR"; */
+"eIh-3P-tpR.text" = "Store feedback %";
+
+/* Class = "UIButton"; normalTitle = "Contact store"; ObjectID = "jPn-MP-cct"; */
+"jPn-MP-cct.normalTitle" = "Contact store";

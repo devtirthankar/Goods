@@ -26,6 +26,7 @@ class GDRegistrationVC: GDBaseVC, GDDropDownViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         setColorForLabels()
         _registrationBtton.layer.cornerRadius = _registrationBtton.frame.height * 0.5
         registrationVM = GDRegistrationVM.init(delegate: self)

@@ -21,6 +21,7 @@ class GDStoreVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         // Do any additional setup after loading the view.
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         _collectionView.register(UINib.init(nibName: headerReuseIdentifierBanner, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifierBanner)

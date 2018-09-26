@@ -22,6 +22,7 @@ class GDProductVC: GDBaseVC, GDProductActionCellDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         
         _collectionView.register(UINib.init(nibName: reuseIdentifierCellDescription, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierCellDescription)
         _collectionView.register(UINib.init(nibName: reuseIdentifierCellAction, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierCellAction)

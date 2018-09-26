@@ -18,6 +18,7 @@ class GDOrdersHistoryVC: GDBaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setColorForTitleViews()
+        setFlipViewForLanguage()
         _collectionView.register(UINib.init(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         getOrderHistory()
     }

@@ -107,7 +107,7 @@ class GDNearYouVC: GDBaseVC, UICollectionViewDelegate, UICollectionViewDataSourc
         }
         let store: Store = nearYouViewModel.stores[indexPath.row]
         let cell: GDStoreThumbnailCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDStoreThumbnailCell
-        let storename: String = ((Locale.current.languageCode! == "ar") ? store.storenamear : store.storename)!
+        let storename: String = (GDUtilities.isPreferredLanguageArabic() ? store.storenamear : store.storename)!
         cell.titleLabel.text = storename
         if let imagepath = store.logo {
             let imageURL = GDWebServiceManager.sharedManager.baseImageURL + "\(imagepath)"

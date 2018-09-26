@@ -23,6 +23,7 @@ class GDMyAccountVC: GDBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         // Do any additional setup after loading the view.
         initializeUI()
         getInitialInputFieldValues()

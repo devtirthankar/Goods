@@ -19,6 +19,7 @@ class GDForgotPasswordVC: GDBaseVC, GDDropDownViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorForTitleViews()
+        setFlipViewForLanguage()
         // Do any additional setup after loading the view.
         saveButton.layer.cornerRadius = saveButton.frame.height * 0.5
     }
