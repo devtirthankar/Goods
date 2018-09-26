@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         IQKeyboardManager.sharedManager().enable = true
         GDStorage.sharedStorage.startCoreDataStack()
         
+        if let setLanguage = UserDefaults.standard.value(forKey: "AppleLanguages") {
+            print("LANGUAGE SET IS : \(setLanguage)")
+            UserDefaults.standard.set("ar", forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
+            print("Now it's: \(UserDefaults.standard.value(forKey: "AppleLanguages"))")
+        }
         
         /*
         if #available(iOS 10.0, *) {

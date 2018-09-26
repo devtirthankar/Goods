@@ -73,11 +73,11 @@ extension GDOrdersHistoryVC: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let order: Order = orders[indexPath.row]
         let cell: GDOrderHistoryCell = _collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! GDOrderHistoryCell
-        cell.orderNumber.text = NSLocalizedString("Order Number: #\(String(describing: order.orderid))", comment: "")
+        cell.orderNumber.text = "Order Number:".translate + "#\(String(describing: order.orderid))"
         cell.productName.text = order.product.productname
-        cell.quantity.text = NSLocalizedString("Quantity: \(String(describing: order.quantity!))", comment: "")
+        cell.quantity.text = "Quantity:".translate + "\(String(describing: order.quantity!))"
         cell.orderDate.text = ""
-        cell.price.text = NSLocalizedString("Order Status: \(String(describing: (order.orderstatus?.orderstatusname!)!))", comment: "")
+        cell.price.text = "Order Status:".translate + "\(String(describing: (order.orderstatus?.orderstatusname!)!))"
         return cell
     }
     

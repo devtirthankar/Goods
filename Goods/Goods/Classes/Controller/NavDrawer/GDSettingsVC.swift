@@ -14,7 +14,7 @@ class GDSettingsVC: GDBaseVC, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var _tableView: UITableView!
     let _cellReuseIdentifier = "GDSettingsItemCell"
-    let _cellTitles = ["Policy", "Notifications", "Support", "Privacy Policy", "Terms of Services"]
+    let _cellTitles = ["Policy".translate, "Notifications".translate, "Support".translate, "Privacy Policy".translate, "Terms of Services".translate]
 
     override func viewDidLoad() {
         super.viewDidLoad()

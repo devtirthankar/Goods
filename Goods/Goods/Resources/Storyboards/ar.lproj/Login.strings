@@ -54,7 +54,7 @@
 "Sx0-dQ-7f5.text" = "إعادة تعيين كلمة المرور";
 
 /* Class = "UILabel"; text = "Please enter OTP sent to your mobile:"; ObjectID = "UBe-Of-jTO"; */
-"UBe-Of-jTO.text" = "Please enter OTP sent to your mobile:";
+"UBe-Of-jTO.text" = "يرجى إدخال كلمة المرور الخاصة بك المرسلة إلى هاتفك المحمول:";
 
 /* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "VPC-iN-vzP"; */
 "VPC-iN-vzP.placeholder" = "تأكيد كلمة المرور";
@@ -72,7 +72,7 @@
 "XKG-Cg-i8A.text" = "التسجيل";
 
 /* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "Y65-Hj-BTO"; */
-"Y65-Hj-BTO.normalTitle" = "Change Password";
+"Y65-Hj-BTO.normalTitle" = "تغيير كلمة السر";
 
 /* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "aWO-OZ-nx9"; */
 "aWO-OZ-nx9.placeholder" = "تأكيد كلمة المرور";
@@ -114,7 +114,7 @@
 "tIi-rN-bPV.normalTitle" = "إكمال التسوق";
 
 /* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "tec-R0-YF0"; */
-"tec-R0-YF0.normalTitle" = "Change Password";
+"tec-R0-YF0.normalTitle" = "تغيير كلمة السر";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "uW1-CC-a54"; */
 "uW1-CC-a54.placeholder" = "رقم الهاتف";
@@ -126,4 +126,4 @@
 "x5V-Iw-fYo.normalTitle" = "Back";
 
 /* Class = "UIButton"; normalTitle = "Save"; ObjectID = "yfo-2n-sdF"; */
-"yfo-2n-sdF.normalTitle" = "Save";
+"yfo-2n-sdF.normalTitle" = "حفظ";
